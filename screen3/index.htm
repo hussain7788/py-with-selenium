@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>CPASAGE</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+   <link href="css/style.css" rel="stylesheet" type="text/css">
+   <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */
+      .navbar {
+         margin-bottom: 0;
+         border-radius: 0;
+      }
+
+      /* Add a gray background color and some padding to the footer */
+      footer {
+         background-color: #f2f2f2;
+         padding: 25px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="col-sm-12">
+      <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click</button>
+   </div>
+</body>
+
+</html>
+
+<div class="modal fade custom-modal text-center" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+   aria-hidden="true">
+   <div class="modal-dialog text-left" role="document">
+      <div class="modal-content">
+         <button data-dismiss="modal" class="modal-close"><i class="fa fa-close"></i> Close</button>
+         <div class="modal-header" id="blueMain">
+            <div class="background-circle-animation">
+               <div class="bubbleBase">
+                  <div class="bubbleBase-th1">
+                     <img src="images/small-circle.png" alt="" class="circle-opacity" />
+                  </div>
+               </div>
+
+               <div class="bubbleBase1">
+                  <div class="bubbleBase-th2">
+                     <img src="images/small-circle.png" alt="" class="circle-opacity circle2-wid200" />
+                  </div>
+               </div>
+
+               <div class="bubbleBase2">
+                  <div class="bubbleBase-th3">
+                     <img src="images/small-circle.png" alt="" class="circle-opacity " />
+                  </div>
+               </div>
+
+               <div class="bubbleBase3">
+                  <div class="bubbleBase-th4">
+                     <img src="images/small-circle.png" alt="" class="circle-opacity" />
+                  </div>
+               </div>
+            </div>
+            <div class="modal-header-content">
+               <div class="left-search-text">
+                  <p>Employee Follow Up</p>
+                  <p class="search-by-text">Search - <i>Assigned</i></p>
+               </div>
+               <div class="middle-select-item pull-left" style="display: none;">
+                     <div class="custom-select">
+                        <select>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="25" selected>25</option>
+                        </select>
+                     </div>
+                  </div>
+               <div class="searchWithCount">
+                  <div class="right-search-box pull-left">
+                     <input type="search" placeholder="Search..." />
+                  </div>
+                  <div class="table-list-count pull-left">25</div>
+               </div>           
+               
+            </div>
+         </div>
+         <div class="modal-body">
+            <div class="table-responsive custom-table">
+               <table class="table">
+                  <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Business</th>
+                        <th>Year</th>
+                        <th>Status</th>
+                        <th>Employee</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td><span class="namefont">Sarah</span></td>
+                        <td>N/A</td>
+                        <td>0</td>
+                        <td>In Progress</td>
+                        <td>Water White</td>
+                     </tr>
+                     <tr class="active">
+                        <td><span class="namefont">Sarah</span></td>
+                        <td>N/A</td>
+                        <td>0</td>
+                        <td>In Progress</td>
+                        <td>Water White</td>
+                     </tr>
+                     <tr>
+                        <td><span class="namefont">Sarah</span></td>
+                        <td>N/A</td>
+                        <td>0</td>
+                        <td>In Progress</td>
+                        <td>Water White</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="row">
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Select Business Incorporation State</p>
+                     <div class="custom-select">
+                        <select name="" id="" class="form-control">
+                           <option value="">Select State</option>
+                           <option value="1">State1</option>
+                           <option value="2">State2</option>
+                        </select>
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Select Business Incorporation State</p>
+                     <div class="custom-select">
+                        <select name="" id="" class="form-control">
+                           <option value="">Select State</option>
+                           <option value="1">State1</option>
+                           <option value="2">State2</option>
+                        </select>
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Select Business Incorporation State</p>
+                     <div class="custom-select">
+                        <select name="" id="" class="form-control">
+                           <option value="">Select State</option>
+                           <option value="1">State1</option>
+                           <option value="2">State2</option>
+                        </select>
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Select Date</p>
+                     <div class="custom-date-picker">
+                        <input type="date" placeholder="MM/DD/YYYY" class="form-control" />
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <label class="custom-checkbox-radio">
+                        <input type="checkbox" class="checkbox"/>
+                        <p class="label--checkbox">Book Keeping</p>
+                     </label>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <div class="custom-select">
+                        <select name="" id="" class="form-control">
+                           <option value="">Select State</option>
+                           <option value="1">State1</option>
+                           <option value="2">State2</option>
+                        </select>
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <label class="custom-checkbox-radio">
+                        <input type="checkbox" class="checkbox"/>
+                        <p class="label--checkbox">Book Keeping</p>
+                     </label>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <div class="custom-date-picker">
+                        <input type="date" placeholder="MM/DD/YYYY" class="form-control" />
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <label class="custom-checkbox-radio">
+                        <input type="checkbox" class="checkbox"/>
+                        <p class="label--checkbox">Book Keeping</p>
+                     </label>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <div class="custom-date-picker">
+                        <input type="text" placeholder="Input Text box" class="form-control" />
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Text Box Item</p>
+                     <div class="custom-date-picker">
+                        <input type="text" placeholder="Input Text box" class="form-control" />
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Select Item</p>
+                     <div class="custom-select">
+                        <select name="" id="" class="form-control">
+                           <option value="">Select State</option>
+                           <option value="1">State1</option>
+                           <option value="2">State2</option>
+                        </select>
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-12 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Commet Text Area</p>
+                     <div class="custom-date-picker">
+                        <textarea type="text" placeholder="Text box" class="form-control"></textarea>
+                     </div>                     
+                  </div>
+               </div>
+               <div class="col-md-12 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Check Box Group</p>
+                     <label class="custom-checkbox-radio">
+                        <input type="checkbox" class="checkbox"/>
+                        <p class="label--checkbox">Check box group item 1</p>
+                     </label>  
+                     <label class="custom-checkbox-radio">
+                        <input type="checkbox" class="checkbox"/>
+                        <p class="label--checkbox">Check box group item 2</p>
+                     </label>  
+                     <label class="custom-checkbox-radio">
+                        <input type="checkbox" class="checkbox"/>
+                        <p class="label--checkbox">Check box group item 3</p>
+                     </label>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Radio Btn Box Group</p>
+                     <label class="custom-checkbox-radio">
+                        <input type="radio" name="radio1" class="radio"/>
+                        <p class="label--checkbox">Yes</p>
+                     </label>  
+                     <label class="custom-checkbox-radio">
+                        <input type="radio" name="radio1" class="radio"/>
+                        <p class="label--checkbox">No</p>
+                     </label>  
+                     <label class="custom-checkbox-radio">
+                        <input type="radio" name="radio1" class="radio"/>
+                        <p class="label--checkbox">Other</p>
+                     </label>                     
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-12">
+                  <div class="custom-form-group">
+                     <p class="form-label">Other Please Describe</p>
+                     <div class="custom-date-picker">
+                        <input type="text" placeholder="Text box" class="form-control" />
+                     </div>                     
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button class="btn btn-secondary pull-left" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary pull-right">Save Changes</button>
+         </div>
+      </div>
+   </div>
+</div>
