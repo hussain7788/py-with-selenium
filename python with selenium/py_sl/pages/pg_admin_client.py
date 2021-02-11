@@ -237,27 +237,20 @@ class pg_admin_client_status(navigation):
         driver = self.driver
         ##sl_time_sleep()
 
-        if params['tab_name'] == "PersonalTab":
+        if params['tab_name'] == "personalTab":
             sl_button_click(driver, lc_all_common.personal_tab)
-            sl_button_click(driver, lc_client_status.edit_btn)
 
-        elif params['tab_name'] == "BusinessTab":
+        elif params['tab_name'] == "businessTab":
             sl_button_click(driver, lc_all_common.business_tab)
-            sl_button_click(driver, lc_client_status.edit_btn)
+        sl_button_click(driver, lc_client_status.edit_btn)
 
     def update_admin_client_status(self, params, response):
         driver =  self.driver
-        ##sl_time_sleep()
-
+        
         if params['emp_status_access'] != True:
             sl_select_dropdown(driver, params['manager_dropdown'], params['manager_names'])
-            sl_select_dropdown(driver,  params['employee_dropdown'], params['employee_names'])
-
-        ##sl_time_sleep()
-        # driver.find_element_by_id(params['extension_checkbox'])
-        ##sl_time_sleep()
+        sl_select_dropdown(driver,  params['employee_dropdown'], params['employee_names'])
         sl_select_dropdown(driver, params['status_dropdown'], params['status_name'])
-        ##sl_time_sleep()
 
     def clicking_on_admin_client_status_update(self, params, response):
         driver = self.driver
