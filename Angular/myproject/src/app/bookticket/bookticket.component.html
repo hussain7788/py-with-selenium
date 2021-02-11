@@ -1,0 +1,47 @@
+<form #bus="ngForm" (ngSubmit)="booktickets(bus)">
+<table align="center" border="0">
+    <tr>
+        <th height="50px"></th>
+    </tr>
+    <tr>
+        <th style="border-radius: 30px;font-size: 20px;color: white;text-align: center;padding: 5px;background-color: blue;" colspan="3">BOOK HERE</th>
+    </tr>
+    <tr>
+        <th style="color: blue;">service no</th>
+        <th style="padding: 20px;"><input type="text" [(ngModel)]="sno" name="sno"></th>
+    </tr>
+    <tr>
+        <th style="color: blue;">from</th>
+        <th style="padding: 20px;"><input type="text" [(ngModel)]="from" name="from"></th>
+    </tr>
+    <tr>
+        <th style="color: blue;">To</th>
+        <th style="padding: 20px;"><input type="text" [(ngModel)]="to" name="to"></th>
+    </tr>
+    <tr>
+        <th style="color: blue;">dep-time</th>
+        <th style="padding: 20px;"><input type="text" [(ngModel)]="dep_time" name="dep-time"></th>
+    </tr>
+    <tr>
+        <th style="color: blue;">arr_time</th>
+        <th style="padding: 20px;"><input type="text" [(ngModel)]="arr_time" name="arr_time"></th>
+    </tr>
+    <tr>
+        <th style="color: blue;">capacity</th>
+        <th style="padding: 20px;"><input type="text" [(ngModel)]="capacity" name="capacity"></th>
+    </tr>
+    <tr>
+        <th style="color: blue;">select travel:</th>
+        <select [(ngModel)]="select" name="select">
+            <option *ngFor="let x of travel" [value]="x.sno">{{x.travel}}</option>
+        </select>
+    </tr>
+    <tr>
+        <th style="color: red;text-align:center;" colspan="4"><button type="submit" class="btn btn-primary">
+            <font color="blue;">BOOK</font>
+        </button></th>
+    </tr>
+
+</table>
+</form>
+{{bus.value | json}}

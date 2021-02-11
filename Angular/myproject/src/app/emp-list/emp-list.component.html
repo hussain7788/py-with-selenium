@@ -1,0 +1,35 @@
+<table align="center" border="1">
+    <tr>
+        <th>
+            <div *ngFor="let x of employee">
+                <table align="center" border="1">
+                    <tr>
+                        <th rowspan="9"><img src="assets/travel-1.png" height="150px" width="150px"></th>
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <th>{{x.id}}</th>
+                    </tr>
+                    <tr>
+                        <th>name</th>
+                        <th>{{x.name}}</th>
+                    </tr>
+                    <tr>
+                        <th>salary</th>
+                        <th>{{x.salary}}</th>
+                    </tr>
+                    <tr>
+                        <th>gender</th>
+                        <th>{{x.gender}}</th>
+                    </tr>
+                    <tr>
+                        <th>email</th>
+                        <th>{{x.email}}</th>
+                    </tr>
+                </table>
+            </div>
+        </th>
+        </tr>
+        
+    
+</table>
