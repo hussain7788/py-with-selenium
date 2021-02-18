@@ -11,4 +11,3 @@ with open("C:/Users/user/Desktop/notes.txt", 'r') as file:
     d =file .readlines()
     for i in d:
         print(i.split())
-

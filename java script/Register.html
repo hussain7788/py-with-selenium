@@ -1,0 +1,106 @@
+<html>
+<head>
+  <style type="text/css">
+      #s1
+      {
+        color:red;
+       }
+ </style>
+  <script type="text/javascript">
+    function validate()
+    {
+        var uname=document.getElementById("t1").value;
+        var pwd=document.getElementById("t2").value;
+        var cpwd=document.getElementById("t3").value;
+        var address=document.getElementById("t4").value;
+        var r="";
+       if(uname=="")
+      {
+          r="username must not be Empty"+"<br>";
+      }
+     if(pwd=="")
+      {
+          r=r+"password must not be Empty"+"<br>";
+      }
+      if(cpwd=="")
+      {
+          r=r+"confirm password must not be Empty"+"<br>";
+      }
+      if(address=="")
+      {
+          r=r+"Address must not be Empty"+"<br>";
+      }
+      if(uname==pwd)
+      {
+          r=r+"uname and password must not be same"+"<br>";
+      }
+     if(pwd!=cpwd)
+      {
+          r=r+"password mismatch"+"<br>";
+      }
+      if(document.getElementById("t5").value=="")
+      {
+           r=r+"Age must not be empty"+"<br>";
+      }
+      document.getElementById("s1").innerHTML=r;
+    }
+ </script>
+</head>
+<body>
+ <form id="f1">
+  <table>
+   <tr>
+   <td>
+    Enter UserName
+   </td>
+    <td>
+    <input type="text" id="t1">
+    </td>
+    </tr>
+   <tr>
+   <td>
+    Enter Password
+   </td>
+    <td>
+    <input type="password" id="t2">
+    </td>
+    </tr>
+   <tr>
+   <td>
+   Confirm Password
+   </td>
+    <td>
+    <input type="password" id="t3">
+    </td>
+    </tr>
+<tr>
+   <td>
+    Enter Address
+   </td>
+    <td>
+     <textarea rows="5" cols="15" id="t4">
+     </textarea>
+    </td>
+    </tr>
+<tr>
+   <td>
+     Enter Age
+  </td>
+    <td>
+    <input type="text" id="t5">
+    </td>
+    </tr>
+   <tr>
+       <td>
+     <input type="button" value="Register" onclick="validate()">
+       </td>
+       </tr>
+  <tr>
+      <td>
+   <span id="s1"></span>
+      </td>
+  </tr>
+  </table>
+ </form>
+</body>
+</html>
