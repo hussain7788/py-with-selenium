@@ -9,15 +9,15 @@ class MyClass extends Component{
 
     Button(){
         return(
-            <button className='btr btr-primary'>button func</button>
+            <button className='btr btr-primary' onClick={this.ClassClick}>button func</button>
         )
     }
     render(){
         return (
            <div>
-            <h1 className='bg-primary-text-white text-center'>my email is: {this.props.my_emai}</h1>
+            <h1 className='bg-primary-text-white text-center'>my email is: {this.props.my_email}</h1>
             <button onClick={this.props.myclick} type='button' className='btn btn-secondary'>class button</button>
-            <small className='btn btn-primary'> <this.Button/> </small>
+            <small className='btn btn-primary'> {this.Button()} </small>
            </div>
             
         )

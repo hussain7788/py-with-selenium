@@ -1,55 +1,49 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from rest_framework.response import Response
+from rest_framework import status
 from rest_framework import generics
-from .models import Room
-from .serializers import RoomSerializer, CreateRoomSerializer
+from .models import Room,Article
+from .serializers import RoomSerializer, CreateRoomSerializer, ArticleSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response 
+from rest_framework import viewsets
 
 
 # Create your views here.
+#### ModelViewset
+class ArticleViewset(viewsets.ModelViewSet):
+    serializer_class = ArticleSerializer
+    queryset = Article.objects.all()
 
-class RoomView(generics.ListAPIView):
-    queryset = Room.objects.all()
-    serializer_class = RoomSerializer
 
-class JoinRoom(APIView):
-    lookup_url = 'code'
-
-    def post(self, request, format=None):
-        if not self.request.session.exists(self.request.session.session_key):
-            self.request.session.create()
-
-        code = request.data.get(self.lookup_url)
-        if code!= None:
-            room_result = Room.objects.filter(code=code)
-            if len(room_result) > 0:
-                room = room_result[0]
-                self.request.session['room_code'] = code
-                return Response({'message':'joinded'})
-            return Response({'message':'no room'})
-        return Response({'bad request':'bad request'})
-
+###  APIViewsets
+class ArticleApiView(APIView):
     
+    def get(self, request):
+        articles = Article.objects.all()
+        serializer = ArticleSerializer(articles, many=True)
+        return Response(serializer.data)
+    
+    def post(self, request):
+        print("request data is", request.data)
+        serializer = ArticleSerializer(data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-# class CreateRoomView(APIView):
-#     serializer_class = CreateRoomSerializer
+        
+        #     Article.objects.create(id=serializer.data.get("id"),
+        #                             title = serializer.data.get("title"),
+        #                             author = serializer.data.get("author"),
+        #                             email = serializer.data.get("email"),
+        #                             )
+        # articles = Article.objects.filter(id=request.data["id"]).values()
+        # return Response({"Message" : "article added", "article":article})
 
-#     def post(self, request, format=None):
-#         if not self.request.session.exists(self.request.session.session_key):
-#             self.request.session.create()
 
-#         serializer = self.serializer_class(data=request.data)
-#         if serializer.is_valid():
-#             guest_can_pause = serializer.data.guest_can_pause
-#             votes_to_skip = serializer.data.votes_to_skip
-#             host = self.request.session.session_key
-#             queryset = Room.objects.all(host=host)
-#             if queryset.exists():
-#                 room = queryset[0]
-#                 room.guest_can_pause = guest_can_pause
-#                 room.votes_to_skip = votes_to_skip
-#                 room.save(update_fields=['guest_can_pause', 'votes_to_skip'])
+
 
 
 

@@ -6,6 +6,7 @@ class Class_Array extends Component {
         return names.map(name =>
             <div>
                 {`${name}`}
+                
             </div>
             )
     }

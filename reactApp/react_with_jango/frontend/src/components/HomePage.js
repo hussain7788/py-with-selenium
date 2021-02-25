@@ -10,16 +10,17 @@ export class HomePage extends Component {
     }
     render() {
         return (
-            <Router>
-                <switch>
-                    <Route exact path='/'> 
-                        <p> this is home page</p>
-                    </Route>
-                    <Route path='/join' component={RoomJoinPage }/>
-                    <Route path='/create' component={CreateRoomPage }/>
+            // <Router>
+            //     <switch>
+            //         <Route exact path='/'> 
+            //             <p> this is home page</p>
+            //         </Route>
+            //         <Route path='/join' component={RoomJoinPage }/>
+            //         <Route path='/create' component={CreateRoomPage }/>
 
-                </switch>
-            </Router>
+            //     </switch>
+            // </Router>
+            <h1>this is home page</h1>
         )
     }
 }

@@ -9,4 +9,16 @@ class Room(models.Model):
     votes_to_skip = models.IntegerField(null=False, default=1)
     created_at = models.DateTimeField(auto_now_add=True)
 
+class Article(models.Model):
+    title = models.CharField(max_length=50)
+    author = models.CharField(max_length=30)
+    email = models.EmailField(unique=True)
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+    
+
+
+
 

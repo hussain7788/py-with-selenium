@@ -1,7 +1,16 @@
-from django.urls import path
-from .views import  RoomView, JoinRoom
+from django.urls import path,include
+from .views import ArticleViewset, ArticleApiView
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register('view_article', ArticleViewset)
 
 urlpatterns = [
-    path('', RoomView.as_view()),
-    path('join-room', JoinRoom.as_view()),
+
+    ##### this urls for ModelViewSet (mostly used for all ops)
+    path('', include(router.urls)),
+
+    #### this path for APIView
+    path('api_article', ArticleApiView.as_view()),
+
 ]

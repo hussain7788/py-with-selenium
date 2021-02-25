@@ -10,11 +10,16 @@ class Name extends Component{
         }
     } 
     ClickMe= () => {
-        this.setState(
-            {
-                name : 'valli'
-            }
-        )
+        if(this.state.name == "hussain"){
+            this.setState({
+                name : "valli"
+            })
+        }
+        else{
+            this.setState({
+                name : "hussain"
+            })
+        }
     }
 
     render(){

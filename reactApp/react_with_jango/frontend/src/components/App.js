@@ -1,9 +1,15 @@
 import React, { Component, Fragment } from 'react'
 import {render} from "react-dom";
+import MainDashboard from './Articles/MainDashboard';
 import HomePage from './HomePage';
 import JoinPage from './JoinPage';
 import Header from './layout/Header';
 import Dashboard from './leads/Dashboard';
+import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom";
+import AddArticle from './Articles/AddArticle';
+import ViewArticle from './Articles/ViewArticle';
+import Home from './Articles/Home';
+
 
 export default class App extends Component {
     constructor(props){
@@ -18,10 +24,21 @@ export default class App extends Component {
     }
     render() {
         return (
-            <div className="container">
-                    <JoinPage/>
-                </div>
+            // <div className="container">
+            //    <MainDashboard/>
+            // </div>
+             <Router>
+                <switch>
+                    <MainDashboard/>
+                    <Route exact path='/'> 
+                            <Home/>
+                    </Route>
+                    <Route path='/add' component={AddArticle}/>
+                    <Route path='/view' component={ViewArticle}/>
 
+                </switch>
+            </Router>
+          
         )
     }
 }

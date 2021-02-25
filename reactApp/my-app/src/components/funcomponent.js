@@ -3,7 +3,7 @@ import React from 'react'
 function Func(props) {
     function ClickMe() {
         alert("this is functional click button")
-        
+
     }
     return (
         <div>
