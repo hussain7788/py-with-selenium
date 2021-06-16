@@ -1,0 +1,66 @@
+{% extends 'common.html' %}
+
+{% block vvv%}
+    {% include 'main.html' %}
+
+
+    <form action="{% url 'save_product' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table align="center" border="0">
+        <tr><th id="product_title">Add Product</th></tr>
+        <tr><th class="product_info"><input type="text" placeholder="Name" required name="p1"></th></tr>
+        <tr><th class="product_info"><input type="number" placeholder="Price" required name="p2" min="1"></th></tr>
+        <tr><th class="product_info">Photo : <input type="file" name="p3" required></th></tr>
+        <tr><th class="product_info"><button type="submit">Save</button> </th></tr>
+        {% if messages %}
+            <tr>
+                <th style="color:red">
+                {% for x in messages%}
+                    {{x}}
+                 {% endfor %}
+                </th>
+            </tr>
+
+        {% endif %}
+    </table>
+    </form>
+
+
+        <table align="center" border="0">
+            <tr>
+                    <th> Name </th>
+                    <th> Price </th>
+                    <th> Photo </th>
+
+            </tr>
+
+            {% for pro in product%}
+            <tr>
+                <th class="product__info_details">{{ pro.p_name }}</th>
+                <th class="product__info_details">{{ pro.p_price }}</th>
+                <th class="product__info_details" id="product_img">
+                    <img src="{{ pro.p_photo.url }}" width="80" height="80">
+                </th>
+
+                <th> 
+                    <a href="{% url 'update_form' pro.id %}">
+                    <button  type="button"> update </button>
+                    </a>
+                </th>
+                
+                <th> 
+                    <a href="{% url 'delete_product' %}?no={{ pro.id }}"> 
+                        <button type="button"> delete </button>
+                    </a>
+                </th>
+
+            </tr>
+
+
+            {% endfor%}
+
+        
+        </table>
+    
+
+{% endblock%}

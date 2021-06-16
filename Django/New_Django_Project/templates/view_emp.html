@@ -1,0 +1,44 @@
+{% extends 'common.html' %}
+
+{% block vvv%}
+    {% include 'main.html' %}
+
+        <table align="center" border="0" class="table table-dark">
+            <tr>
+                    <th> Name </th>
+                    <th> salary </th>
+                    <th> degn </th>
+                    <th> update </th>
+                    <th> delete </th>
+
+
+            </tr>
+
+            {% for obj in object_list %}
+            <tr>
+                <th>{{ obj.emp_name }}</th>
+                <th>{{ obj.emp_salary }}</th>
+                <th>{{ obj.emp_degn }}</th>
+
+                <th> 
+                    <a href="{% url 'update_emp' obj.id %}"
+                    <button  type="button"> update </button>
+                    </a>
+                </th>
+                
+                <th> 
+                    <a href="{% url 'delete_emp' obj.id %}"
+                    <button  type="button"> delete </button>
+                    </a>
+                </th>
+
+            </tr>
+
+
+            {% endfor%}
+
+        
+        </table>
+    
+
+{% endblock%}

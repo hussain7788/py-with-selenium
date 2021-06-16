@@ -1,0 +1,44 @@
+{% extends 'common.html' %}
+
+{% block vvv%}
+    {% include 'main.html' %}
+
+        <table align="center" border="0" class="table table-dark">
+            <tr>
+                    <th> Name </th>
+                    <th> salary </th>
+                    <th> degn </th>
+                    <th> update </th>
+                    <th> delete </th>
+
+
+            </tr>
+
+            
+            <tr>
+                <th>{{ object.emp_name }}</th>
+                <th>{{ object.emp_salary }}</th>
+                <th>{{ object.emp_degn }}</th>
+
+                <th> 
+                    <form method="post">
+                    {% csrf_token %}
+                    <button type="submit"> Yes </button>
+                    </form>
+                </th>
+                
+                <th> 
+                    <a href="{% url 'view_emp' %}"
+                        <button type="submit"> No </button>
+                    </a>
+                </th>
+
+            </tr>
+
+
+
+        
+        </table>
+    
+
+{% endblock%}

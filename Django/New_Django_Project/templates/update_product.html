@@ -1,0 +1,16 @@
+{% extends "common.html" %}
+
+{% block vvv %}
+{% load static %}
+    {% include "main.html" %}
+
+        <form action="{% url 'save_updated_pro' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="p" readonly value="{{data.id}}"> <br>
+        <input type="text" name="p1" value="{{data.p_name}}"><br>
+        <input type="text" name="p2" value="{{data.p_price}}"><br>
+        <input type="file" name="p3" value="{{data.p_photo.url}}">
+        <button type="submit"> update </button>
+
+        </form>
+{% endblock %}

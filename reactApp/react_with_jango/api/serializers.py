@@ -12,7 +12,14 @@ class CreateRoomSerializer(serializers.ModelSerializer):
         fields = ('guest_can_pause', 'votes_to_skip')
 
 class ArticleSerializer(serializers.ModelSerializer):
+    def to_representation(self, obj):
+        data = super().to_representation(obj)
+        data['title'] = obj.title
+        data['author'] = obj.author
+        data['email'] = obj.email
+        return data
+
     class Meta:
         model = Article
-        fields = "__all__"
+        fields = ("id",)
         

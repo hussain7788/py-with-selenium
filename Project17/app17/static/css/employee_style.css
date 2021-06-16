@@ -1,0 +1,21 @@
+
+#title
+{
+    font-family: "Agency FB";
+    font-size: 60px;
+    color: green;
+}
+.menu
+{
+    font-family: "Agency FB";
+    font-size: 30px;
+    color: blue;
+}
+#copyright
+{
+    font-family: "Arial Black";
+    font-size: 10px;
+    font-style: italic;
+    background-color: #ffcf0a;
+    color: brown;
+}

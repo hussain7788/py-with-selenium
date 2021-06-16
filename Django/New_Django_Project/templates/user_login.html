@@ -1,0 +1,26 @@
+{% extends 'common.html' %}
+
+{% block vvv%}
+    {% include 'main.html' %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        {{form.as_p}}
+        <button type="submit">Save</button>
+        {% if messages %}
+            <tr>
+                <th style="color:red">
+                {% for x in messages%}
+                    {{x}}
+                 {% endfor %}
+                </th>
+            </tr>
+
+        {% endif %}
+    </table>
+    </form>
+
+
+
+{% endblock%}

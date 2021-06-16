@@ -1,0 +1,18 @@
+{% extends 'common.html' %}
+
+{% block vvv%}
+    {% include 'main.html' %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table align="center" border="0">
+        <tr><th>Add Employee</th></tr>
+        {{form}}
+        <tr><th><button type="submit">Save</button> </th></tr>
+        
+    </table>
+    </form>
+
+
+
+{% endblock%}

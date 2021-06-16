@@ -1,0 +1,41 @@
+
+{% extends 'common.html' %}
+
+{% block naveen %}
+
+      <style>
+            td
+            {
+                padding: 10px;
+            }
+            #r_th{
+                font-family: "Agency FB";
+                font-size: 20px;
+                background-color: #4fff00;
+                color: #e505ff;
+            }
+        </style>
+
+    <form action="{% url 'update_emp' %}" method="post">
+
+    {% csrf_token %}
+        <table align="center" border="0">
+            <tr class="r_row"><th id="r_th">Employee Updating</th></tr>
+            <tr class="r_row">
+                <td><input type="number" readonly value="{{ data.idno }}" name="t1" min="101"></td>
+            </tr>
+            <tr class="r_row">
+                <td><input type="text" value="{{ data.name }}" name="t2"></td>
+            </tr>
+            <tr class="r_row">
+                <td>
+                    <input type="number" value="{{ data.salary }}" name="t3">
+                </td>
+            </tr>
+            <tr class="r_row">
+                <th><button type="submit">Save</button> </th>
+            </tr>
+        </table>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'common.html' %}
+
+{% block vvv%}
+    {% include 'main.html' %}
+
+<h1> welcome: {{name}} </h1>
+<a href="{% url "user_login" %}">
+<input style="color:red" type="button" value="Signout">
+
+{% endblock%}

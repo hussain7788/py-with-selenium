@@ -23,24 +23,14 @@ class ArticleApiView(APIView):
     def get(self, request):
         articles = Article.objects.all()
         serializer = ArticleSerializer(articles, many=True)
-        return Response(serializer.data)
+        return Response({"articles" : serializer.data})
     
     def post(self, request):
-        print("request data is", request.data)
         serializer = ArticleSerializer(data = request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        
-        #     Article.objects.create(id=serializer.data.get("id"),
-        #                             title = serializer.data.get("title"),
-        #                             author = serializer.data.get("author"),
-        #                             email = serializer.data.get("email"),
-        #                             )
-        # articles = Article.objects.filter(id=request.data["id"]).values()
-        # return Response({"Message" : "article added", "article":article})
 
 
 
