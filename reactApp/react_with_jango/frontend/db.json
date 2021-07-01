@@ -1,0 +1,36 @@
+{
+  "contacts": [
+    {
+      "id": "45",
+      "name": "kannaa",
+      "email": "kanna@gmail.com",
+      "age": "453"
+    },
+    {
+      "id": "78",
+      "name": "chinnaa",
+      "email": "chinna@gmail.com",
+      "age": "343"
+    },
+    {
+      "id": "46",
+      "name": "jeevaa",
+      "email": "jeeva@gmail.com",
+      "age": "453"
+    },
+    {
+      "id": 30,
+      "name": "valli",
+      "email": "gangan3@gmail.com",
+      "age": 29
+    }
+  ],
+  "employee": [
+    {
+      "id": "1",
+      "emp_name": "hussainss",
+      "emp_email": "hussain@gmail.com",
+      "emp_degn": "pythondev"
+    }
+  ]
+}
