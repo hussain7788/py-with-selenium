@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import *
 from django.views.generic import TemplateView
 urlpatterns = [
@@ -18,7 +19,9 @@ urlpatterns = [
     path('user_reg', user_reg, name="user_reg"),
     path('user_login', user_login, name="user_login"),
     path('email_valid', email_valid, name="email_valid"),
-    path('user_profile', user_profile, name="user_profile")
+    path('user_profile', user_profile, name="user_profile"),
+    path('add_person_data/', add_person_data, name="add_person_data"),
+    path("delete_records/", delete_records, name="delete_records")
 
 
 

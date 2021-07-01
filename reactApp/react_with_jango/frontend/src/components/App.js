@@ -9,6 +9,10 @@ import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-rout
 import AddArticle from './Articles/AddArticle';
 import ViewArticle from './Articles/ViewArticle';
 import Home from './Articles/Home';
+import AddEmp from './JsonApi/AddEmp';
+import ViewEmp from './JsonApi/ViewEmp';
+import EmpMainDashboard from './JsonApi/EmpMainDashboard';
+
 
 
 export default class App extends Component {
@@ -22,19 +26,22 @@ export default class App extends Component {
         }
 
     }
+    sample(data){
+        console.log("parent data::",data)
+    }
     render() {
         return (
-            // <div className="container">
-            //    <MainDashboard/>
-            // </div>
              <Router>
+                    {/* <MainDashboard/> */}
+                    <EmpMainDashboard/>
                 <switch>
-                    <MainDashboard/>
                     <Route exact path='/'> 
                             <Home/>
                     </Route>
-                    <Route path='/add' component={AddArticle}/>
-                    <Route path='/view' component={ViewArticle}/>
+                    {/* <Route path='/add' render={(props) => <AddArticle {...props} sample={this.sample} />} />
+                    <Route path='/view' component={ViewArticle}/> */}
+                    <Route path='/add_emp' render={(props) => <AddEmp {...props} data="Add Emp" />} />
+                    <Route path="/view_emp"  render={(props) => <ViewEmp {...props} data="View Emp" />} />
 
                 </switch>
             </Router>

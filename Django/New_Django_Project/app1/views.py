@@ -10,7 +10,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
 
-from .forms import UserLoginForm
+from .forms import UserLoginForm, PersonForm
 from django.core.mail import send_mail
 from New_Django_Project import settings as se
 import random
@@ -88,8 +88,9 @@ class delete_emp(DeleteView):
     model = Employee
     success_url = "/view_emp/"
 
-###############################
+#############################################################
 
+###### user authentication 
 def user_reg(request):
     if request.method == "POST":
         f_name = request.POST['f1']
@@ -140,6 +141,8 @@ def email_valid(request):
 def user_login(request):
     if request.method == "POST":
         f1 = AuthenticationForm(request=request, data=request.POST)
+    # if we have photo files we can use
+        # f2 = AuthenticationForm(request.POST, request.FILES)
         if f1.is_valid():
             un = f1.cleaned_data['username']
             ps = f1.cleaned_data['password']
@@ -225,8 +228,6 @@ def session(request):
     request.session.flush()
 
 
-#########################################################################
-
 def cookie(request):
 ### set cookie 
     response = HttpResponse("cookie set")
@@ -239,7 +240,30 @@ def cookie(request):
     response = HttpResponse("deleted cookie") 
     response.delete_cookie("emp_name")
 
-### set expiry time of cookie
+############################################################################
+
+##using model forms
+
+def add_person_data(request):
+    if request.method == "POST":
+        fm = PersonForm(request.POST)
+        if fm.is_valid():
+            fm.save()
+            messages.success(request, "Added Person Successfully")
+            return redirect("add_person_data")
+    else:
+        fm = PersonForm()
+    return render(request, "add_person_data.html", {"form":fm})
+
+def delete_records(request):
+    fm = Person.objects.get(id=9)
+    fm1 = Person.objects.get(id=10)
+    
+    fm.delete()
+    fm1.delete()
+
+    print("record is deleted")
+    return redirect("add_person_data")
 
 
 

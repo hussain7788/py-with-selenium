@@ -1,0 +1,89 @@
+{
+    "type": "page_object",
+    "class_name": "PG_ClientAddTodo",
+    "config": [
+        {
+            "func_name": "client_add_todo",
+            "params": [
+                "client_todo_obj->Client_Todo_Task::List"
+            ],
+            "return_type": "bool",
+            "actions": [
+
+                  {
+                    "keyword": "click",
+                    "locator_id": "client_main_dashboard"
+                  },
+                  {
+                      "repeat": {
+                      "object": "client_todo_obj",
+                      "steps": [
+                            {
+                              "keyword": "wait_until_invisible",
+                              "locator_id": "todo_modal_id"
+                            },
+                            {
+                            "keyword": "click",
+                            "locator_id": "add_todo_btn"
+                            },
+
+                            {
+                            "keyword": "input_text",
+                            "locator_id": "todo_due_date",
+                            "params": [
+                                "client_todo_obj.todo_due_date::var"
+                              ]
+                            },
+
+                            {
+                            "keyword": "input_text",
+                            "locator_id": "todo_task",
+                            "params": [
+                                "client_todo_obj.todo_task::var"
+                              ]
+                            },
+                            {
+                            "keyword": "click",
+                            "locator_id": "save_todo_btn"
+                            }
+                      ]
+                    }
+                  }
+
+            ]
+            },
+            {
+                "func_name": "complete_client_todo_task",
+                "params": [
+                    "client_todo_obj->Client_Todo_Task::List"
+                ],
+                "return_type": "bool",
+                "actions": [
+
+                      {
+                        "keyword": "click",
+                        "locator_id": "client_main_dashboard"
+                      },
+                      {
+                          "repeat": {
+                          "object": "client_todo_obj",
+                          "steps": [
+                                {
+                                  "keyword": "sleep",
+                                  "params": ["1::int"]
+                                },
+
+                                {
+                                "keyword": "click",
+                                "locator_id": "complete_client_todo_task",
+                                "locator_params": ["index+1::var"]
+                                }
+
+                          ]
+                        }
+                      }
+
+                ]
+            }
+    ]
+}

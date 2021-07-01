@@ -11,6 +11,11 @@ urlpatterns = [
     path('', include(router.urls)),
 
     #### this path for APIView
-    path('api_article', ArticleApiView.as_view()),
+    # for all records
+    path('api_article/', ArticleApiView.as_view()),
+    ## for one record
+    path('api_article/<int:pk>/', ArticleApiView.as_view()),
+
+
 
 ]
