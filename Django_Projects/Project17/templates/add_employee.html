@@ -1,0 +1,40 @@
+
+{% extends 'common.html' %}
+
+{% block naveen %}
+        <style>
+            td
+            {
+                padding: 10px;
+            }
+            #r_th{
+                font-family: "Agency FB";
+                font-size: 20px;
+                background-color: yellow;
+                color: red;
+            }
+        </style>
+
+    <form action="{% url 'save_emp' %}" method="post">
+
+    {% csrf_token %}
+        <table align="center" border="0">
+            <tr class="r_row"><th id="r_th">Employee Registration</th></tr>
+            <tr class="r_row">
+                <td><input type="number" placeholder="IDNO" required name="t1" min="101"></td>
+            </tr>
+            <tr class="r_row">
+                <td><input type="text" placeholder="NAME" required name="t2"></td>
+            </tr>
+            <tr class="r_row">
+                <td>
+                    <input type="number" placeholder="SALARY" required name="t3">
+                </td>
+            </tr>
+            <tr class="r_row">
+                <th><button type="submit">Save</button> </th>
+            </tr>
+        </table>
+    </form>
+
+{% endblock %}

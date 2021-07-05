@@ -1,0 +1,33 @@
+{% load static %}
+<style>
+
+    .mm
+    {
+        text-align: center;
+        font-family: 'Agency FB';
+        font-size: 30px;
+        width: 150px;
+        color: maroon;
+        background-color: wheat;
+
+    }
+
+    a:link { color:wheat;text-decoration: none; }
+    a:visited { color:maroon; }
+    {#a:hover { color:maroon; background-color:wheat;}#}
+
+</style>
+<table align="center" border="0" style="padding-top: 10px">
+    <tr>
+        <th class="mm"> <a href="{% url 'main' %}">Home</a> </th>
+        <th class="mm"> <a href="{% url 'admin_login' %}">Admin</a> </th>
+        <th class="mm"> <a href="#">Register</a> </th>
+        <th class="mm"> <a href="#">Login</a> </th>
+        <th class="mm" style="width: 200px">
+            <img  src="{% static 'images/commerce-and-shopping.png' %}">
+            Cart Items : 0
+        </th>
+    </tr>
+</table>
+
+

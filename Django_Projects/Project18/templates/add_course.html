@@ -1,0 +1,47 @@
+
+
+<html>
+    <body>
+    <form action="{% url 'save_course' %}" method="post">
+        {% csrf_token %}
+        <table align="center" border="2">
+            <tr><th>Add New Course</th></tr>
+
+            <tr><th>
+                <input type="text" placeholder="Course Name" required name="c1">
+                {% if error %}
+                    <h4 style="color: red">{{ error }}</h4>
+                {% endif %}
+            </th></tr>
+
+            <tr><th><input type="number" placeholder="Course Fee" required name="c2" min="1000"></th></tr>
+            <tr><th><button type="submit">Save</button></th></tr>
+        </table>
+    </form>
+
+
+
+    <table align="center" border="2">
+        <tr bgcolor="#ff4500">
+            <th style="text-align: center;font-family: 'Agency FB';font-size: 40px;padding: 10px">
+                Course Id
+            </th>
+            <th style="text-align: center;font-family: 'Agency FB';font-size: 40px;padding: 10px">
+                Course Name
+            </th>
+            <th style="text-align: center;font-family: 'Agency FB';font-size: 40px;padding: 10px">
+                Course Fee
+            </th>
+        </tr>
+
+        {% for x in data %}
+            <tr>
+                <th>{{ x.course_id }}</th>
+                <th>{{ x.course_name }}</th>
+                <th>{{ x.course_fee }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+
+    </body>
+</html>

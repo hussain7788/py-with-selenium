@@ -1,0 +1,45 @@
+{% extends 'common.html' %}
+
+{% block naveen %}
+    {% load static %}
+
+    <table class="table table-dark">
+        <tr>
+            <th colspan="2" style="text-align: center">Delete Employee Details</th>
+        </tr>
+        <tr>
+            <th>Employee IDNO </th>
+            <th>{{ object.idno }}</th>
+        </tr>
+        <tr>
+            <th>Employee NAME </th>
+            <th>{{ object.name }}</th>
+        </tr>
+
+        <tr>
+            <th>Employee SALARY </th>
+            <th>{{ object.salary }}</th>
+        </tr>
+
+        <tr>
+            <th>Employee PHOTO </th>
+            <th><img src="{{ object.photo.url }}" width="150" height="150"></th>
+        </tr>
+
+        <tr>
+            <th>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit">Yes</button>
+                </form>
+            </th>
+
+
+            <th>
+                 <form action="{% url 'view_all' %}">
+                    <button type="submit">No</button>
+                </form>
+            </th>
+        </tr>
+    </table>
+{% endblock %}

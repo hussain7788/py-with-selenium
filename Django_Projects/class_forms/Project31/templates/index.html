@@ -1,0 +1,14 @@
+
+<body bgcolor="yellow">
+<form action="{% url 'check' %}">
+    <input type="password" placeholder="Password" name="t1">
+    <button type="submit">Get Button</button>
+</form>
+
+
+<form action="{% url 'check' %}" method="post">
+    {% csrf_token %}
+    <input type="password" placeholder="Password" name="t2">
+    <button type="submit">Post Button</button>
+</form>
+</body>

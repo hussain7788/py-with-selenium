@@ -1,0 +1,59 @@
+
+{% extends 'common.html' %}
+
+{% block naveen %}
+
+    {% include 'main-menu.html' %}
+
+    <style>
+        #admin_title
+        {
+            background-color: wheat ;
+            color: maroon;
+            padding: 15px;
+            font-size: 30px;
+            font-family: "Agency FB";
+            width: 300px;
+        }
+        .admin_error
+        {
+            padding: 10px;
+            background-color: yellow;
+            color: orangered;
+            font-family: "Arial Black";
+            font-size: 20px;
+        }
+    .admin_field
+    {
+        padding: 10px;
+    }
+    </style>
+    <form action="{% url 'admin_login_check' %}" method="post">
+    {% csrf_token %}
+    <table align="center" border="0">
+        <tr>
+            <th id="admin_title">Admin Login Page</th>
+        </tr>
+        <tr><th class="admin_field"><input type="text" placeholder="Username" required name="t1"></th></tr>
+        <tr><th class="admin_field"><input type="password" placeholder="Password" required name="t2"></th></tr>
+        <tr><th class="admin_field"><button type="submit">Login</button> </th></tr>
+
+
+        {% if messages %}
+
+
+            <tr>
+                <th class="admin_error">
+                    {% for x in messages %}
+                        {{ x }}
+                    {% endfor %}
+                </th>
+            </tr>
+
+        {% endif %}
+
+
+    </table>
+    </form>
+
+{% endblock %}

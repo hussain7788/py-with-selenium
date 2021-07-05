@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0f24e33c-c9db-40ab-8171-2cf8b471a586" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/.idea/Product.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/.idea/dataSources/78a3d556-2489-41f9-9604-0b2f63762649.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/.idea/dataSources/78a3d556-2489-41f9-9604-0b2f63762649/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/Product/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/Product/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/Product/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/Product/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/Product/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/Dummy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/migrations/0002_usermodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/static/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/static/images/Market-PNG-Free-Download.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/static/images/commerce-and-shopping.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/app/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/media/product_images/canon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/media/product_images/kids.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/media/product_images/mi-redmi-8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/media/product_images/mymax-m41.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/media/product_images/nikon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/media/product_images/oppo-a7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/media/product_images/oppo-f11-pro.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/naveenmart.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/admin_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/admin_login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/admin_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/admin_view_products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/admin_view_users.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/common.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/in_cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies and cart_/Product/templates/main-menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/.idea/Project25.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/Project25/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/Project25/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/Project25/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/Project25/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/Project25/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/app25/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/app25/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/app25/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/app25/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/app25/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/app25/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/app25/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16.cookies/Project25/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/.idea/Project27.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/Project27/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/Project27/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/Project27/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/Project27/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/Project27/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/app27/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/app27/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/app27/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/app27/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/app27/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/app27/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/app27/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/app27/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../19.reg_forms/Project27/templates/success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/.idea/Project29.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/.idea/dataSources/65b10292-062d-450d-83bb-aaabbbc7e2cf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/.idea/dataSources/65b10292-062d-450d-83bb-aaabbbc7e2cf/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/Project29/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/Project29/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/Project29/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/Project29/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/Project29/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/migrations/0002_auto_20200522_1159.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/app29/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/employee_photo/admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/employee_photo/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22.modelform (Unzipped Files)/Project29/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/.idea/Project30.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/Project30/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/Project30/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/Project30/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/Project30/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/Project30/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/app30/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/app30/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/app30/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/app30/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/app30/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/app30/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/app30/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project30/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/.idea/Project31.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/Project31/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/Project31/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/Project31/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/Project31/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/Project31/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/app31/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/app31/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/app31/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/app31/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/app31/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/app31/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/app31/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project31/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/.idea/Project32.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/Project32/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/Project32/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/Project32/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/Project32/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/Project32/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/app32/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/app32/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/app32/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/app32/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/app32/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/app32/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/app32/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../26.class forms (Unzipped Files)/Project32/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/.idea/Project33.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/.idea/dataSources/9f5467b2-f9eb-4c6f-a90e-f33190ff9756.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/.idea/dataSources/9f5467b2-f9eb-4c6f-a90e-f33190ff9756/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/Project33/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/Project33/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/Project33/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/Project33/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/Project33/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/migrations/0002_usermodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/static/images/employee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/app33/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/media/employee_images/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/media/employee_images/four.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/media/employee_images/kumar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/media/employee_images/mohan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/media/employee_images/ravi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/media/employee_images/venom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/add_new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/common.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/view_all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../29.class_views_project/Project33/templates/view_complete_emp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-E-folder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagination_project/Product/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pagination_project/Product/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagination_project/Product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pagination_project/Product/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JupyterTrust" id="0a830260-8af1-49be-9afd-005c4a09f6b2" />
+  <component name="ProjectId" id="1oN5hq1VF5SwacViZwlqt5xuuEj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="React_Project" type="Python.DjangoServer" factoryName="Django server">
+      <module name="React_Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f24e33c-c9db-40ab-8171-2cf8b471a586" name="Default Changelist" comment="" />
+      <created>1613114329764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613114329764</updated>
+      <workItem from="1613114335339" duration="4197000" />
+      <workItem from="1613137532227" duration="121000" />
+      <workItem from="1613626891674" duration="114000" />
+      <workItem from="1614258959683" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

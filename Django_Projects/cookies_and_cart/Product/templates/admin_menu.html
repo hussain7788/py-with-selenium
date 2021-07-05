@@ -1,0 +1,27 @@
+
+<style>
+
+    .mm
+    {
+        text-align: center;
+        font-family: 'Agency FB';
+        font-size: 30px;
+        width: 150px;
+        color: wheat;
+    }
+
+    a:link { color:wheat; background-color:maroon;text-decoration: none; }
+    a:visited { color:wheat; background-color:maroon; }
+    a:hover { color:maroon; background-color:wheat;}
+
+</style>
+<table align="center" border="2">
+    <tr>
+        <th class="mm"> <a href="{% url 'admin_home' %}">Home</a> </th>
+        <th class="mm"> <a href="{% url 'admin_view_users' %}">Users</a> </th>
+        <th class="mm"> <a href="{% url 'admin_view_products' %}">Product</a> </th>
+        <th class="mm"> <a href="{% url 'main' %}">Logout</a> </th>
+    </tr>
+</table>
+
+
