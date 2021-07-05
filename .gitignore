@@ -6,3 +6,5 @@ chrome driver/
 static/frontend/
 .vscode/
 Git/
+db.sqlite3
+$RECYCLE.BIN/

@@ -1,15 +1,15 @@
-class Employee{
-    companyName:string = "tcs";
-    companyAddress :string = "hyd";
+class Employee {
+    companyName: string = "tcs";
+    companyAddress: string = "hyd";
 
-    constructor(empName:String, empAge:Number){
+    constructor(empName: String, empAge: Number) {
         let empname = empName
         let empage = empAge
-        console.log(empage,empname);
+        console.log(empage, empname);
 
     }
-        
-    greet(){
+
+    greet() {
         console.log(`my company name is ${this.companyName} and my address is ${this.companyAddress}`)
     }
 }
@@ -19,16 +19,17 @@ class Employee{
 // console.log(d1.companyName);
 // d1.greet()
 
-class Manager extends Employee{
-    constructor(managerName:string, managerAge:number){
+class Manager extends Employee {
+    constructor(managerName: string, managerAge: number) {
         super(managerName, managerAge);
     }
-    delegate(){
+    delegate() {
         console.log("worked")
     }
 }
 let m1 = new Manager("kanna", 23)
 m1.greet();
+m1.delegate()
 
 
 

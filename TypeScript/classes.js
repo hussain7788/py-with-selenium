@@ -42,3 +42,4 @@ var Manager = /** @class */ (function (_super) {
 }(Employee));
 var m1 = new Manager("kanna", 23);
 m1.greet();
+m1.delegate();
