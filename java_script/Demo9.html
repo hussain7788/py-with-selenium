@@ -1,0 +1,24 @@
+
+<html>
+    <body>
+
+        <input type="text" placeholder="Name" id="t1">
+        <br><br>
+        <button type="submit" onClick="show(); see()">Submit</button>
+
+
+        <script>
+            function show()
+            {
+                var name = document.getElementById("t1").value;
+                console.log("name is", name);
+            }
+            function see()
+            {
+                var age = document.getElementById("t1").value;
+                console.log("age is", age);
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+
+
+<html>
+    <head>
+        <script>
+            var x = true;
+            function showlogin()
+            {
+               var login_text = '<table border="2"> <tr><th>Login Page</th></tr> <tr><th><input type="text" placeholder="Username" required></th></tr> <tr><th><input type="password" placeholder="Password" required></th></tr> <tr><th><button type="submit" onclick="validate()">Login</button> </th></tr> </table>';
+
+                if(x)
+                {
+
+                    document.getElementById("d1").innerHTML = login_text;
+                    x = false;
+                    console.log(x)
+                }
+                else {
+                    document.getElementById("d1").innerHTML = "..";
+                    x = true;
+                }
+            }
+
+            function validate()
+            {
+                alert("ok")
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <h3>Click on Image to Login</h3>
+        <img src="images/login.png" width="100" height="100" onclick="showlogin()"><br><br>
+        <div id="d1">...</div>
+
+    </body>
+</html>

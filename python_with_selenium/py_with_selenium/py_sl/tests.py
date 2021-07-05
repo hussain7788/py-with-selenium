@@ -1,0 +1,1 @@
+from py_sl.manual_test.test_case.tc_test_page import *

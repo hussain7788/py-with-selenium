@@ -1,0 +1,62 @@
+
+
+<html>
+    <head>
+        <script>
+            function check_password()
+            {
+                var p = document.getElementById("p1");
+
+                p = p.value.trim();
+                var x = p.length;
+                if(x<8)
+                {
+                    document.getElementById("s1").innerText = "Poor";
+                    document.getElementById("s2").innerText = "";
+                    document.getElementById("s3").innerText = "";
+                }
+                else
+                {
+                    if(x==8)
+                    {
+                        document.getElementById("s2").innerText = "Good";
+                        document.getElementById("s1").innerText = "";
+                        document.getElementById("s3").innerText = "";
+
+                    }
+                    else
+                    {
+                        document.getElementById("s3").innerText = "Strong";
+                        document.getElementById("s1").innerText = "";
+                        document.getElementById("s2").innerText = "";
+                    }
+                }
+            }
+
+            function show_password()
+            {
+                var y = document.getElementById("p1");
+                if(y.type == "password")
+                {
+                    y.type = "text"
+                }
+                else
+                {
+                    y.type = "password"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="password" placeholder="Password" id="p1" onkeyup="check_password()">
+
+        <font color="red"><b><span id="s1">.</span></b></font>
+
+        <font color="blue"><b><span id="s2">.</span></b></font>
+
+        <font color="green"><b><span id="s3">.</span></b></font>
+
+        <input type="checkbox" onclick="show_password()"> Show Password
+
+    </body>
+</html>
