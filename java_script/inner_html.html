@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inner Html Example</title>
+	<script type="text/javascript">
+		var x=true
+		function htmlPage(){
+			var html = '<table border="2"> <tr> <td> username</td> <td> <input type="text" required></input> </td> </tr> <tr> <td> password</td> <td> <input type="password" required></input> </td> </tr> <tr> <td> <button type="submit" onclick="validate()">Login</button> </td> </tr> </table>'
+			if(x){
+				document.getElementById('d1').innerHTML = html
+				x = false;
+			}
+			else{
+				document.getElementById('d1').innerText = "Page will load here"
+				x = true;
+
+			}
+
+		}
+		function validate(){
+			alert("Login Successfully")
+		}
+	</script>
+
+</head>
+<body>
+
+	<h3> Click Image To Login </h3>
+	<img src="Images/login.png" onclick="htmlPage()"><br><br>
+	<div id="d1"></div>
+
+</body>
+</html>
