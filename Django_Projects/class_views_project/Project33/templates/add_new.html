@@ -1,0 +1,21 @@
+
+{% extends 'common.html' %}
+
+{% block naveen %}
+    {% load static %}
+
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+   <table class="table table-dark">
+        <tr><th colspan="2">Employee Registration</th></tr>
+        {{ form }}
+        <tr>
+            <th colspan="2">
+                <button type="submit">Save</button>
+            </th>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

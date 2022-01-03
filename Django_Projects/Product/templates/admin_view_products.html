@@ -1,0 +1,77 @@
+
+
+{% extends 'common.html' %}
+
+{% block naveen %}
+    {% include 'admin_menu.html' %}
+    <style>
+     .product_info
+     {
+         padding: 10px;
+         color: wheat;
+     }
+    #product_title
+    {
+        padding: 15px;
+        font-size: 30px;
+        font-family: "Agency FB";
+        color: maroon;
+        background-color: wheat;
+    }
+    .product__info_title
+    {
+       padding: 10px;
+        width: 100px;
+        background-color: wheat;
+        color: maroon;
+        font-family: "Arial Black";
+        font-size: 20px;
+    }
+    .product__info_details
+    {
+        color: wheat;
+        font-family: "Agency FB";
+    }
+    #product_img {
+
+    }
+    </style>
+
+
+    <form action="{% url 'save_product' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center" border="0">
+        <tr><th id="product_title">Add Product</th></tr>
+        <tr><th class="product_info"><input type="text" placeholder="Name" required name="p1"></th></tr>
+        <tr><th class="product_info"><input type="number" placeholder="Price" required name="p2" min="1"></th></tr>
+        <tr><th class="product_info"><input type="number" placeholder="Quantity" required name="p3" min="1"></th></tr>
+        <tr><th class="product_info">Photo : <input type="file" name="p4" required></th></tr>
+        <tr><th class="product_info"><button type="submit">Save</button> </th></tr>
+    </table>
+    </form>
+
+    <table align="center" border="2">
+    <tr>
+        <th class="product__info_title">No</th>
+        <th class="product__info_title">Name</th>
+        <th class="product__info_title">Price</th>
+        <th class="product__info_title">Quantity</th>
+        <th class="product__info_title">Image</th>
+        <th class="product__info_title">Status</th>
+    </tr>
+
+    {% for x in data %}
+         <tr>
+            <th class="product__info_details">{{ x.no }}</th>
+            <th class="product__info_details">{{ x.name }}</th>
+            <th class="product__info_details">{{ x.price }}</th>
+            <th class="product__info_details">{{ x.quantity }}</th>
+            <th class="product__info_details" id="product_img">
+                <img src="{{ x.photo.url }}" width="80" height="80">
+            </th>
+            <th class="product__info_details">{{ x.status }}</th>
+    </tr>
+    {% endfor %}
+
+    </table>
+{% endblock %}

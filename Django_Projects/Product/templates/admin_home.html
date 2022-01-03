@@ -1,0 +1,25 @@
+
+{% extends 'common.html' %}
+
+{% block  naveen%}
+    {% load static %}
+    {% include 'admin_menu.html' %}
+    <style>
+    .admin_info
+    {
+        font-family: "Agency FB";
+        font-size: 20px;
+        color: wheat;
+        width: 350px;
+    }
+    </style>
+
+    <table align="center" border="0">
+    <tr><th rowspan="5"><img src="{% static 'images/1.jpg' %}"></th></tr>
+    <tr><th class="admin_info"> Name : N Naveen Kumar</th></tr>
+    <tr><th class="admin_info"> Contact No : 9052492329</th></tr>
+    <tr><th class="admin_info"> Email Id : pythonwithnaveen@gmail.com</th></tr>
+    <tr><th class="admin_info"> Address : Hyderabad</th></tr>
+
+    </table>
+{% endblock %}

@@ -1,0 +1,64 @@
+
+{% extends 'common.html' %}
+
+{% block naveen %}
+    {% load static %}
+
+       <table class="table table-dark">
+        <tr>
+            <th colspan="4" style="text-align: center">All Employee Details</th>
+        </tr>
+        <tr style="background-color: red">
+            <th>IDNO</th>
+            <th>NAME</th>
+{#            <th>SALARY</th>#}
+{#            <th>PHOTO</th>#}
+            <th>View Complete Details </th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        {% for x in object_list %}
+             <tr>
+                    <th>{{ x.idno }}</th>
+                    <th>{{ x.name }}</th>
+{#                    <th>{{ x.salary }}</th>#}
+{#                    <th>#}
+{#                        <img src="{{ x.photo.url }}" width="100" height="100">#}
+{#                    </th>#}
+
+                 <th>
+                      <a href="{% url 'view_complete_emp' x.idno %}">
+                        Yes
+                    </a>
+                 </th>
+
+                <th>
+                    <a href="{% url 'update_emp' x.idno %}">
+                        Yes
+                    </a>
+                </th>
+
+
+                <th>
+                    <a href="{% url 'delete_emp' x.idno %}">
+                        Yes
+                    </a>
+                </th>
+
+
+        </tr>
+        {% endfor %}
+       </table>
+
+        {% if page_obj.has_previous %}
+             <h3 style="text-align: center;color: white"> Previous</h3>
+        {% endif %}
+
+       {% if page_obj.has_next %}
+           <a href="{% url 'view_all' %}">
+           <h3 style="text-align: center;color: white"> Next</h3>
+           </a>
+       {% endif %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+
+<html>
+    <body>
+    <form action="{% url 'register_employee' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+    </body>
+</html>

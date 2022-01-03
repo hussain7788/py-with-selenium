@@ -1,0 +1,55 @@
+{% load static %}
+<html>
+    <head>
+        <title>Naveen MART</title>
+        <style>
+            body{
+                background-color: maroon;
+            }
+            #title
+            {
+                font-family: "Agency FB";
+                font-size: 60px;
+                padding: 10px;
+                color: wheat;
+                 text-align: center;
+            }
+            #icon
+            {
+                width: 100px;
+                height: 100px;
+
+            }
+            #copyright
+            {
+                background-color: wheat;
+                color: maroon;
+                font-family: Arial;
+                font-size: 15px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table align="center" border="0">
+            <tr>
+                <th>
+                    <img id = "icon" src="{% static 'images/Market-PNG-Free-Download.png' %}">
+                </th>
+                <th id="title">
+                    Python With Naveen Mart</th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    {% block naveen %}
+                    {% endblock %}
+                </th>
+            </tr>
+            <tr style="padding-top: 50px">
+                <th colspan="2" id="copyright">
+                    Copyright @ Pyhon with Naeen
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>

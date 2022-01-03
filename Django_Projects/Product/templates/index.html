@@ -1,0 +1,62 @@
+
+{% extends 'common.html' %}
+
+{% block naveen %}
+    {% include 'main-menu.html' %}
+    <style>
+    .p_info
+    {
+        text-align: right;
+
+        background-color: wheat;
+        color: maroon;
+        font-family: "Agency FB";
+        font-size: 20px;
+
+    }
+    .p_data
+    {
+
+        text-align: left;
+        color: wheat;
+        font-family: "Agency FB";
+        font-size: 20px;
+
+    }
+    .img-circle {
+    border-radius: 50%;
+}
+
+    </style>
+
+ <table border="0" align="center" >
+     <tr>
+{% for x in data %}
+   <td style="width: 350px;padding: 15px">
+    <table align="center" border="0" style="border-color: wheat">
+        <tr><th rowspan="5">
+            <img src="{{ x.photo.url }}" width="150" height="150" class="img-circle">
+        </th></tr>
+
+        <tr><th class="p_info">Name</th> <th class="p_data">{{ x.name }}</th></tr>
+        <tr><th class="p_info">Price</th> <th class="p_data">{{ x.price }}</th></tr>
+        <tr><th class="p_info">Quantity</th> <th class="p_data">{{ x.quantity }}</th></tr>
+        <tr>
+            <th colspan="3">
+                <button type="submit" style="font-family: 'Agency FB';font-size: 25px;color: wheat;background-color: maroon;padding: 5px">
+                    Add to Cart</button>
+            </th>
+        </tr>
+        </table>
+   </td>
+   {% if forloop.last %}
+     </tr>
+   {% else %}
+     {% if forloop.counter|divisibleby:"2" %}
+       </tr><tr>
+     {% endif %}
+   {% endif %}
+{% endfor %}
+</table>
+
+{% endblock %}

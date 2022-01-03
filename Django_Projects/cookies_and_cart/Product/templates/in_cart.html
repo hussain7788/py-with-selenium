@@ -1,0 +1,41 @@
+
+{% extends 'common.html' %}
+
+{% block naveen %}
+        <style>
+            .product__info_title
+    {
+       padding: 10px;
+        width: 100px;
+        background-color: wheat;
+        color: maroon;
+        font-family: "Arial Black";
+        font-size: 20px;
+                width: 200px;
+    }
+
+        .product__info_details
+    {
+        color: wheat;
+        font-family: "Agency FB";
+    }
+        </style>
+
+       <table align="center" border="2">
+        <tr>
+            <th class="product__info_title" >Product No</th>
+            <th class="product__info_title">Product Name</th>
+        </tr>
+
+        {% for k,v in data.items %}
+            {% if k != "csrftoken" %}
+       <tr>
+            <th class="product__info_details">{{ k }}</th>
+            <th class="product__info_details">{{ v }}</th>
+        </tr>
+            {% endif %}
+       {% endfor %}
+
+       </table>
+
+{% endblock %}

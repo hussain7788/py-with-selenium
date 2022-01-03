@@ -1,0 +1,52 @@
+
+
+<form action="{% url 'save_employee' %}" method="post">
+    {% csrf_token %}
+<table align="center" border="2">
+    <tr><th>Add Employee</th></tr>
+    <tr><th><input type="text" placeholder="name" required name="t1"></th></tr>
+    <tr><th><input type="number" placeholder="salary" required name="t2"></th></tr>
+    <tr><th><button type="submit">Save</button> </th></tr>
+</table>
+</form>
+
+<table align="center" border="2">
+    <tr><th>IDNO</th><th>NAME</th><th>SALARY</th></tr>
+
+    {% for x in data %}
+        <tr>
+            <th>{{ x.employee_idno }}</th>
+            <th>{{ x.employee_name }}</th>
+            <th>{{ x.employee_salary }}</th>
+
+        </tr>
+    {% endfor %}
+</table>
+
+<table align="center" border="2" style="padding-top: 25px">
+    <tr><th>Pay Salary's</th></tr>
+    <tr><th>Employee IDNO
+        <select onchange="display()" id="idno">
+            <option>Select</option>
+            {% for x in data %}
+                <option value='{"id_no":{{ x.employee_idno }},"sal":{{ x.employee_salary }}}'>{{ x.employee_idno }}</option>
+            {% endfor %}
+        </select>
+    </th></tr>
+    <tr><th>IDNO : <span id="s_idno"></span> </th></tr>
+    <tr><th>SALARY : <span id="s_salary"></span></th></tr>
+    <tr><th>Date <input type="date" name="t3" required></th></tr>
+<tr><th><button type="submit">Pay</button> </th></tr>
+</table>
+
+
+<script>
+    function display() {
+        var val = document.getElementById("idno").value;
+        var json_data = JSON.parse(val);
+
+        document.getElementById("s_idno").innerHTML ='<input type=text value='+json_data.id_no+' readonly name=t1>';
+        document.getElementById("s_salary").innerHTML ='<input type=text value='+json_data.sal+' readonly name=t2>';
+
+    }
+</script>

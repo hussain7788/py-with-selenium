@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/employee_style.css' %}">
+    </head>
+    <body>
+        <table align="center" border="2">
+            <tr>
+                <th colspan="3" id="title">
+                   Sathya Employees Information
+                </th>
+            </tr>
+
+
+            <tr>
+                <th class="menu">
+                    <a href="{% url 'main' %}">
+                        Home
+                    </a>
+                </th>
+
+                <th class="menu">
+                    <a href="{% url 'add_employee' %}">
+                        Add New Employee
+                    </a>
+                </th>
+                <th class="menu">
+                    <a href="{% url 'view_all' %}">
+                        View all Employee's
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    {% block naveen %}
+                    {% endblock %}
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3" id="copyright">
+                    Copyright @ Python with Naveen
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>

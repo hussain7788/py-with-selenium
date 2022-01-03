@@ -1,0 +1,5 @@
+[
+  "tests.py::Test_page::test_1_signin",
+  "tests.py::Test_page::test_2_nav_to_client_actions",
+  "tests.py::Test_page::test_3_driver_quit"
+]
