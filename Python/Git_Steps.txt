@@ -1,0 +1,33 @@
+1. create repo in git
+2. after u will have two branches in your repo
+	*main  *master
+
+3. initiate git in your local machine
+	* git init
+
+4. git clone in u r machine
+	* git clone "url_path"
+
+5. add user and email
+	* git config --global user.name "FIRST_NAME"
+	* git config --global user.email "email of u r account" (mandatory)
+
+6. add origin master
+	* git add origin master
+
+7. pull request
+	* git pull 
+
+8. add files and commit and push files
+	* git add
+	* git commit -m "message"
+	* git push -u origin master
+
+>>>>> when we create new branch we need to clone repo and git pull so u can get all data from that repo
+
+>>>>> delete branches 
+
+1. delete branch in git 
+	git branch -d "branch_name"
+2. delete branch in head as well 
+	git push origin --delete "branch_name"
