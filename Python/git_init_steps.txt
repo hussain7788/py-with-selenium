@@ -1,0 +1,20 @@
+------git initialization in local computer 
+steps:-
+
+1. git init
+2. git clone "--your repo url--"
+3. git remote add origin "--your repo url--"
+4. git config --global user.name "--your name--"
+5. git config --global user.email "--your registered mail--(mandatory to give only reg email)"
+6. git pull origin master
+7. git push origin master
+
+-----check origin is set or not------
+git remote -v
+
+---- revert back committed and pushed changes into main repo-----
+1. git revert "--commit id--(by typing git log)"
+2. this will open editor.. and "Ctrl+c" then type message then ":wq" and enter..
+3. now git push 
+4. this is remove last committed and pushed changes
+
