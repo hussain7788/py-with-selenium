@@ -18,3 +18,15 @@ git remote -v
 3. now git push 
 4. this is remove last committed and pushed changes
 
+
+----- if .gitignore does not work then do this-----
+1. git rm -r --cached .; (this is for all files)
+2. git add .;
+3. git commit -m "Untracked files issue resolved to fix .gitignore";
+
+--for a single file to clear cache---
+1 . git rm --cached <file>;
+
+----When you remove something from .gitignore file and the file does not appear to be tracked, you can add it manually as follows:----
+1. git add -f <file>;
+2. git commit -m "Re-Adding ignored file by force";
