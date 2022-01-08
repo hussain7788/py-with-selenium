@@ -1,0 +1,53 @@
+
+<table align="center" border="3" style="margin: 10px;">
+    <tr>
+        <th style="color: blue;"> Company details</th>
+    </tr>
+    {%for comp in company %}
+    <tr>
+        <td>{{comp.name}}</td>
+    </tr>
+        {%endfor%}
+</table>
+<table align="center" border="3" style="margin: 10;">
+<tr>
+    <th style="color: blue;"> Language details</th>
+</tr>
+{%for lang in language %}
+<tr>
+    <td>{{lang.name}}</td>
+</tr> 
+    {%endfor%}
+</table>
+
+<table align="center" border="3" style="margin:10">
+
+<tr>
+    <th colspan="7" style="color:blue"> Programmer details</th>
+</tr>
+<tr>
+    <th> name</th>
+    <th> age</th>
+    <th> company</th>
+    <th colspan="4"> language</th>
+
+
+</tr>
+{%for pro in programmer %}
+<tr>
+    <td>{{pro.name}}</td>
+    <td>{{pro.age}}</td>
+    <td>{{pro.company.name}}</td>
+    {%for lan in pro.language.all %}
+    <td>
+        {{lan.name}}
+    </td>
+    {%endfor%}
+   
+
+
+</tr>
+    {%endfor%}
+
+    
+</table>

@@ -1,0 +1,257 @@
+######### foreign key relationships
+###########################################################################
+class Language(models.Model):
+    name = models.charfield(max_length=20)
+
+class Framework(models.Model):
+    name = models.CharField(max=30)
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+
+## to access Framework language name from language
+    . Framework.objects.filter(language__name="python").values()
+
+## to access language Framework
+    . language.objects.filter(framework__name="django").values()
+
+#############################################################################
+
+
+class Movie(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self) -> str:
+        return self.name
+
+
+class Char(models.Model):
+    name = models.CharField(max_length=30)
+    movie = models.ManyToManyField(Movie)
+
+    def __str__(self) -> str:
+        return self.name
+####
+
+
+    from app1.models import *
+>>> m = Movie(name="avengers")   
+>>> m.save()
+>>> c = Char(name="captain")
+>>> c.save()
+>>> c.movie = m
+Traceback (most recent call last):     
+  File "<console>", line 1, in <module>
+  File "C:\PYTHON\lib\site-packages\django\db\models\fields\related_descriptors.py", line 545, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use movie.set() instead.
+>>> c.movie.add(m)       
+>>> c
+<Char: captain>
+>>> civil = Movie(name="civil")
+>>> thor = Movie(name="thor")
+>>> civil_char = Char(name="thor")
+>>> civil.save()
+>>> thor.save()
+>>> civil_char.save()
+>>> c.movie.add(civil)
+>>> c.movie.add(thor)
+>>> Char.objects.all().values()
+<QuerySet [{'id': 1, 'name': 'captain'}, {'id': 2, 'name': 'thor'}]>
+>>> Movie.objects.all().values()
+####################################################################################################################
+### 
+
+class Company(models.Model):
+    c_name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.c_name
+
+
+class Language(models.Model):
+    l_name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.l_name
+
+
+class Programmer(models.Model):
+    p_name = models.CharField(max_length=30)
+    age = models.IntegerField(null=True)
+    p_company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    p_language = models.ManyToManyField(Language)
+
+    def __str__(self):
+        return self.p_name
+
+
+## Language
+
+>>> Language.objects.filter(l_name__exact="py")
+<QuerySet [<Language: py>]>
+>>> Language.objects.filter(l_name__exact="Py") 
+<QuerySet []>
+>>> Language.objects.filter(l_name__iexact="Py")
+<QuerySet [<Language: py>]>
+>>> Language.objects.exclude(l_name__exact="py")  
+<QuerySet [<Language: java>, <Language: php>]>
+
+##  Programmer
+
+>>> Programmer.objects.filter(age__gt=20)
+<QuerySet [<Programmer: hussain>, <Programmer: valli>]>
+>>> Programmer.objects.filter(age__gt=25)
+<QuerySet []>
+>>> Programmer.objects.filter(age__gte=23)
+<QuerySet [<Programmer: hussain>, <Programmer: valli>]>
+
+>>> Programmer.objects.filter(age__lt=25)
+<QuerySet [<Programmer: valli>]>
+>>> Programmer.objects.filter(age__lte=25)
+<QuerySet [<Programmer: hussain>, <Programmer: valli>]>
+>>>
+>>> Programmer.objects.filter(p_name__contains="s")
+<QuerySet [<Programmer: hussain>]>
+>>> Programmer.objects.filter(p_name__contains="sl") 
+<QuerySet []>
+>>> Programmer.objects.filter(p_name__contains="l")  
+<QuerySet [<Programmer: valli>]>
+>>> Programmer.objects.filter(p_name__in=['hussain','valli'])
+<QuerySet [<Programmer: hussain>, <Programmer: valli>]>
+>>> Programmer.objects.exclude(p_name__in=['hussain','valli'])
+<QuerySet []>
+>>> Programmer.objects.exclude(p_name__in=['hussain'])         
+<QuerySet [<Programmer: valli>]>
+
+>>> Programmer.objects.exclude(p_name__startswith="v") 
+<QuerySet [<Programmer: hussain>]>
+>>> Programmer.objects.filter(p_name__startswith="v")  
+<QuerySet [<Programmer: valli>]>
+>>> Programmer.objects.filter(p_name__endswith="v")   
+<QuerySet []>
+>>> Programmer.objects.filter(p_name__endswith="li")
+<QuerySet [<Programmer: valli>]>
+>>> Programmer.objects.filter(p_name__iendswith="Li") 
+<QuerySet [<Programmer: valli>]>
+
+>>> Programmer.objects.all().count()
+2
+>>> Programmer.objects.filter(p_name__startswith="v").count()
+1
+>>> Programme r.objects.filter(p_name__endswith="li").count()  
+
+############################
+##### slicing and indexing 
+#### [:3] here its starts from 0 index and ends at 2 index ..so we will get 3 records
+#### [1:4] here its start from 1 index and ends at 3 index ..so we will get 3 records
+#### [2:] starts from 2 index and so on ..
+#######
+
+
+>>> Programmer.objects.all()
+<QuerySet [<Programmer: hussain>, <Programmer: valli>, <Programmer: hussain786>]>
+>>> Programmer.objects.all()[:2]
+<QuerySet [<Programmer: hussain>, <Programmer: valli>]>
+>>> Programmer.objects.all()[:1] 
+<QuerySet [<Programmer: hussain>]>
+>>> Programmer.objects.all()[:0] 
+<QuerySet []>
+>>> Programmer.objects.all()[:1] 
+<QuerySet [<Programmer: hussain>]>
+>>> Programmer.objects.all()[:3] 
+<QuerySet [<Programmer: hussain>, <Programmer: valli>, <Programmer: hussain786>]>
+>>> Programmer.objects.all()[:4] 
+<QuerySet [<Programmer: hussain>, <Programmer: valli>, <Programmer: hussain786>]>
+>>> Programmer.objects.all()[1:3] 
+<QuerySet [<Programmer: valli>, <Programmer: hussain786>]>
+>>> Programmer.objects.all()[1:]  
+<QuerySet [<Programmer: valli>, <Programmer: hussain786>]>
+>>> Programmer.objects.all()[:2] 
+<QuerySet [<Programmer: hussain>, <Programmer: valli>]>
+
+##### order_by
+
+>>> Company.objects.all().order_by("c_name")
+<QuerySet [<Company: amazon>, <Company: fb>, <Company: google>]>
+>>> Company.objects.all().order_by("-c_name")
+<QuerySet [<Company: google>, <Company: fb>, <Company: amazon>]>
+>>> Programmer.objects.all().order_by("age")
+<QuerySet [<Programmer: valli>, <Programmer: hussain786>, <Programmer: hussain>]>
+>>> Programmer.objects.all().values()
+<QuerySet [{'id': 8, 'p_name': 'hussain', 'age': 25, 'p_company_id': 7}, {'id': 9, 'p_name': 'valli', 'age': 23, 'p_company_id': 8}, {'id': 10, 'p_name': 'hussain786', 'age': 24, 'p_company_id': 9}]>
+>>> Programmer.objects.all().order_by("p_company")
+<QuerySet [<Programmer: hussain>, <Programmer: valli>, <Programmer: hussain786>]>
+>>> Programmer.objects.all().order_by("-p_company")
+<QuerySet [<Programmer: hussain786>, <Programmer: valli>, <Programmer: hussain>]>
+
+###### access many to many fields from Programmer to check languages
+
+
+>>> Programmer.objects.all()                        
+<QuerySet [<Programmer: hussain>, <Programmer: valli>, <Programmer: hussain786>]>
+>>> p=Programmer.objects.all()
+>>> p=Programmer.objects.get(p_name="hussain")
+>>> p
+<Programmer: hussain>
+>>> p.p_company
+<Company: google>
+>>> p.p_language
+<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x000002F059494610>
+>>> p.p_language.all()
+<QuerySet [<Language: py>]>
+>>> p.p_language.all()[0]
+<Language: py>
+>>> p.p_language.all()[0].l_name
+'py'
+>>>
+
+
+
+###### accessing data from Language .which programmer know which language
+
+>>> l1 = Language.objects.filter(l_name="py").get()
+>>> l1
+<Language: py>
+>>> l1.programmer_set
+<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x000002F0594D1520>
+>>> l1.programmer_set.all()
+<QuerySet [<Programmer: hussain>]>
+>>> l1.programmer_set.all()[0]
+<Programmer: hussain>
+>>> l1.programmer_set.all()[0].p_name
+'hussain'
+>>> l1.programmer_set.all()[0].age
+25
+>>> l1.programmer_set.all()[0].p_company
+<Company: google>
+>>> l1.programmer_set.all()[0].p_company.c_name
+'google'
+>>>
+
+
+###### accessing data from Company ...which programmer working in which company
+
+
+>>> c = Company.objects.filter(c_name="google").get()
+>>> c
+<Company: google>
+>>> c.programmer_set.all()
+<QuerySet [<Programmer: hussain>]>
+>>> c.programmer_set.all()[0]
+<Programmer: hussain>
+>>> c.programmer_set.all()[0].p_name
+'hussain'
+>>> c.programmer_set.all()[0].age
+25
+>>> c.programmer_set.all()[0].p_company
+<Company: google>
+>>> c.programmer_set.all()[0].p_company.c_name
+'google'
+>>>
+
+#########
+## To use AND OR operators
+	from django.db.models import Q
+ #OR operator to query model
+    programme = programme.filter(Q(age__gte=20) | Q(age__lte=24))
+  # AND operator to query model
+    programme = programme.filter(Q(age__gte=20) & Q(age__lte=24))
