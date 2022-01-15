@@ -1,0 +1,41 @@
+{
+  "state": [
+    {
+      "id": 1,
+      "stateid": 86876,
+      "statename": "andhra"
+    },
+    {
+      "id": 2,
+      "stateid": 898098,
+      "statename": "telangana"
+    }
+  ],
+  "city": [
+    {
+      "id": 1,
+      "cityname": "kadapa",
+      "state": "andhra"
+    }
+  ],
+  "travel": [
+    {
+      "id": 101,
+      "sno": 100230,
+      "from": "hyderabad",
+      "to": "kadapa",
+      "deptime": "8pm",
+      "arrtime": "6am",
+      "fare": 400
+    },
+    {
+      "id": "102",
+      "sno": "8787",
+      "from": "kadapa",
+      "to": "hyd",
+      "deptime": "8pm",
+      "arrtime": "6am",
+      "fare": "600"
+    }
+  ]
+}

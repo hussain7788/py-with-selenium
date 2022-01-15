@@ -1,0 +1,46 @@
+<form>
+<ul>
+        <h2 style="color: green; font-size: 30;"> Add Employee </h2>
+    <li>
+        Id:<input type="number" [(ngModel)]="id" name="id" required>
+      </li>
+    <li>
+      Name:<input type="text" [(ngModel)]="name" name="name" required>
+    </li>
+    <li>
+      Designation: <input type="text" [(ngModel)]="designation" name="designation" required>  
+    </li>
+    <li>
+      Salary : <input type="number" [(ngModel)]="salary" name="salary" required> 
+    </li>
+    <li>
+      <button type="submit" (click)="save_emp()" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-danger">Reset</button>
+
+    </li>
+  
+    <small style="color: blue;font-size: 20;">{{result}}</small>
+  </ul>
+</form>
+
+<table border="3" style="padding: 20px;">
+    <tr>
+        <th style="color: blue; font-size: 30;" colspan="4"> Employee Details</th>
+    </tr>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+        <th>Delete Employee</th>
+
+    </tr>
+    <tr *ngFor = "let emp of emp_list">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.degn}}</td>
+        <td>{{emp.salary}}</td>
+        <td><button type="submit" (click)="delete_emp(emp.id)">Delete</button></td>
+
+    </tr>
+</table>

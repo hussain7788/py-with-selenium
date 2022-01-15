@@ -1,0 +1,28 @@
+{
+  "emp": [
+    {
+      "id": 1,
+      "name": "hussain",
+      "degn": "dev",
+      "salary": 560000
+    },
+    {
+      "id": 2,
+      "name": "valli",
+      "degn": "dev",
+      "salary": 560000
+    },
+    {
+      "id": 5,
+      "name": "kanna",
+      "degn": "dev",
+      "salary": 40000
+    },
+    {
+      "id": 6,
+      "name": "chinna",
+      "degn": "dev",
+      "salary": 560000
+    }
+  ]
+}

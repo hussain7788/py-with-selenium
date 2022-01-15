@@ -1,0 +1,4 @@
+--for the first time we need to enable this command ---
+    .powershell Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+---after this command u can able to run tsc files---
