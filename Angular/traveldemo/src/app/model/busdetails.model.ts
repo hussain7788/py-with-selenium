@@ -1,8 +1,8 @@
 export class Bus{
-    sno:number;
-    from_to:string;
-    timings:string;
-    capacity:number;
-    fare:number;
-    photopath?:string;
+    sno:any;
+    from_to:any;
+    timings:any;
+    capacity:any;
+    fare:any;
+    photopath?:any;
 }

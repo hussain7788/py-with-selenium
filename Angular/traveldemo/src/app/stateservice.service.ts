@@ -1,7 +1,8 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClientModule,HttpClient, HttpHeaders } from '@angular/common/http';
 import {observable, Observable} from 'rxjs'
-import { State } from './model/state.model';
+import { State } from '../../../traveldemo/src/app/model/state.model';
 const headerOption={
   headers:new HttpHeaders({'content-Type':'application/json'})
 }
@@ -73,3 +74,4 @@ export class StateserviceService {
   }
 
 }
+

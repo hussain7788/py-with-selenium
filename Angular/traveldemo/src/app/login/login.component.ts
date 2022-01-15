@@ -8,13 +8,14 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username:string;
-  password:number;
+  username:any;
+  password:any;
   result:any;
   photopath:any;
   photopreview:any;
     constructor(private route:Router) { }
     
+
     
     
     ngOnInit(): void {

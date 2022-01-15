@@ -1,3 +1,6 @@
+// class Employee {
+//     companyName: string = "tcs";
+//     companyAddress: string = "hyd";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,33 +16,31 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Employee = /** @class */ (function () {
-    function Employee(empName, empAge) {
-        this.companyName = "tcs";
-        this.companyAddress = "hyd";
-        var empname = empName;
-        var empage = empAge;
-        console.log(empage, empname);
+var person = /** @class */ (function () {
+    function person(p) {
+        // get(b:person_interface) {
+        //     console.log(`name is ${b.name} age is ${b.age} address is ${b.add}`)
+        //     console.log("get method")
+        // }
+        this.get = function (b) {
+            console.log("name is ".concat(b.name, " age is ").concat(b.age, " address is ").concat(b.add));
+            console.log("get method");
+        };
+        var p_name = p.name;
+        var p_age = p.age;
+        var p_add = p.add;
+        console.log("name is ".concat(p_name, " age is ").concat(p_age, " address is ").concat(p_add));
     }
-    Employee.prototype.greet = function () {
-        console.log("my company name is " + this.companyName + " and my address is " + this.companyAddress);
-    };
-    return Employee;
+    return person;
 }());
-// let d1 = new Employee("hussain", 23);
-// console.log(d1.companyAddress);
-// console.log(d1.companyName);
-// d1.greet()
-var Manager = /** @class */ (function (_super) {
-    __extends(Manager, _super);
-    function Manager(managerName, managerAge) {
-        return _super.call(this, managerName, managerAge) || this;
+var p = new person({ "name": "hussain", "age": 23, "add": "kadapa" });
+p.get({ "name": "valli", "age": 23 });
+var extend_p = /** @class */ (function (_super) {
+    __extends(extend_p, _super);
+    function extend_p(p) {
+        return _super.call(this, p) || this;
     }
-    Manager.prototype.delegate = function () {
-        console.log("worked");
-    };
-    return Manager;
-}(Employee));
-var m1 = new Manager("kanna", 23);
-m1.greet();
-m1.delegate();
+    return extend_p;
+}(person));
+var ex_p = new extend_p({ "name": "hussain", "age": 23, "add": "kadapa" });
+ex_p.get({ "name": "hussain", "age": 23, "add": "kadapa" });
