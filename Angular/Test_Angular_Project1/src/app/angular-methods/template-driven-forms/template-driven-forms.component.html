@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<form>
+    <div class="form-group">
+        <label for="firstName">firstName</label>
+        <input 
+        required 
+        ngModel 
+        minlength="3" 
+        maxlength="10" 
+        pattern="hussain" #firstName="ngModel"(click)="log(firstName)" type="text" name="firstName" class="form-control">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors?.['required']">first name is required</div>
+            <div *ngIf="firstName.errors?.['minlength']">first name should be {{firstName.errors?.['minlength'].requiredLength}} characters.</div>
+            <div *ngIf="firstName.errors?.['maxlength']">firstName should be less than {{firstName.errors?.['maxlength'].requiredLength}} characters</div>
+            <div *ngIf="firstName.errors?.['pattern']">first name not match </div>
+
+        </div>
+        <!-- <div class="alert alert-danger" *ngIf="firstName."></div> -->
+    </div>
+  
+    <div class="form-group">
+        <label for="comment">Comment</label>
+        <textarea 
+        required  
+        ngModel 
+        minlength="10"
+        maxlength="200"
+        #comment="ngModel"
+        name="comment" class="form-control" id="comment" cols="30" rows="10"></textarea>
+        <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">
+            <div *ngIf="comment.errors?.['required']">comment is required</div>
+            <div *ngIf="comment.errors?.['minlength']">comment should be {{comment.errors?.['minlength'].requiredLength}}</div>
+
+        </div>
+    </div>
+    <button class="btn btn-primary">submit</button>
+    <!-- div.form-control>label[for='firstName']+input:text.form-control -->
+</form>

@@ -2,27 +2,33 @@
   "emp": [
     {
       "id": 1,
-      "name": "hussain",
+      "name": "hussainvalli",
       "degn": "dev",
-      "salary": 560000
+      "salary": 56000
     },
     {
       "id": 2,
       "name": "valli",
       "degn": "dev",
-      "salary": 560000
+      "salary": 56000
     },
     {
-      "id": 5,
-      "name": "kanna",
-      "degn": "dev",
-      "salary": 40000
-    },
-    {
-      "id": 6,
+      "id": 3,
       "name": "chinna",
       "degn": "dev",
       "salary": 560000
+    },
+    {
+      "id": 6,
+      "name": "gsf",
+      "degn": "fssdfs",
+      "salary": 43234
+    },
+    {
+      "id": 7,
+      "name": "sdfas",
+      "degn": "sfda",
+      "salary": 345245
     }
   ]
 }

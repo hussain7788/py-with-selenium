@@ -53,3 +53,25 @@ let dict1 = {"name":"valli", "age":23}
 let dict2 = {"person":dict1, "e_degn":"developer", "e_salary":40000}
 let ns = new new_sample();
 ns.sample_method(dict1, dict2)
+
+
+
+
+// ###############################################################################
+ const data = {
+        "employees": [
+               {"id":1,"name":"anil","age":30},
+              {"id":2,"name":"sunil","age":25},
+              {"id":3,"name":"ajay","age":23},
+              {"id":4,"name":"vijay","age":24},
+              {"id":5,"name":"john","age":26}
+    ]  
+  }
+
+  const res = data.employees.filter(function(value, index){
+            console.log(value.id);
+                  
+  })
+  console.log("result", res);
+  
+  

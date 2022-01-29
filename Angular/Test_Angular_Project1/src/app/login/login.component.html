@@ -2,16 +2,19 @@
     <ul>
         <h2 style="color: green; font-size: 30;"> Login Employee </h2>
         <li>
-            Name:<input type="text" [(ngModel)]="name" name="name" required>
+            Name:<input type="text" app-login [(ngModel)]="name" name="name" required>
           </li>
         <li>
-          Designation:<input type="text" [(ngModel)]="designation" name="designation" required>
+          Designation:<input type="text" app-login [(ngModel)]="designation" name="designation" required>
         </li>
         
         <li>
           <button type="submit" (click)="login()" class="btn btn-primary">Login</button>
         </li>
-      
-        <small style="color: blue;font-size: 20;">{{message}}</small>
+        <span *ngIf="isValid"> Valid User</span>
+        <span *ngIf="isInvalid"> Invalid User</span>
+
       </ul>
     </form>
+
+    Name:<input type="text" app-login >

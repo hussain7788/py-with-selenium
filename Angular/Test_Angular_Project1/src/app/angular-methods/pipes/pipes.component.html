@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div>
+    StudentNo is{{Sno}}
+    <br>
+    StudentName {{Sname|uppercase}}
+  <br>
+  Cname is{{Cname|lowercase}}
+  <br>
+  Emailid is{{Emailid}}
+  <br>
+  DateofJoin {{JoinDate| date:'shortDate'}}
+  <br>
+  DateofJoin {{JoinDate| date:'longDate'}}
+  <br>
+  DateofJoin {{JoinDate| date:'mediumDate'}}
+  <br>
+  Course Fees {{Fees|currency:'USD':true}}
+  <br>
+  Course Fees {{Fees|currency:'EUR':true}}
+  <br>
+  CollegeName is{{CollegeName|slice: 0: 6}}
+  <br>
+  CollegeName is{{CollegeName|slice: 6: 10}}
+  </div>
+
+  student name {{Sname | lowercase}}<br>
+  cname is {{Cname | uppercase}}<br>
+  date of join {{JoinDate | date:'mediumDate'}}<br>
+  date of join {{JoinDate | date:'shortDate'}}<br>
+  currency {{Fees | currency:'EUR':true}}<br>
+  slicing of string {{CollegeName | slice: 0:6}}

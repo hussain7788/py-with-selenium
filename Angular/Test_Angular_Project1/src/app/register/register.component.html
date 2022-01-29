@@ -1,27 +1,43 @@
-<form>
-<ul>
-        <h2 style="color: green; font-size: 30;"> Add Employee </h2>
-    <li>
-        Id:<input type="number" [(ngModel)]="id" name="id" required>
-      </li>
-    <li>
-      Name:<input type="text" [(ngModel)]="name" name="name" required>
-    </li>
-    <li>
-      Designation: <input type="text" [(ngModel)]="designation" name="designation" required>  
-    </li>
-    <li>
-      Salary : <input type="number" [(ngModel)]="salary" name="salary" required> 
-    </li>
-    <li>
-      <button type="submit" (click)="save_emp()" class="btn btn-primary">Submit</button>
-      <button type="reset" class="btn btn-danger">Reset</button>
+<form #empForm = "ngForm" (ngSubmit) = "saveEmp(empForm)">
 
-    </li>
-  
-    <small style="color: blue;font-size: 20;">{{result}}</small>
-  </ul>
+
+  <h2 style="color: green; font-size: 30;" class="row"> Add Employee </h2>
+  <div>
+    <label for="id" class="row">Id : </label>
+    <input type="number" [(ngModel)]="id" name="id" required>
+  </div>
+  <div>
+    <label for="name"  class="row">  Name : </label>
+    <input type="text" [(ngModel)]="name" name="name" required>
+    <!-- <span *ngIf="empForm.submitted && empForm.get('name').invalid">please fill all details..</span> -->
+  </div>
+  <div>
+    <label for="designation"  class="row">Designation : </label>
+    <input type="text" [(ngModel)]="designation" name="designation" required>
+  </div>
+  <div>
+    <label for="salary"  class="row">Salary : </label>
+    <input type="number" [(ngModel)]="salary" name="salary" required>
+  </div>
+  <div class="row">
+    <button type="submit" class="btn btn-primary" [disabled]="empForm.invalid">Submit</button>
+    <button type="reset" class="btn btn-danger">Reset</button>
+
+  </div>
+  <small style="color: blue;font-size: 20;">{{result}}</small>
+
+  <!-- <div class="form-group" style="width: 400px;">
+    <label>department:</label>
+    <select name="department" [(ngModel)]="department" class="form-control">
+        <option *ngFor="let x of dept" [value]="x.id">
+              {{x.name}}  
+        </option>
+    </select>
+</div> -->
+
 </form>
+
+Form Values: {{empForm.value | json }}
 
 <table border="3" style="padding: 20px;">
     <tr>
@@ -33,6 +49,8 @@
         <th>Designation</th>
         <th>Salary</th>
         <th>Delete Employee</th>
+        <th>Update Employee</th>
+
 
     </tr>
     <tr *ngFor = "let emp of emp_list">
@@ -41,6 +59,46 @@
         <td>{{emp.degn}}</td>
         <td>{{emp.salary}}</td>
         <td><button type="submit" (click)="delete_emp(emp.id)">Delete</button></td>
+        <td><button type="submit" (click)="update_emp(emp.id);emp_update=true">Update</button></td>
+
 
     </tr>
+    <tr>
+      <td colspan="6" style="color: red;">
+        <span *ngIf = "message">{{message}}</span>
+      </td>
+    </tr>
 </table>
+
+
+<form #empUpdateForm = "ngForm" (ngSubmit) = "updateEmpForm(empUpdateForm)">
+
+
+<table border="3" style="padding: 20px;" *ngIf = "emp_update">
+  <tr>
+      <th style="color: blue; font-size: 30;" colspan="4"> Update emp Details</th>
+  </tr>
+  <tr>
+    <th> Id: </th> <td><input type="hidden" [(ngModel)]="id" name="id" value={{emp_data.id}}> </td>
+  </tr>
+  <tr>
+    <th> Name: </th> <td><input type="text" [(ngModel)]="name" name="name" value={{emp_data.name}}> </td>
+  </tr>
+  <tr>
+    <th> Designation: </th> <td><input type="text" [(ngModel)]="designation" name="designation" value={{emp_data.degn}}> </td>
+  </tr>
+  <tr>
+    <th> Salary: </th> <td><input type="number" [(ngModel)]="salary" name="salary" value={{emp_data.salary}}> </td>
+  </tr>
+  <tr>
+    <td><button type="submit">Update</button> </td><td><button type="submit">Back</button> </td>
+  </tr>
+
+</table>
+</form>
+
+
+
+
+
+

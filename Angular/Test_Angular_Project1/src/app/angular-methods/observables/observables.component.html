@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<form [formGroup] = "empForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="id">Id</label>
+        <div *ngIf="successMsg;then read else noread">ignored</div>
+        <ng-template #noread>
+            <input type="number" name="id" id="" formControlName="id" class="form-control" [class.is-invalid]="empForm.controls?.['id'].invalid && empForm.controls?.['id'].touched"> 
+        </ng-template>
+        <ng-template #read>
+             <input type="number" name="id" id="" formControlName="id" class="form-control" readonly> 
+        </ng-template>
+        <div class='alert alert-danger' *ngIf="empForm.controls?.['id'].invalid && empForm.controls?.['id'].touched">
+            id is required
+        </div>
+        
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="" formControlName="name" class="form-control"
+        [class.is-invalid]="empForm.controls?.['name'].invalid && empForm.controls?.['name'].touched"> 
+        <div class='alert alert-danger' *ngIf="empForm.controls?.['name'].invalid && empForm.controls?.['name'].touched">
+            <small *ngIf="empForm.controls?.['name'].errors?.['required']"> Name is required</small>
+            <small *ngIf="empForm.controls?.['name'].errors?.['minlength']"> Name contains atleast {{empForm.controls?.['name'].errors?.['minlength'].requiredLength}} characters</small>
+            <small *ngIf="empForm.controls?.['name'].errors?.['maxlength']"> Name should not exceed {{empForm.controls?.['name'].errors?.['maxlength'].requiredLength}} characters</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="degn">Designation</label>
+        <input type="text" name="degn" id="" formControlName="degn" class="form-control"
+        [class.is-invalid]="empForm.controls?.['degn'].invalid && empForm.controls?.['degn'].touched"> 
+        <div class='alert alert-danger' *ngIf="empForm.controls?.['degn'].invalid && empForm.controls?.['degn'].touched">
+            <small *ngIf="empForm.controls?.['degn'].errors?.['required']"> designation is required</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="number" name="salary" id="" formControlName="salary" class="form-control"
+        [class.is-invalid]="empForm.controls?.['salary'].invalid && empForm.controls?.['salary'].touched"> 
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="empForm.invalid"> submit</button>
+</form>
+
+<!-- ######################################################################### -->
+
+<table class="table">
+    <h2 style="color: green;"> Emp Details By Observables </h2>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+    </tr>
+    <tr *ngFor = "let emp of emp_list">
+    <!-- another way to pass url params in anchor tag -->
+        <td>
+           <a [routerLink]="['/method/emp', emp.id]">
+            {{emp.id}}
+           </a> 
+        </td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.degn}}</td>
+        <td>{{emp.salary}}</td>
+        <td><button type="submit" (click)="editEmp(emp.id)">Edit</button> </td>
+        <td><button type="submit" (click)="getUrlParams({id:emp.id, name:emp.name})">Urlparams</button> </td>
+
+    </tr>
+
+</table>
+
+

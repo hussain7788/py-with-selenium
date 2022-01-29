@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,11 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { CourseModule } from './course/course.module';
 import { LoginComponent } from './login/login.component';
+import { AngularMethodsModule } from './angular-methods/angular-methods.module';
+import { EmpServiceService } from './angular-methods/emp-service.service';
+import { LazyloadModule } from './lazyload/lazyload.module';
+import { CustomPreloadingStrategyService } from './lazyload/custom-preloading-strategy.service';
+import { AuthGuardGuard } from './angular-methods/router-guard/auth-guard.guard';
 
 @NgModule({
   declarations: [
@@ -20,17 +25,26 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     BannerComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    CourseModule
+    CourseModule,
+    // AngularMethodsModule,
+    ReactiveFormsModule,
+  // if we want to lazyload any module then we should not import module here..
+    // LazyloadModule,
 
   ],
-  providers: [CrudOpsServiceService],
+  providers: [CrudOpsServiceService, EmpServiceService, CustomPreloadingStrategyService, AuthGuardGuard ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log("app.module.ts loaded");
+    
+  }
+}

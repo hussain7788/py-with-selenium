@@ -1,0 +1,99 @@
+<app-header></app-header>
+
+<form [formGroup] = "employeeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="firstName">FirstName</label>
+         <input required type="text" class="form-control" formControlName="firstName"
+          id="firstName" [class.is-invalid]="username.invalid && username.touched">
+
+        <div class="alert alert-danger" *ngIf="username.invalid && username.touched">
+                <h6 *ngIf="username.errors?.['minlength']">firstName atleast 2 characters</h6>
+                <h6 class="text-danger" *ngIf="username.errors?.['required']">full name is required</h6>
+                <h6 class="text-danger" *ngIf="username.errors?.['maxlength']">firstName must not above 10 characters</h6>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input
+         type="text" 
+         required
+         formControlName="email"
+         pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+        class="form-control" name="email"
+        [class.is-invalid]="employeeForm.controls?.['email'].invalid && employeeForm.controls?.['email'].touched">
+        <div class="alert alert-danger" *ngIf="employeeForm.controls?.['email'].invalid && employeeForm.controls?.['email'].touched">
+            <h6 *ngIf="employeeForm.controls?.['email'].errors?.['pattern']"> Not a valid email</h6>
+            <h6 *ngIf="employeeForm.controls?.['email'].errors?.['required']"> Email is required</h6>
+        </div>
+    </div>
+    <div formGroupName="skills">
+        <div class="form-group">
+            <label for="skillName" style="padding-right: 20px;">Skill Name</label>
+            <select formControlName="skillName" id="skillName" name="skillName">
+                <option *ngFor="let skill of skillOptions" [value]="skill.name">{{skill.name}} </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exp">Experience</label>
+            <input
+             type="text" 
+             required
+             formControlName="exp"
+            class="form-control" name="exp">
+        </div>
+        <div class="form-group">
+            <label for="proficiency">Proficiency</label>
+                <input type="radio" id="proficiency" value="beginner" formControlName="proficiency"> Beginner
+                <input type="radio" id="proficiency" value="advanced" formControlName="proficiency"> Advanced
+           
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="employeeForm.invalid"> submit</button>
+    <button type="button" class="btn btn-primary" (click)="loadData()"> load data</button>
+
+</form>
+
+
+
+
+
+<!-- ######################################################################### -->
+<table border="1">
+<tr>
+<th style= "padding : 1epx">FormGroup</th>
+<th style="padding : 1epx"> FormControl (firstName) </th>
+</tr>
+<tr>
+<td style="padding : 10px">
+    touched: {{ employeeForm.touched }}
+<br/> dirty: {{ employeeForm.dirty }}
+<br/> valid: {{ employeeForm.valid}}
+<br/> Form Values: {{employeeForm. value | json }}
+</td>
+<td style="padding: 1epx">
+touched: {{ employeeForm.get('firstName').touched}}
+<br/> dirty: {{ employeeForm.get('firstName').dirty }}
+<br/> valid: {{ employeeForm.get('firstName').valid }}
+<br/> required : {{employeeForm.get('firstName').errors?.['required']}}
+<br/> Ful1 Name Value : {{employeeForm.get('firstName').value}}
+<!-- <br/> errors : {{employeeForm.controls?.['firstName'].errors?.['minlength'].requiredLength}} -->
+<!-- <br/> errors : {{employeeForm.get('firstName').errors?.['minlength'].requiredLength}} -->
+
+
+</td>
+</tr>
+</table>
+
+
+<!-- //// this is just for validation test -->
+<form #form="ngForm" (ngSubmit)="saveForm(form)"> 
+    <div class="form-group">
+        <label for="lastName">last name</label>
+        <input type="text" name="lastName" id="lastName" [(ngModel)]="lastName">
+        <div class="alert alert-danger" *ngIf="form.form.controls?.['lastName'].touched">
+            name is required
+        </div>
+    </div>
+    <button type="submit" class="btn btn-danger">submit</button>
+</form>
