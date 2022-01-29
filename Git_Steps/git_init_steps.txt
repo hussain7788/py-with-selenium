@@ -18,6 +18,9 @@ git remote -v
 3. now git push 
 4. this is remove last committed and pushed changes
 
+------reglog to check all activities---------
+1.git reflog
+
 
 ----- if .gitignore does not work then do this-----
 1. git rm -r --cached .; (this is for all files)
@@ -30,3 +33,41 @@ git remote -v
 ----When you remove something from .gitignore file and the file does not appear to be tracked, you can add it manually as follows:----
 1. git add -f <file>;
 2. git commit -m "Re-Adding ignored file by force";
+
+----- when we give wrong message at the time of commit .so we can change by following---
+1. git commit -m "first wrong message"
+2. git commit --amend -m "second right message"
+
+---- when u want to add more files to already committed files .we can do by following
+1. git add <files>
+2. git commit --amend 
+3. save editor and :wq enter
+4. now this file is part of before committed files
+
+
+----- if we want to get rid of untracked files when we use git status.. we can do by following----
+1.git clean -df
+---------------------
+
+----- if we want to get back our committed files into staging area ..we can use 'reset --soft'
+1. git log
+2. here we need to copy commit id of before commit for example..
+		first commit id  (which we want to get back)
+		second commit id (which we need to copy id to reset first commit)
+3. git reset --soft <commit id>
+4. git status .. then u can get all u r changes in staging area
+5. git reset <commit id> (this will also get back u r committed files and data but in unstage
+6. git reset --hard (if we use this u will loose all u r data ..so carefull on this)
+---------------
+
+---------if we not intentionally committed change in master branch but supposed to commit in other branches ..then we can copy that commit into other branch
+1. git log (in main branch ..and copy commit id)
+2. git checkout <branch name>
+3. git cherry-pick <commit id>
+4. now git log u can see one commit in other branch 
+-------------------- 
+
+
+
+
+
