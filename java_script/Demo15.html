@@ -1,4 +1,4 @@
-
+<!-- 
 
 <html>
     <head>
@@ -32,7 +32,50 @@
     <body>
         <h3>Click on Image to Login</h3>
         <img src="images/login.png" width="100" height="100" onclick="showlogin()"><br><br>
+        <img src="images/login.png" onclick=""
         <div id="d1">...</div>
 
     </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var x = true;
+        function showLogin(){
+            var loginForm = '<table align="center"><input type="text" placeholder="username"><br> <input type="password" placeholder="password"><br> <button type="button" onclick="validate()">Login</button>  </table>'
+            if(x){
+                document.getElementById("s1").innerHTML = loginForm;
+                x = false;
+            }
+            else{
+                document.getElementById("s1").innerHTML = "..";
+                x = true;
+
+            }
+
+        }
+        function validate(){
+            alert("ok")
+        }
+        function keypress(){
+            var data = document.getElementById("t1").value;
+            console.log(data)
+        }
+    </script>
+</head>
+<body>
+    <h4>Click here to Login</h4>
+    <img src="images/login.png" width="100" height="100" onclick="showLogin()"><br>
+    <span id="s1"></span>
+
+    <input type="text" id="t1" onchange="keypress()">
+</body>
 </html>

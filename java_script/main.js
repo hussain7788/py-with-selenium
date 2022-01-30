@@ -11,10 +11,14 @@ const data = [{"tab_config":[{"tab_name":"Unassigned","id":"unassignedTab","inte
 			"years":[2020,2019,2018,2017],
 			"buttons":{"Initial":[{"type":"dropdown","options":["Team Member","Sarah Walker","John Casey","Morgan Grimes","d1 lname"],"values":[-1,0,1,4,7],"id":"mgrDropDown"},{"type":"button","display":"Assign","id":"assign","active":true}],"Assigned":[{"type":"button","display":"Admin Review","id":"preparationTabadminReview","active":true},{"type":"button","display":"Client Review","id":"preparationTabclientReview","active":true}],"In Progress":[{"type":"button","display":"Admin Review","id":"preparationTabadminReview","active":true},{"type":"button","display":"Client Review","id":"preparationTabclientReview","active":true}],"Mgr Review":[{"type":"button","display":"Admin Review","id":"preparationTabadminReview","active":true},{"type":"button","display":"Client Review","id":"preparationTabclientReview","active":true}],"Admin Review":[{"type":"button","display":"Client Review","id":"reviewTabclientReview","active":true},{"type":"button","display":"Efile Auth","id":"reviewTabefileAuth","active":true}],"Info Pending":[{"type":"button","display":"Admin Review","id":"finalizationTabadminReview","active":true},{"type":"button","display":"Client Review","id":"finalizationTabclientReview","active":true},{"type":"button","display":"Efile Auth","button":"efileAuth","active":false},{"type":"button","display":"Efiled","button":"efiled","active":false},{"type":"button","display":"Send Reminder","id":"sendReminder","active":true}],"Client Review":[{"type":"button","display":"Admin Review","button":"adminReview","active":false},{"type":"button","display":"Client Review","button":"clientReview","active":false},{"type":"button","display":"Efile Auth","id":"finalizationTabefileAuth","active":true},{"type":"button","display":"Efiled","button":"efiled","active":false},{"type":"button","display":"Send Reminder","id":"finalizationTabsendReminder","active":true}],"Efile Auth":[{"type":"button","display":"Admin Review","button":"adminReview","active":false},{"type":"button","display":"Client Review","button":"clientReview","active":false},{"type":"button","display":"Efile Auth","button":"efileAuth","active":false},{"type":"button","display":"Efiled","id":"finalizationTabefiled","active":true},{"type":"button","display":"Send Reminder","id":"finalizationTabsendReminder","active":true}],"Efiled":[{"type":"button","display":"Close","id":"closureTabclose","active":true}],"Closed":[{"type":"button","display":"Close","button":"close","active":false}],"Unassigned":[{"type":"dropdown","options":["Team Member","Sarah Walker","John Casey","Morgan Grimes","d1 lname"],"values":[-1,0,1,4,7],"id":"mgrDropDown"},{"type":"button","display":"Assign","id":"assign","active":true}],"Preparation":[{"type":"button","display":"Admin Review","id":"adminReview","active":false},{"type":"button","display":"Client Review","id":"clientReview","active":false}],"Review":[{"type":"button","display":"Client Review","id":"clientReview","active":true},{"type":"button","display":"Efile Auth","id":"efileAuth","active":true}],"Finalization":[{"type":"button","display":"Admin Review","id":"adminReview","active":false},{"type":"button","display":"Client Review","id":"clientReview","active":false},{"type":"button","display":"Efile Auth","id":"efileAuth","active":false},{"type":"button","display":"Efiled","id":"efiled","active":false},{"type":"button","display":"Send Reminder","id":"sendReminder","active":false}],"Closure":[{"type":"button","display":"Close","id":"close","active":false}],"Extension":null,"Overview":null}}]
 
-console.log(data[0].tab_config.length)
-const res = data[0].tab_config.forEach(ele => {
-    console.log("data updated", ele)
-})
+// console.log(data[0].tab_config.length)
+// const res = data[0].tab_config.forEach(ele => {
+//     console.log("data updated", ele)
+// })
+
+// for(let i of companies){
+// 	console.log(i.name)
+// }
 
 
 
@@ -33,6 +37,7 @@ const res = data[0].tab_config.forEach(ele => {
 // 	console.log(argument, index)
 // })
 // console.log("list2", list2)
+
 
 
 //  for loop for args and push to list
@@ -56,6 +61,7 @@ const res = data[0].tab_config.forEach(ele => {
 // console.log(list3)
 
 
+
 // //  using another way to filter
 // const list4 = args.filter(arg => arg>=40);
 // console.log(list4)
@@ -73,7 +79,6 @@ const res = data[0].tab_config.forEach(ele => {
 // const array2 = args.filter((arg, index) => (arg>= 60 && arg<=100));
 // console.log(array2)
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 // //  map function
 // //  getting company values
@@ -83,13 +88,14 @@ const res = data[0].tab_config.forEach(ele => {
 // console.log(test)
 
 
+
 // // map fnunction 
 // // square root of args
 // const res = args.map(age => Math.sqrt(age)).map(age => age * 2);
 // console.log(res)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-// // sort function
+// // sort function for asc and desc
 // const sortMethod = companies.sort(function(c1, c2){
 // 		console.log("c1", c1,   "c2", c2)
 // })
@@ -148,6 +154,22 @@ const res = data[0].tab_config.forEach(ele => {
 // 	.reduce((total, age) => total + age, 0);
 
 // console.log(combined)
+
+// const comb = args
+// .map(age => age *2)
+// .filter(age => age>=100)
+// .sort((a,b) => b-a)
+// .reduce((total,age) => total+age, 0 ) ;
+// console.log(comb)
+
+// // reduce is used to calculate the total value of list values
+// const r1 = args.reduce((p_value, c_value) => p_value+c_value, )
+// console.log(r1)
+
+// // sort method for asc and desc list
+// const s1 = args.sort((a,b) => b-a)
+// console.log(s1)
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

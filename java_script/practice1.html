@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function ValidateForm(){
+            var name= document.getElementById("name").value;
+            var age= document.getElementById("age").value.trim();
+            var email= document.getElementById("email").value.trim();
+            var password= document.getElementById("password").value.trim();
+            console.log(name,age)
+            if(name == ""){
+                document.getElementById("s1").innerText = "Name should not be empty";
+            }
+            else if(age == ""){
+                document.getElementById("s1").innerText = "";
+                document.getElementById("s2").innerText = "Age must not be empty";
+            }
+            else if(email == ""){
+                document.getElementById("s1").innerText = "";
+                document.getElementById("s2").innerText = "";
+                document.getElementById("s4").innerText="Email must not be empty";
+            }
+            else if(password.length<5){
+                document.getElementById("s1").innerText = "";
+                document.getElementById("s2").innerText = "";
+                document.getElementById("s4").innerText = "";
+                document.getElementById("s5").innerText = "Passoword minimum 5 characters";
+                
+            }
+            else{
+                document.getElementById("s5").innerText = "";
+                document.getElementById("s6").innerText = "Submitted successfully"
+                alert(`${name} your form submitted successfully`)
+            }
+        }
+        function showPassword(){
+            var password= document.getElementById("password");
+            console.log(password.type)
+            if(password.type == "password"){
+                password.type = "text";
+            }
+            else{
+                password.type = "password";
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li>
+            NAME:<input type="text" id="name">
+            <span id="s1">.</span>
+        </li>
+        <li>
+            AGE: <input type="number" id="age">
+            <span id="s2">.</span>
+        </li>
+        
+        <li>
+            EMAIL: <input type="email" id="email">
+            <span id="s4">.</span>
+        </li>
+        <li>
+            PASSWORD: <input type="password" id="password">
+            <input type="checkbox" id="checkbox" onclick="showPassword()"> show password
+            <span id="s5">.</span>
+        </li>
+        <button type="button" onclick="ValidateForm()">Submit</button>
+        <span id="s6">.</span>
+    </ul>
+    
+</body>
+</html>
