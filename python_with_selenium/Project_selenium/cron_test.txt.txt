@@ -1,0 +1,59 @@
+#!bin/bash
+# from pm.test.scaling.sc_test import *
+date
+rm -rf /home/cpasage_namo2/.cache/google-chrome/Default/Cache
+pkill chrome
+pkill atom
+#mkdir in home backupLog
+
+# echo Ashlesha_cpasage_namo2
+echo scaling Test: 3 cpa 50 clients
+source ~/pkgs/venv/bin/activate
+#
+# # Delete Database :
+cd ~/django_cpa_pm/cpa_pm
+rm -rf db.sqlite3 pm/migrations/0001_initial.py
+
+# #pm_migrate: pyenv; code_base; python manage.py makemigrations; python manage.py migrate'
+cd ~/django_cpa_pm/cpa_pm
+python manage.py makemigrations
+python manage.py migrate
+
+# run_server: run_server='code_base; python manage.py runserver 0.0.0.0:8200'
+export DISPLAY=:2
+gnome-terminal -- python manage.py runserver 0.0.0.0:8200
+sleep 10
+
+# db_migrate : 'pyenv; code_base; python manage.py db_migrate; python manage.py db_version'
+python manage.py db_migrate
+python manage.py db_version
+
+
+#sleep 10
+cd ~/cpa_pm_test/pm
+pytest tests.py --pdb --offset $(date +%d%m)
+
+
+cd ~/cpa_pm_test/pm/test/utils/log_parser
+sleep 5
+python log_parser.py
+sleep 5
+cd ~/Pm/log
+sleep 5
+cat log_report.log | grep "False"
+
+
+#backup
+cd ~/Pm/log
+mv pm_logger.log $(date +%d%m)_pm_logger.log
+mv test.log $(date +%d%m)_test.log
+mv log_report.log $(date +%d%m)_log_report.log
+
+mv $(date +%d%m)_pm_logger.log ~/backupLog
+mv $(date +%d%m)_test.log ~/backupLog
+mv $(date +%d%m)_log_report.log ~/backupLog
+
+cd ~/Pm/log
+touch log_report.log
+
+exec $SHELL
