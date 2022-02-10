@@ -1,0 +1,107 @@
+<script>
+    // get data from form fields using ids and post to the 'register_user' url
+    $("#btnSave").click(function () {
+        console.log("Save Button Clicked");
+        output = "";
+        // these ids we r getting from form fields 
+        let nm = $("#nameid").val();
+        let em = $("#emailid").val();
+        let pw = $("#passwordid").val();
+        // to get csrf token go to page and viewpagesource there under form u get csrftoken
+        let csr = $("input [name=csrfmiddlewaretoken").val();
+        var mydata = { name: nm, email: em, password: pw, csrfmiddlewaretoken: csr };
+        var my_data = { username: uname, email: email, password1: password1, password2: password2, csrfmiddlewaretoken: csrf };
+        $.ajax({
+            url: "{% url 'save' %}",
+            method: POST,
+            data: my_data,
+            success: function (data) {
+                console.log("data::", data)
+                // data we are getting from view .there we are returning JsonResponse as dictionary
+                x = data.student_data
+                if (data.status == "save") {
+                    // this data we are sending to template to show all records
+                    for (i = 0; i < x.length; i++) {
+                        output += "<tr><td>" + x[i].id + "</td><td>" + x[i]
+                            .name + "</td><td>"
+                            + x[i].email + "</td><td>" + x[i].password +
+                            // here btn-edit and btn-del classes used for delete records using class attribute
+                            "</td><td> <input type='button' class='btn btn-warning btn-sm btn-edit' value='Edit' data-sid=" + x[i].id +
+                            "> <input type='button' class='btn btn-danger btn-sm btn-del' value='Delete' data-sid=" + x[i].id + ">"
+
+                    }
+                    $("#tbody").html(output);
+                    $("#form")[0].reset();
+                }
+            },
+
+        })
+    });
+
+    //delete data
+    // here btn-del and data-sid are attributes of form field classes
+    $("#tbody").on("click", ".btn-del", function () {
+        let id = $(this).attr("data-sid");
+        // csrf token must
+        let csr = $("input [name=csrfmiddlewaretoken").val();
+        my_data = { sid: id, csrfmiddlewaretoken: csr };
+        //we are sending id to the view 
+        $.ajax({
+            url: "{% url 'delete' %}",
+            method: POST,
+            data: my_data,
+            success: function (data) {
+                // this data we are getting form the view 
+                console.log(data)
+            }
+        })
+    });
+
+
+
+
+</script>
+
+<script>
+    // Delete Item
+    $(document).on('click', '.delete-button', function (e) {
+        e.preventDefault();
+        var prodid = $(this).data('index');
+        $.ajax({
+            type: 'POST',
+            url: '{% url "basket:basket_delete" %}',
+            data: {
+                productid: $(this).data('index'),
+                csrfmiddlewaretoken: "{{csrf_token}}",
+                action: 'post'
+            },
+            success: function (json) {
+                $('.product-item[data-index="' + prodid + '"]').remove();
+                document.getElementById("subtotal").innerHTML = json.subtotal;
+                document.getElementById("basket-qty").innerHTML = json.qty
+            },
+            error: function (xhr, errmsg, err) { }
+        });
+    })
+
+    // Update Item
+    $(document).on('click', '.update-button', function (e) {
+        e.preventDefault();
+        var prodid = $(this).data('index');
+        $.ajax({
+            type: 'POST',
+            url: '{% url "basket:basket_update" %}',
+            data: {
+                productid: $(this).data('index'),
+                productqty: $('#select' + prodid + ' option:selected').text(),
+                csrfmiddlewaretoken: "{{csrf_token}}",
+                action: 'post'
+            },
+            success: function (json) {
+                document.getElementById("basket-qty").innerHTML = json.qty
+                document.getElementById("subtotal").innerHTML = json.subtotal
+            },
+            error: function (xhr, errmsg, err) { }
+        });
+    })
+</script>
