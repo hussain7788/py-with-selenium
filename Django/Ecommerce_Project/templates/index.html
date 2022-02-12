@@ -29,7 +29,9 @@
   </button>
 </div>
 
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 
 <main>
   <section class="py-5 text-center container">
@@ -53,7 +55,6 @@
       <div class="pb-3 h5">All Products</div>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
         {% for product in products %}
-
         <div class="col">
           <div class="card shadow-sm">
             <img class="img-fluid" alt="Responsive image" src="{{ product.p_image.url }}" />
@@ -75,7 +76,6 @@
             </div>
           </div>
         </div>
-
         {% endfor %}
       </div>
     </div>

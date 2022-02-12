@@ -10,5 +10,12 @@ urlpatterns = [
     path('search/<slug:category_slug>/',
          views.category_list, name="category_list"),
     path("product/<slug:slug>/", views.product_details, name="product_details"),
+    path('user_profile/', views.user_profile, name="user_profile"),
+    path('user_account/', views.user_account, name="user_account"),
+    path('user_account_update/', views.user_account_update,
+         name="user_account_update"),
+    path("user_account_delete/", views.user_account_delete,
+         name="user_account_delete")
+
 
 ]

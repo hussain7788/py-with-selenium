@@ -6,9 +6,10 @@ from .forms import UserRegForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+
 
 def categories(request):
     return {
@@ -78,7 +79,6 @@ def login_user(request):
             user_obj = User.objects.get(username=uname)
             request.session['user_id'] = user_obj.id
             context = {"username": uname}
-            messages.success(request, "valid user")
             return render(request, "user_profile.html", context)
         else:
             messages.error(request, "invalid user")
@@ -101,3 +101,45 @@ def category_list(request, category_slug):
 def product_details(request, slug):
     product = get_object_or_404(Product, slug=slug)
     return render(request, "product_details.html", {"product": product})
+
+
+@login_required
+def user_profile(request):
+    context = {"username": request.user.username}
+    return render(request, "user_profile.html", context)
+
+
+@login_required
+def user_account(request):
+    user_id = request.session['user_id']
+    user = get_object_or_404(User, id=user_id)
+    return render(request, "user_account.html", {"data": user})
+
+
+@login_required
+def user_account_update(request):
+    if request.method == "POST":
+        user_id = request.POST.get("id")
+        fn = request.POST.get("fn")
+        ln = request.POST.get("ln")
+        uname = request.POST['un']
+        email = request.POST['em']
+        password1 = request.POST['p1']
+        password2 = request.POST['p2']
+        user = User.objects.get(id=user_id)
+        user.username = uname
+        user.first_name = fn
+        user.last_name = ln
+        user.email = email
+        user.set_password(password1)
+        user.save()
+        return JsonResponse({"status": "user updated"})
+
+
+@login_required
+def user_account_delete(request):
+    if request.method == "POST":
+        user_id = request.POST.get("id")
+        user = User.objects.get(id=user_id)
+        user.delete()
+        return JsonResponse({"status": "user deleted"})

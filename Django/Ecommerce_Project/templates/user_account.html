@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post" style=" width: 50vw; margin-left : 25vw;">
+    {%csrf_token%}
+    <div class="row pt-5">
+        <div class="col">
+            <h4 class="text-center alert alert-info">Account Details</h4>
+            <label for="first_name" class="col-sm-2 col-form-label">First Name</label>
+            <div class="col">
+                <input type="text" class="form-control" id="first_name" name="first_name" value="{{data.first_name}}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="last_name" class="col-sm-2 col-form-label">Last Name</label>
+            <div class="col">
+                <input type="text" class="form-control" id="last_name" name="last_name" value="{{data.last_name}}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="username" class="col-sm-2 col-form-label">Username</label>
+            <div class="col">
+                <input type="text" class="form-control" id="username" name="username" value="{{data.username}}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col">
+                <input type="email" class="form-control" id="email" name="email" value="{{data.email}}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="password1" class="col-sm-2 col-form-label">password1</label>
+            <div class="col">
+                <input type="password" class="form-control" id="password1" name="password1" value="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="password2" class="col-sm-2 col-form-label">Password2</label>
+            <div class="col">
+                <input type="password" class="form-control" id="password2" name="password2" value="">
+            </div>
+        </div>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto pt-4">
+        <button id="updateBtn" class="btn btn-primary" value="{{data.id}}" type="button">Update</button>
+        <button id="deleteBtn" class="btn btn-primary" value="{{data.id}}" type="button">Delete</button>
+    </div>
+</form>
+
+<script>
+    $(document).on("click", "#updateBtn", function (e) {
+        var id = $("#updateBtn").val();
+        console.log("update id is::", id);
+        var fn = $("#first_name").val();
+        var ln = $("#last_name").val();
+        var un = $("#username").val();
+        var em = $("#email").val();
+        var p1 = $("#password1").val();
+        var p2 = $("#password2").val();
+
+        my_data = { id: id, fn: fn, ln: ln, un: un, em: em, p1: p1, p2: p2, csrfmiddlewaretoken: "{{csrf_token}}" }
+        $.ajax({
+            method: "POST",
+            url: "{% url 'user_account_update' %}",
+            data: my_data,
+            success: function (json) {
+                console.log("json data::", json);
+            },
+            error: function (error) {
+
+            }
+        })
+    });
+    $(document).on("click", "#deleteBtn", function (e) {
+        var id = $("#deleteBtn").val();
+        my_data = { id: id, csrfmiddlewaretoken: "{{csrf_token}}" }
+        $.ajax({
+            method: "POST",
+            url: "{% url 'user_account_delete' %}",
+            data: my_data,
+            success: function (json) {
+                console.log(json);
+            },
+            error: function (error) {
+
+            }
+        })
+    });
+
+
+</script>
+
+{% endblock %}

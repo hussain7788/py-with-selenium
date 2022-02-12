@@ -1,4 +1,14 @@
 {
-    "name": "hussain",
-    "age": 23
+    "employees" : [
+        {
+            "name": "hussain",
+            "age": 23
+        },
+        {
+            "name": "valli",
+            "age": 24
+        }
+
+    ]
+
 }

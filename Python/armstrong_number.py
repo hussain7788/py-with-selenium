@@ -28,6 +28,7 @@ print("sum of prime numbers::", sum_prime)
 ################################################
 
 # armstrong number
+# armstrong numbers from 100 to 1000 are [153, 370, 371, 407]
 
 n = 153
 length = len(str(n))
@@ -39,3 +40,18 @@ if n == total:
     print(153, "is armstrong number")
 else:
     print(153, "is not armstrong number")
+
+#################################################
+
+
+n = "407"
+length = len(n)
+sum = 0
+for i in n:
+    sum += int(i) ** int(length)
+
+print(sum)
+if sum == int(n):
+    print(n, "is armstrong number")
+else:
+    print(n, "is not armstrong number")

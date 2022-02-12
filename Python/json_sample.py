@@ -52,3 +52,17 @@ print(j2, type(j2))
 # with open("sample30.json") as json_file:
 #     j2 = json_file.read()
 #     print(j2)
+
+
+with open("sample30.json", 'r') as f:
+    data = json.load(f)
+    for i, v in data.items():
+        for value in v:
+            print(value['name'])
+    f.close()
+
+with open("sample30.json", 'r') as f:
+    data = json.loads(f.read())
+    print(data, type(data))
+
+

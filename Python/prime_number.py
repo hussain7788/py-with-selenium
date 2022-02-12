@@ -39,3 +39,18 @@ for n in range(1, 100):
 #         else:
 #             print(n, "is prime")
 #     req = input("do u want again(yes/no)::")
+
+
+n = 90
+if n > 1:
+    for i in range(2, 10):
+        if n % i == 0:
+            print(n, "is not prime")
+            break
+    else:
+        print(n, "is prime")
+
+n1 = list(eval(input("enter")))
+n2 = input("enter string::")
+n2 = n2.split()
+print(n1, n2)
