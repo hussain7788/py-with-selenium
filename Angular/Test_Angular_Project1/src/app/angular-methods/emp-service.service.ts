@@ -18,5 +18,9 @@ export class EmpServiceService {
 
   }
   
+  getEmploye():Observable<IEmployee>{
+    return this.http 
+
+  }
 
 }

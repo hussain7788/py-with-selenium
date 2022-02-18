@@ -1,4 +1,5 @@
 import json
+from textwrap import indent
 
 # Data to be written
 dictionary = {
@@ -8,13 +9,36 @@ dictionary = {
     "phonenumber": "9976770500"
 }
 
-file2 = open("sample30.json", 'r')
-file1 = open("sample30.json", 'a')
+json_data = '''{
+    "j_name":"hussain",
+    "j_age":23,
+    "j_address":"kadapa"
+}'''
+
+with open("sample1.json", 'w') as s1:
+    s1.write(json_data)
 d1 = {"name": "valli", "age": 23}
-j1 = json.dumps(d1)
-print(j1, type(j1))
-j2 = json.loads(j1)
-print(j2, type(j2))
+# dump will take py dict and convert to json and save into json file
+with open("sample30.json", 'w') as f2:
+    json.dump(dictionary, f2, indent=4)
+
+# reading the json file sample30.json
+with open("sample30.json", 'r') as f1:
+    r = json.load(f1)
+    print(r, type(r))
+
+# storing py dict into sample30.json by dumping
+with open("sample30.json", 'a') as f3:
+    json.dump(d1, f3)
+    with open("sample30.json", 'r') as f4:
+        r1 = json.load(f4)
+        print("r1::", r1, type(r1))
+
+# file1 = open("sample30.json", 'a')
+# j1 = json.dumps(d1)
+# print(j1, type(j1))
+# j2 = json.loads(j1)
+# print(j2, type(j2))
 # file1.write(j1)
 # file1.close()
 # print(data)
@@ -54,15 +78,13 @@ print(j2, type(j2))
 #     print(j2)
 
 
-with open("sample30.json", 'r') as f:
-    data = json.load(f)
-    for i, v in data.items():
-        for value in v:
-            print(value['name'])
-    f.close()
+# with open("sample30.json", 'r') as f:
+#     data = json.load(f)
+#     for i, v in data.items():
+#         for value in v:
+#             print(value['name'])
+#     f.close()
 
-with open("sample30.json", 'r') as f:
-    data = json.loads(f.read())
-    print(data, type(data))
-
-
+# with open("sample30.json", 'r') as f:
+#     data = json.loads(f.read())
+#     print(data, type(data))

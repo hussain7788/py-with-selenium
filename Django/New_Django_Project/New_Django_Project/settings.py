@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app1',
-    'model_query_app'
+    'model_query_app',
+    'AjaxDemo'
 ]
 
 MIDDLEWARE = [

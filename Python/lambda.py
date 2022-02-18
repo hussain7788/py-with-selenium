@@ -19,3 +19,10 @@ f3.insert(6, [7, 8])
 print(f3)
 print(f2.index(4))
 print(f2, f3)
+
+
+# g1 = list(map(lambda a: a*2, l1))
+# print(g1)
+
+g2 = list(filter(lambda a: a % 2 == 0, l1))
+print(g2)

@@ -25,7 +25,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app1.urls')),
-    path('', include('model_query_app.urls'))
+    path('', include('model_query_app.urls')),
+    path('', include('AjaxDemo.urls')),
+
 
 
 ]

@@ -55,3 +55,16 @@ if sum == int(n):
     print(n, "is armstrong number")
 else:
     print(n, "is not armstrong number")
+######################################
+
+n = int(input("enter any number::",))
+n = str(n)
+sum = 0
+num_len = len(n)
+for i in n:
+    sum += int(i) ** int(num_len)
+
+if int(n) == int(sum):
+    print("it is an ARMSTRONG number")
+else:
+    print("it is NOT an ARMSTRONG number")

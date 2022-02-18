@@ -1,14 +1,6 @@
 {
-    "employees" : [
-        {
-            "name": "hussain",
-            "age": 23
-        },
-        {
-            "name": "valli",
-            "age": 24
-        }
-
-    ]
-
-}
+    "name": "sathiyajith",
+    "rollno": 56,
+    "cgpa": 8.6,
+    "phonenumber": "9976770500"
+}{"name": "valli", "age": 23}

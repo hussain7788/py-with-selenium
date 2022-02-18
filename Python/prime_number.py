@@ -16,13 +16,13 @@
 
 ##########################################################
 # program for prime in range
-for n in range(1, 100):
-    if n > 1:
-        for j in range(2, n):
-            if n % j == 0:
-                break
-        else:
-            print(n)
+# for n in range(1, 100):
+#     if n > 1:
+#         for j in range(2, n):
+#             if n % j == 0:
+#                 break
+#         else:
+#             print(n)
 
 #############################################################################
 
@@ -41,16 +41,16 @@ for n in range(1, 100):
 #     req = input("do u want again(yes/no)::")
 
 
-n = 90
+n = 7
 if n > 1:
-    for i in range(2, 10):
+    for i in range(2, n):
         if n % i == 0:
             print(n, "is not prime")
             break
     else:
         print(n, "is prime")
 
-n1 = list(eval(input("enter")))
-n2 = input("enter string::")
-n2 = n2.split()
-print(n1, n2)
+# n1 = list(eval(input("enter")))
+# n2 = input("enter string::")
+# n2 = n2.split()
+# print(n1, n2)

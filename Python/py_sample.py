@@ -13,15 +13,15 @@ def sample(*args, **kwargs):
 sample(1, 2, 3, 4, kwargs={"name": "hussain", "age": 23})
 
 
-def h(n):
-    s = 0
-    count = 0
-    for i in range(2, n):
-        if n % i == 0:
-            count += 1
-            s += i
-            print("i", i)
-    return(s)
+# def h(n):
+#     s = 0
+#     count = 0
+#     for i in range(2, n):
+#         if n % i == 0:
+#             count += 1
+#             s += i
+#             print("i", i)
+#     return(s)
 
 
-print(h(60)-h(45))
+# print(h(60)-h(45))

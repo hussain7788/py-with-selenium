@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'test_api',
     'rest_framework',
     'frontend',
+    'test_api2',
+    'django_filters',
 
 ]
 
@@ -72,6 +74,9 @@ TEMPLATES = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
 WSGI_APPLICATION = 'react_with_jango.wsgi.application'
 
 

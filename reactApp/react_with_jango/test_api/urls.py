@@ -5,6 +5,7 @@ from .views import PersonModelViewSet, PersonApiView
 router = routers.DefaultRouter()
 router.register("p_view_set", PersonModelViewSet)
 
+
 urlpatterns = [
     path('', include(router.urls)),
 

@@ -1,0 +1,147 @@
+{% extends 'common.html' %}
+
+{% block vvv%}
+{% include 'main.html' %}
+
+<form method="post">
+    {%csrf_token%}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <input type="hidden" id="stuId" name="stuId">
+                <h4 class="text-center alert alert-info">Add Student</h4>
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col">
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="age" class="col-sm-2 col-form-label">Age</label>
+                <div class="col">
+                    <input type="number" class="form-control" id="age" name="age">
+                </div>
+            </div>
+        </div>
+        <button id="addBtn" class="btn btn-primary" type="button">Add</button>
+        <div>
+            <span id="s1" style="color: red;"></span>
+        </div>
+    </div>
+</form>
+
+<table class="table" border="0" align="right">
+    <thead>
+        <tr>
+            <th>Show Students</th>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        {% for stu in student %}
+        <tr>
+            <td>{{stu.id}}</td>
+            <td>{{stu.name}}</td>
+            <td>{{stu.age}}</td>
+            <td>
+                <input type="button" data-sid="{{stu.id}}" id="editBtn" class="btn btn-warning btn-sm" value="edit">
+                <input type="button" data-sid="{{stu.id}}" id="delBtn" class="btn btn-danger btn-sm" value="delete">
+            </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+<script>
+    $(document).on("click", "#addBtn", function (e) {
+        e.preventDefault();
+        var sid = $("#stuId").val();
+        var na = $("#name").val();
+        var age = $("#age").val();
+        output = "";
+        my_data = { id: sid, na: na, age: age, csrfmiddlewaretoken: "{{csrf_token}}" }
+        $.ajax({
+            method: "POST",
+            url: "{% url 'add' %}",
+            data: my_data,
+            success: function (json) {
+                if (json.status == "saved") {
+                    console.log(json.data);
+                    document.getElementById("s1").innerText = "Added Successfully"
+                    x = json.data
+                    for (i = 0; i < x.length; i++) {
+                        output += "<tr><td>" + x[i].id + "</td><td>" + x[i].name + "</td><td>" + x[i].age + '</td><td><input type="button" class="btn btn-warning btn-sm" id="editBtn" value="edit" data-sid=' + x[i].id + '> <input type="button" class="btn btn-danger btn-sm" id="delBtn" value="delete" data-sid=' + x[i].id + '></td>';
+
+
+                    }
+                    $("#tbody").html(output);
+                    $("#stuId").val('');
+                    $("form")[0].reset();
+                }
+
+            },
+            error: function (error) {
+
+            }
+        })
+
+    });
+
+    $(document).on("click", "#delBtn", function (e) {
+        e.preventDefault();
+
+        var id = $(this).attr('data-sid')
+        my_data = { id: id, csrfmiddlewaretoken: "{{csrf_token}}" };
+        mythis = this
+        console.log(id);
+        $.ajax({
+            url: "{% url 'delete' %}",
+            method: "POST",
+            data: my_data,
+            success: function (json) {
+                if (json.status == "deleted") {
+                    $("#s1").text("deleted successfully")
+                    $(mythis).closest("tr").fadeOut();
+                }
+            }
+        })
+    })
+
+    $(document).on("click", "#editBtn", function (e) {
+        e.preventDefault();
+
+        var id = $(this).attr('data-sid')
+        my_data = { id: id, csrfmiddlewaretoken: "{{csrf_token}}" };
+        mythis = this
+        console.log(id);
+        $.ajax({
+            url: "{% url 'update' %}",
+            method: "POST",
+            data: my_data,
+            success: function (json) {
+                console.log(json.data);
+                $("#stuId").val(json.data.id)
+                $("#name").val(json.data.name)
+                $("#age").val(json.data.age)
+
+            }
+        })
+    })
+
+</script>
+
+
+
+
+
+
+{% endblock %}

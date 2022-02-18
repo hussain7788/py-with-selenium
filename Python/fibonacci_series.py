@@ -35,3 +35,20 @@ while count < nterms:
     n1 = n2
     n2 = nth
     count += 1
+print("*"*30)
+
+nterm = int(input("enter term::,"))
+n1, n2 = 0, 1
+count = 0
+
+if nterm <= 0:
+    print("positve")
+elif nterm == 1:
+    print("fibonanci series ", n1)
+else:
+    while count < nterm:
+        print(n1)
+        nth = n1+n2
+        n1 = n2
+        n2 = nth
+        count += 1
