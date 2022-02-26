@@ -1,0 +1,94 @@
+--------------docker--------------------
+
+1. install docker 
+ 	-sudo apt install docker.io
+
+2. so here we need to install images then it will create container. so goto dockerhub.com
+and search for ubuntu then there is image(command) to install ubuntu 
+	-sudo docker pull ubuntu
+
+3. so now we need to check whether image(ubuntu) is installed or not
+  	-sudo docker images
+
+4. install another image 
+	-sudo docker pull centos
+5. check image
+	-sudo docker images
+
+6. now we need to create container using specific image id
+	- sudo docker run -it <image id>
+    .One image can create number of containers
+    .<-it> this command will take u to interactive terminal.. if u want enter exit
+
+7. now we need to check running containers
+	-sudo docker ps 	(all running containers only)
+	-sudo docker ps -a      (all running and exited containers)
+
+8. start the container once it stopped 
+	- sudo docker start <container id>
+
+9. stop the container 
+	- sudo docker stop <container id>
+
+10. create another container for image ubuntu based on image id
+	-sudo docker run -itd <image id>
+
+11. if we want to stop container 
+	-sudo docker stop <container id>
+	-sudo docker stop <container id> <container id> (stop multiple containers)
+
+12. start the container
+	-sudo docker start <container id>
+
+13. Removing exited container based on id
+	-sudo docker rm <container id>
+
+14. Removing working container 
+	-sudo docker rm <container id> -f  (we cant remove running container but by using -f we can)
+
+15. Removing container image using image id
+	-sudo docker rmi <image id>
+
+16. if we want to remove image that contains number of containers then its not possible 
+	bacause containers dependent on this image .so first we need to remove all containers dependent on this image 
+	then only we can remove image
+	-sudo docker rmi <image id>
+------------------------------------------------------------------------------------
+
+---------- commands -------------------------
+docker overall view
+
+docker installation
+
+images docker pull
+
+docker images
+
+docker run -it img-id
+
+docker run -itd img-id
+
+docker ps
+
+docker ps -a
+
+docker stop cid
+
+docker start cid
+
+docker restart cid
+
+docker stop c1 c2 c3
+
+docker rm cid
+
+docker rmi cid
+
+d image 1e4
+
+yes f
+
+docker rm cid -f
+
+images being used by container cant delete
+

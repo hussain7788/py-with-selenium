@@ -1,0 +1,44 @@
+.btn {
+  color: blue;
+  margin: 20px;
+}
+
+.btn1 {
+  background-color: red;
+  margin-left: 70px;
+}
+
+h1.large-heading {
+  color: blue;
+}
+
+h1.small-head {
+  color: red;
+}
+
+#big-b.sm.b {
+  color: yellow;
+  font-size: 200%;
+}
+
+div p {
+  color: blue;
+}
+
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: rgb(168, 168, 170);
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  margin: 50px;
+  border: 10px solid;
+  background-color: red;
+}

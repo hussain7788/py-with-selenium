@@ -5,6 +5,6 @@ data = [
 ]
 
 d1 = [{"name": val['name'], "age":val['age'], "address":val['address']}
-      for i, val in enumerate(data) if val['age'] <= 18]
+      for i, val in enumerate(data) if val['age'] >= 18]
 
 print(d1)
