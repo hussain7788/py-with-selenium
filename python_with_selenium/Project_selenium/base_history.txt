@@ -1,0 +1,773 @@
+ls -lart /tmp/
+cd /var
+cd /tmp/
+ls -lart
+cd 
+cd /var
+cd tmp/
+ls -lart
+sudo ls -lart tmp/
+clear
+cd
+vim ~/.bashrc
+source ~/.bashrc 
+clear
+chk_docker 
+clear
+cat README.txt 
+sudo docker-compose up -d pg_db
+sudo docker-compose exec pg_db bash
+git branch -a
+clear
+cat README.txt 
+alias | grep complete
+complete_docker_down 
+docker_up 
+clear
+chk_docker 
+ws_docker 
+clear
+clear
+code_json 
+clear
+ls -lart
+vim run.json 
+../webjson1.0.0.exe run.json 
+clear
+bash cron_test.sh 
+cd 
+mkdir Pm
+cd Pm/
+ls -lart
+mkdir log
+mkdir backuplog
+cd log/
+touch test.log
+clear
+cd
+code_json 
+bash cron_test.sh 
+top
+clear
+ps -aef | grep kdevtmp
+mkdir Documents
+clear
+ls -lart
+cd Documents/
+ls -lart
+clear
+ws_docker 
+code_json 
+git status
+ws_docker 
+top
+git status
+clear
+chk_docker
+code_json
+clear
+git status
+clear
+top
+clear
+top
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+\clear
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+ls
+./webjson1.0.0.exe cpa_pm/run.json
+clear
+./webjson1.0.0.exe cpa_pm/run.json
+ls
+./webjson1.0.0.exe cpa_pm/run.json
+clear
+./webjson1.0.0.exe cpa_pm/run.json
+app_update 
+clear
+top
+ls
+./webjson1.0.0.exe cpa_pm/run.json
+
+clear
+pytest tests2.py -m utc_5 --pdb
+wjenv
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+wjenv
+
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+git status
+clear
+./webjson1.0.0.exe cpa_pm/run.json
+cd ~/repo
+ls
+cd acws
+clear
+docker_down
+docker_up
+clear
+cd cpa_pm
+clear
+pytest tests2.py -m utc_19 --pdb
+wjenv
+clear
+wjenv
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+crontab -e
+clear
+ls
+./webjson1.0.0.exe cpa_pm/run.json
+cd ../
+clear
+docker_down
+docker_up
+clear
+top
+killall -9 chrome
+clear
+top
+clear
+ls /tmp/*
+ls -lart /tmp/*
+ls -lart /var/tmp*
+ls -lart /var/*
+sudo ls -lart /var/tmp/*
+sudo ls -lart /var/tmp/
+find / -name kdevtmpfsi
+sudo find / -name kdevtmpfsi
+rm -rf /var/lib/docker/overlay2/4f3ff0a7242baaa30aa1a5ece45be9251b6375a1e86ec0af8277145fed816a5e/diff/tmp/kdevtmpfsi /var/lib/docker/overlay2/4f3ff0a7242baaa30aa1a5ece45be9251b6375a1e86ec0af8277145fed816a5e/merged/tmp/kdevtmpfsi
+sudo rm -rf /var/lib/docker/overlay2/4f3ff0a7242baaa30aa1a5ece45be9251b6375a1e86ec0af8277145fed816a5e/diff/tmp/kdevtmpfsi /var/lib/docker/overlay2/4f3ff0a7242baaa30aa1a5ece45be9251b6375a1e86ec0af8277145fed816a5e/merged/tmp/kdevtmpfsi
+sudo find / -name kdevtmpfsi
+sudo find / -name kinsing
+sudo rm -rf /var/lib/docker/overlay2/4f3ff0a7242baaa30aa1a5ece45be9251b6375a1e86ec0af8277145fed816a5e/diff/tmp/kinsing /var/lib/docker/overlay2/4f3ff0a7242baaa30aa1a5ece45be9251b6375a1e86ec0af8277145fed816a5e/merged/tmp/kinsing
+clear
+sudo find / -name kinsing
+sudo crontab -u root -i
+sudo crontab -u root -l
+sudo crontab -l
+crontab -l
+ps -aef | grep kdevtmp
+ls -lart /tmp/kdevtmpfsi 
+sudo cat /tmp/kdevtmpfsi
+sudo chmod 000 /tmp/kdevtmpfsi
+sudo chmod 000 /tmp/kinsing
+sudo chmod 000 /tmp/zzz
+sudo chmod 000 /var/tmp/kinsing
+clear
+ls -lart
+ps -aef | grep kdev
+sudo kill -9 26532
+sudo kill -9 14745
+ps -aef | grep kdev
+sudo kill -9 21
+sudo kill -9 2
+ps -aef | grep kdev
+clear
+ps -aef | grep kinsing
+ls -lart /tmp/
+sudo ls -lart /var/tmp/
+vim /etc/init.d/capdock
+vim /etc/init.d/cpadock
+sudo vim /etc/init.d/cpadock
+clear
+ps -aef | grep kdevtmp
+ps -aef | grep kinsing
+top
+chk_docker 
+ls -lart
+find / -type f -exec grep -l "kdevtmpfsi" {} +
+sudo find / -type f -exec grep -l "kdevtmpfsi" {} +
+cd
+crontab -l
+crontab -l -u root
+sudo crontab -l -u root
+sudo crontab -l -u systemd
+sudo crontab -l -u systemd+
+ps -aef | grep kdevtmp
+clear
+docker_down
+docker_up
+cd cpa_pm
+clear
+git status
+pull_code
+git log
+clear
+git status
+git add config/locators/admin/client_dashboard/admin_client_doc.json config/locators/client/client_login_doc.json config/locators/receptionist/rcp_client_doc.json config/page_object/admin/client_dashboard/admin_client_doc.json config/page_object/client/client_login_doc.json config/page_object/receptionist/rcp_client_doc.json unit_test_cases/utc_7_admin_client_dashboard.py
+git commit -m "Hussain -client doc locator changes for all logins" 
+git push
+clear
+./webjson1.0.0.exe cpa_pm/run.json
+clear
+./webjson1.0.0.exe cpa_pm/run.json
+git status
+pull_code
+wjenv
+clear
+git status
+git restore --staged cpa_pm/config/locators/admin/client_dashboard/admin_client_doc.json
+clear
+git status
+cd cpa_pm
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+pull_codeclear
+clear
+pytest tests2.py -m utc_5 --pdb
+clear
+pytest tests2.py -m utc_18 --pdb
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+pytest tests2.py -m utc_19 --pdb
+clear
+crontab -e
+clear
+ls
+ls
+touch pm_logger.log
+touch cron_test_data.log
+clear
+ls
+cat log_report.log
+clear
+cd wjson_acws
+ls
+clear
+./webjson1.0.0.exe cpa_pm/run.json
+clear
+ls
+cd log
+ls
+cat log_report.log
+cat pm_logger.log
+cat cron_test_data.log
+clear
+grep "^utc" cron_test_data.log
+clear
+truncate -s 0 cron_test_data.log
+clear
+crontab -e
+clear
+date
+crontab -e
+clear
+date
+clear
+cd wjson_acws
+ls
+cd cpa_pm
+ls
+clear
+crontab -e
+clear
+crontab -e
+clear
+time
+date
+crontab -e
+clear
+date
+datetime
+date
+clear
+date
+date 
+date
+clear
+code_json 
+app_update 
+top
+sudo kill -9 49802
+clear
+top
+clear
+sudo find / -type f -exec grep -l "kdevtmpfsi" {} +
+sudo find / kdevtmpfsi
+sudo find / -type f -exec grep -l "kdevtmpfsi" {} +
+find / -type d "kdevtmpfsi"
+find / "kdevtmpfsi"
+find / -type f "kdevtmpfsi"
+find / "kdevtmpfsi" -type f
+clear
+top
+sudo kill -9 53691
+find / "kdevtmpfsi"
+find / kdevtmpfs*
+find / kdevtmpfsi
+clear
+complete_docker_down 
+chk_docker 
+clear
+docker_up 
+clear
+chk_docker 
+clear
+docker_up 
+complete_docker_down 
+app_update 
+cd /usr/local/share/WebDriverManager/chrome/
+ls -lart
+clear
+cd
+clear
+top
+chk_docker 
+complete_docker_down 
+full_code_pull 
+find / kdevtmpfsi
+sudo reboot
+pg_db_docker 
+chk_docker 
+clear
+app_update 
+clear
+docker_up 
+clear
+chk_docker 
+pg_db_docker 
+ws_docker 
+portal_docker 
+clear
+top
+code_json 
+git status
+top
+cd ~/repo/wjson_acws
+ls
+wjenv
+clear
+ls
+./webjson1.0.0.exe cpa_pm/run.json
+date
+time
+date
+pull_code
+git log
+clear
+cd ~/repo/wjson_acws/cpa_pm
+clear
+crontab -e
+clear
+date
+clear
+pytest tests2.py -m utc_7 --pdb
+wjenv
+clear
+wjenv
+clear
+pytest tests2.py -m utc_7 --pdb
+clear
+git status
+git add unit_test_cases/utc_7_admin_client_dashboard.py
+clear
+git status
+git diff config/locators/receptionist/rcp_client_doc.json
+clear
+git status
+git add config/locators/receptionist/rcp_client_doc.json config/page_object/receptionist/rcp_client_doc.json
+git status
+git commit -m "Hussain -active eng validation"
+git push
+git status
+cd ~/Pm/log
+clear
+ls
+cat cron_test_data.log
+clear
+tail -F cron_test_data.log
+clear
+cd ~/repo/acws
+docker_down
+docker_up
+clear
+docker images
+docker ps -a
+sudo docker images
+sudo docker ps -a
+sudo docker run 920c743c9ca8
+sudo docker ps -a
+sudo docker rm 199e871d2ab1
+sudo docker ps -a
+clear
+cd ~/repo
+ls
+cd acws
+clear
+full_code_pull
+docker_up
+cd ~/repo
+cd acws
+ls
+cd acws_portal
+ls
+portal_docker
+clear
+docker_down
+docker_up
+clear
+git status
+clear
+cd acws
+ls
+docker_down
+docker_up
+clear
+git status
+clear
+cd wjson_acws/cpa_pm
+clear
+wjenv
+clear
+pytest tests.py 
+clear
+pytest tests2.py  
+clear
+pytest tests2.py -m utc_6 --pdb
+clear
+pytest tests2.py -m utc_6 --pdb
+clear
+chk_docker 
+clear
+cd wjson_acws
+ls
+clear
+ls
+./webjson1.0.0.exe cpa_pm/run.json
+clear
+wjenv
+ls
+clear
+vim ~/.aliases 
+code_json 
+git status
+alias | grep pull_code
+pull_code 
+git log
+wjenv
+clear
+cd wjson_acws
+clear
+vim ~./aliases
+clear
+git branch -a
+git branch
+clear
+code_json
+clear
+code_base
+clear
+cd_docker
+clear
+chk_docker
+clear
+code_base
+cd ../../
+ls
+clear
+full_code_pull
+code_json
+git log
+clear
+pull_code
+git log
+clear
+vim ./aliase
+clear
+vim ./aliease
+clear
+vim ./alieases
+clear
+vim ~/.aliases
+clear
+git status
+rm alias gterm='/usr/bin/dbus-launch /usr/bin/gnome-terminal &'
+alias start_vnc="vncserver --localhost no"
+# Code commands
+alias wjenv='source ~/pkgs/wjenv/bin/activate'
+alias code_base='cd ~/repo/acws/acws_api/cpa_pm'
+alias code_json='wjenv; cd ~/repo/wjson_acws/cpa_pm'
+alias update_chrome_driver='wjenv; sudo `which webdrivermanager` chrome --linkpath /usr/local/bin'
+# Docker Commands
+alias cd_docker='cd ~/repo/acws/acws_api/cpa_pm/cpa_pm/config/development/docker'
+alias docker_up='cd_docker; sudo docker-compose up -d'
+alias docker_down='cd_docker; sudo docker-compose down'
+alias complete_docker_down='cd_docker; sudo docker-compose down -v --rmi all --remove-orphans'
+alias chk_docker='cd_docker; sudo docker-compose ps -a'
+alias ws_docker='cd_docker; sudo docker-compose exec wserver bash'
+alias portal_docker='cd_docker; sudo docker-compose exec portal sh'
+alias pg_db_docker='cd_docker; sudo docker-compose exec pg_db bash'
+# GIT Commands
+alias pull_code="git stash; git pull --rebase; git stash apply"
+alias full_code_pull="cd ~/repo/acws/; git submodule foreach --recursive 'git stash'; git submodule foreach --recursive 'git pull --rebase'; git submodule foreach --recursive 'git stash apply'; git pull --rebase"
+alias git_pretty='git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"'
+alias git_clone='cd ~/repo; git clone --recursive git@github.com:Intelligent-Workspace/acws.git'
+alias git_clone_test='cd ~/repo; git clone git@github.com:Intelligent-Workspace/wjson_acws.git'
+alias git_clone_nidhicpa='cd ~/repo; git clone git@github.com:Intelligent-Workspace/nidhicpa-site.git'
+alias git_clone_intelws='cd ~/repo; git clone git@github.com:Intelligent-Workspace/intelws-site.git'
+alias git_clone_drjain='cd ~/repo; git clone git@github.com:Intelligent-Workspace/drjain-me-site.git'
+# System Upgrade
+alias app_update='sudo apt-get update; sudo apt-get upgrade -y; sudo apt-get autoremove -y; sudo apt-get autoclean -y; sudo apt-get clean; sudo apt-get check; update_chrome_driver'
+clear
+git status
+rm aliase
+git status
+rm aliease
+rm alieases
+clear
+ls
+./webjson1.0.0.exe cpa_pm/run.json
+./webjson1.0.0.exe run.json
+clear
+pytest tests2.py -m utc_1 --pdb
+clear
+ls
+clear
+pytest tests2.py -m utc_1 --pdb
+clear
+wjev
+wjenv
+clear
+ls
+cd wjson_acws/cpa_pm
+clear
+git status
+git stash list
+git stash save "my data"
+git stash list
+clear
+git status
+git stash list
+git stash apply 0
+clear
+git status
+cd ../../
+ls
+vim ./aliease
+clear
+git status
+clear
+code_json
+code_base
+clear
+deactivate wjenv
+clear
+docker_down
+docker_up
+clear
+vim .alieases
+clear
+cd ~/repo
+vim .aliease
+clear
+cd acws
+clear
+pyenv
+clear
+top
+sudo kill -9 77992
+clear
+ls -lart
+cd system_setup/
+ls -lart
+vim f_secure_docker.sh
+bash f_secure_docker.sh 
+vim f_secure_docker.sh
+echo "Cpasage@123" | sudo bash f_secure_docker.sh
+vim f_secure_docker.sh 
+cd system_setup/
+vim f_secure_docker.sh 
+bash f_secure_docker.sh 
+vim f_secure_docker.sh 
+cat f_secure_docker.sh 
+vim f_secure_docker.sh 
+bash f_secure_docker.sh 
+vim f_secure_docker.sh 
+clear
+ls -lart
+sudo chmod 755 *.sh
+clear
+ls -lart
+vim f_secure_docker.sh 
+bash f_secure_docker.sh 
+vim f_secure_docker.sh 
+bash f_secure_docker.sh 
+vim f_
+vim f_secure_docker.sh 
+bash f_secure_docker.sh 
+vim f_secure_docker.sh 
+app_update 
+vim f_secure_docker.sh 
+bash f_secure_docker.sh&
+clear
+top
+clear
+find / kdevtmpfs*
+find / -iname kdevtmpfs*
+sudo find / -iname kdevtmpfs*
+rm -rf /var/lib/docker/overlay2/3830e6f95a825d6890973f943e6ef8cc1c76bdf1edcc32d1b0f53e235f44e522/diff/tmp/kdevtmpfsi /var/lib/docker/overlay2/3830e6f95a825d6890973f943e6ef8cc1c76bdf1edcc32d1b0f53e235f44e522/merged/tmp/kdevtmpfsi /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/diff/tmp/kdevtmpfsi /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/diff/var/tmp/kdevtmpfsi /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/merged/tmp/kdevtmpfsi /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/merged/var/tmp/kdevtmpfsi /var/lib/docker/overlay2/9f057a2dd9957f72168d79159e416be50d130756f48d1e81c9b6e30e526a113c/diff/tmp/kdevtmpfsi /var/lib/docker/overlay2/9f057a2dd9957f72168d79159e416be50d130756f48d1e81c9b6e30e526a113c/merged/tmp/kdevtmpfsi
+sudo rm -rf /var/lib/docker/overlay2/3830e6f95a825d6890973f943e6ef8cc1c76bdf1edcc32d1b0f53e235f44e522/diff/tmp/kdevtmpfsi /var/lib/docker/overlay2/3830e6f95a825d6890973f943e6ef8cc1c76bdf1edcc32d1b0f53e235f44e522/merged/tmp/kdevtmpfsi /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/diff/tmp/kdevtmpfsi /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/diff/var/tmp/kdevtmpfsi /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/merged/tmp/kdevtmpfsi /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/merged/var/tmp/kdevtmpfsi /var/lib/docker/overlay2/9f057a2dd9957f72168d79159e416be50d130756f48d1e81c9b6e30e526a113c/diff/tmp/kdevtmpfsi /var/lib/docker/overlay2/9f057a2dd9957f72168d79159e416be50d130756f48d1e81c9b6e30e526a113c/merged/tmp/kdevtmpfsi
+sudo find / -iname kdevtmpfs*
+sudo find / -iname kinsing*
+sudo rm -rf /var/lib/docker/overlay2/3830e6f95a825d6890973f943e6ef8cc1c76bdf1edcc32d1b0f53e235f44e522/diff/tmp/kinsing /var/lib/docker/overlay2/3830e6f95a825d6890973f943e6ef8cc1c76bdf1edcc32d1b0f53e235f44e522/diff/var/tmp/kinsing /var/lib/docker/overlay2/3830e6f95a825d6890973f943e6ef8cc1c76bdf1edcc32d1b0f53e235f44e522/merged/tmp/kinsing /var/lib/docker/overlay2/3830e6f95a825d6890973f943e6ef8cc1c76bdf1edcc32d1b0f53e235f44e522/merged/var/tmp/kinsing /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/diff/tmp/kinsing /var/lib/docker/overlay2/5c6c6ca250ccd8a71182e01a5364efc17b6fab3cef512a658f35a0b097624dfe/merged/tmp/kinsing /var/lib/docker/overlay2/9f057a2dd9957f72168d79159e416be50d130756f48d1e81c9b6e30e526a113c/diff/tmp/kinsing /var/lib/docker/overlay2/9f057a2dd9957f72168d79159e416be50d130756f48d1e81c9b6e30e526a113c/diff/var/tmp/kinsing /var/lib/docker/overlay2/9f057a2dd9957f72168d79159e416be50d130756f48d1e81c9b6e30e526a113c/merged/tmp/kinsing /var/lib/docker/overlay2/9f057a2dd9957f72168d79159e416be50d130756f48d1e81c9b6e30e526a113c/merged/var/tmp/kinsing
+sudo find / -iname kinsing*
+sudo find / -iname kdevtmp*
+clear
+sudo find / -iname kdevtmp*
+sudo find / -iname kinsing*
+cd_docker
+docker system prune
+sudo docker system prune
+iptables -I DOCKER-USER -i eth0 -j DROP
+sudo iptables -I DOCKER-USER -i eth0 -j DROP
+sudo iptables -I DOCKER-USER -m state --state RELATED,ESTABLISHED -j ACCEPT
+sudo find / -iname kdevtmpfsi* -exec rm -fv {} ;
+find / -iname kdevtmpfsi* -exec rm -fv {} \;
+sudo find / -iname kdevtmpfsi* -exec rm -fv {} \;
+touch /tmp/kdevtmpfsi
+sudo chmod 000 /tmp/kdevtmpfsi
+clear
+sudo find / -iname kinsing* -exec rm -fv {} \;
+touch /tmp/kinsing && touch /var/tmp/kinsing
+touch /tmp/kinsing
+sudo touch /var/tmp/kinsing
+sudo chmod 000 /tmp/kinsing 
+sudo chmod 000 /var/tmp/kinsing
+clear
+sudo find / -iname kinsing*
+sudo find / -iname kdevtmp*
+clear
+cd
+cd /root/scripts
+sudo cd /root/scripts
+vim /root/scripts/ctKillProc.sh
+sudo vim /root/scripts/ctKillProc.sh
+ps -aef | grep ctKil
+ps -aef | grep f_se
+sudo kill -9 98376
+ps -aef | grep f_se
+clear
+ps -aef | grep kdevtmp*
+exit
+top
+ps -aef | grep kdevtmp
+ps -aef | grep ctKi
+exit
+app_update 
+cd /usr/local/share/WebDriverManager/chrome/
+ls -lart
+cd
+full_code_pull 
+sudo reboot
+ps -aef | grep ctKi
+ps -aef | grep ct
+ps -aef | grep kdevtmpfsi
+ps -aef | grep ct
+ps -aef | grep ctKi
+sudo nohup sh /root/scripts/ctKillProc.sh &
+ps -aef | grep ctKi
+code_base
+clear
+chk_docker
+clear
+code_base
+code_docker
+cd docker
+clear
+sudo apt-get install ssmtp
+clear
+sudo vim /etc/ssmtp/ssmtp.conf
+clear
+crontab -e
+clear
+$hostname$hostname
+$hostname
+hostname
+sudo hostname
+sudo $hostname
+clear
+$hostanme
+$hosname
+hostname
+clear
+crontab -e
+ate
+date
+clear
+crontab -e
+clear
+crontab -e
+date
+clear
+crontab -e
+clear

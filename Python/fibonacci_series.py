@@ -53,16 +53,18 @@
 #         n2 = nth
 #         count += 1
 
-###########################################################################################
+##########################################################################################
 # by using Generators we can easily findout fibonacci series
-def fibonacci():
+
+
+def fibonacci(num):
     a, b = 0, 1
-    while True:
+    count = 0
+    while count < num:
         yield a
         a, b = b, a+b
+        count += 1
 
 
-for i in fibonacci():
-    if i > 100:
-        break
+for i in fibonacci(5):
     print(i)
