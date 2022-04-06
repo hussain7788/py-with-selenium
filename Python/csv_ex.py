@@ -11,6 +11,7 @@ with open('mycsv.csv', 'w', newline='') as f:
 with open("mycsv.csv", 'r') as f:
     r = csv.reader(f)
 
+
     # reading data adding into another csv file
     with open("csv1.csv", "w", newline='') as c:
         w = csv.writer(c)
