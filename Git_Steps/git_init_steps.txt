@@ -67,6 +67,9 @@ git remote -v
 4. now git log u can see one commit in other branch 
 -------------------- 
 
+------------- if we want to add or remove files based on folder -----
+1. git add <foldername>/*
+2. git restore --staged <foldername>/*
 
 
 
