@@ -73,4 +73,12 @@ git remote -v
 
 
 
+----------------------------------------------------------------------------------------------
+Create alias command in windows powershell
+
+To Create new alias command
+1. New-Alias <name> <command>
+
+Get all alias commands
+2. Get-Alias
 
