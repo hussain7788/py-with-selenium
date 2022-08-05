@@ -52,3 +52,10 @@ $ sudo grep --color -i cron /var/log/syslog
 sudo vim /etc/ssmtp/ssmtp.conf
 bash +x <scriptname>.sh
 bash ./<scriptname>.sh
+---------------------------------------------------------
+Commands to setup cronjob --
+
+06 13 * * * cd ~/repo/wjson_acws/cpa_pm/ && bash ./cron_test_utc.sh > /home/iw_user/Pm/log/cron_test_data.log
+09 13 * * * cd ~/repo/wjson_acws/cpa_pm/ && bash ./cron_test_utc_data.sh
+
+

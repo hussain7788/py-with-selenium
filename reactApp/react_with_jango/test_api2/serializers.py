@@ -1,4 +1,3 @@
-from attr import dataclass
 from rest_framework import serializers
 from .models import Student
 

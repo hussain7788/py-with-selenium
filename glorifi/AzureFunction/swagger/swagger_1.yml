@@ -1,0 +1,729 @@
+openapi: 3.0.0
+info:
+  title: DataHub READ APIs
+  version: v1
+# servers:
+# - url: https://datahub-party-function-app.azurewebsites.net/
+# - url: http://localhost:7071
+paths:
+  /lookup-ani/{ani}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup with ANI
+      parameters:
+        - in: path
+          name: ani
+          schema: 
+            type: string
+          required: true
+          description: ani
+      operationId: getLookupWithAni
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLookupWithAniResponse'
+        '400':
+          description: 'Validation Error' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '500':
+          description: Server not available.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'  
+  /lookup-phone/{phone_num}/{ani}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup with phone number & ani
+      parameters:
+        - in: path
+          name: phone_num
+          schema: 
+            type: string
+          required: true
+          description: phone number
+        - in: path
+          name: ani
+          schema: 
+            type: string
+          required: true
+          description: ani of caller
+      operationId: getLookupWithMobAni
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLookupWithMobAniResponse'
+        '400':
+          description: 'Validation Error' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse' 
+        '433':
+          description: 'Party ID does not exist.' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'    
+  /lookup-active-insurance/{ani}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup Active Insurance
+      parameters:
+        - in: path
+          name: ani
+          schema: 
+            type: string
+          required: true
+          description: ani of the caller
+      operationId: getLookupActiveInsurance
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLookupActiveInsuranceAniResponse'
+        '400':
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '434':
+          description: ani does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '500':
+          description: Server not available.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'   
+  /lookup-phone-dob/{phone_num}/{dob}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup with phone number & dob
+      parameters:
+        - in: path
+          name: phone_num
+          schema: 
+            type: string
+          required: true
+          description: phone_num
+        - in: path
+          name: dob
+          schema: 
+            type: string
+          required: true
+          description: dob
+      operationId: getLookupWithMobDob
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLookupWithMobDobResponse'
+        '400':
+          description: 'Validation Error' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse' 
+        '433':
+          description: 'Party ID does not exist.' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'  
+  /lookup-member-insurance/{member_id}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup Member Insurance
+      parameters:
+        - in: path
+          name: member_id
+          schema: 
+            type: integer
+          required: true
+          description: member_id
+      operationId: getLookupMemberInsuranceByMemberId
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLookupMemberInsuranceByMemberIdResponse'
+        '400':
+          description: Given request is invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '420':
+          description: Member ID does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '500':
+          description: Server not available.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse' 
+  /lookup-member-mortgages-summary-info/{member_id}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup Member Mortgages Summary
+      parameters:
+        - in: path
+          name: member_id
+          schema: 
+            type: integer
+          required: true
+          description: member_id
+      operationId: getLookupMemberMortgagesSummaryInfoByMemberId
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLookupMemberMortgagesSummaryInfoByMemberIdResponse'
+        '400':
+          description: Given request is invalid.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '420':
+          description: Member ID does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '425':
+          description: Customer ID does not exist.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '500':
+          description: Server not available.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse' 
+  /lookup-member-banking-summary-info/{member_id}:
+    get:
+      tags:
+        - Lookup
+      summary: Member Banking Summary
+      parameters:
+        - in: path
+          name: member_id
+          schema: 
+            type: integer
+          required: true
+          description: Member ID of member
+      operationId: GetMemberBankingSummary
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getMemberBankingSummaryResponse'
+        '400':
+          description: 'Validation Error' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '420':
+          description: 'Member ID does not exist.' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'   
+        '425':
+          description: 'Customer ID does not exist.'  
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'   
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /lookup-insurance-product/{member_id}:
+    get:
+      tags:
+        - Lookup
+      summary: Get Insurance Balance by product
+      parameters:
+        - in: path
+          name: member_id
+          schema: 
+            type: integer
+          required: true
+          description: Customer ID of customer
+        - in: query
+          name: product code
+          schema: 
+            type: string
+          required: false
+          description: product code
+      operationId: GetInsuracebalanceByproduct
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getinsurancebalancebyproduct'
+        '400':
+          description: 'Validation Error'           
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'           
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /lookup-member-banking-checking-info/{member_id}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup Banking Checking Summary 
+      parameters:
+        - in: path
+          name: member_id
+          schema: 
+            type: integer
+          required: true
+          description: Member ID of member
+      operationId: getMemberBankingInfo
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getMemberBankingCheckingInfoResponse'
+        '400':
+          description: 'Validation Error' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '420':
+          description: 'Member ID does not exist.' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '425':
+          description: 'Customer ID does not exist.'  
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /lookup-member-banking-savings-info/{member_id}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup Banking Savings Summary
+      parameters:
+        - in: path
+          name: member_id
+          schema: 
+            type: integer
+          required: true
+          description: Member ID of member
+      operationId: getMemberBankingSavingsInfo
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getMemberBankingSavingsInfoResponse'
+        '400':
+          description: 'Validation Error' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '420':
+          description: 'Member ID does not exist.' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+              example: {"message":"This member does not exist"}
+              
+        '425':
+          description: 'Customer ID does not exist.'  
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'
+              example: {"message":"There is no customer ID associated with this member"}
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example: {"message":"Internal Server Error"}
+  /lookup-member-banking-cc-info/{member_id}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup Credit Card Summary
+      parameters:
+        - in: path
+          name: member_id
+          schema: 
+            type: integer
+          required: true
+          description: Member ID of member
+      operationId: GetMemberCCSummary
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getMemberCCResponse'
+        '400':
+          description: 'Validation Error' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '420':
+          description: 'Member ID does not exist.' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'   
+              example:  
+                  message: Member ID does not exist.               
+        '433':
+          description: 'Party ID does not exist.'  
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'   
+              example:
+                  message: Party ID does not exist.                
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                  message: Internal Server Error
+  /lookup-member-banking-cd-info/{member_id}:
+    get:
+      tags:
+        - Lookup
+      summary: Lookup Banking CD Summary
+      parameters:
+        - in: path
+          name: member_id
+          schema: 
+            type: integer
+          required: true
+          description: Member ID of member
+      operationId: GetMemberCDSummary
+      responses:
+        '200':
+          description: Successful operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getMemberCDResponse'
+        '400':
+          description: 'Validation Error' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationErrorResponse'
+        '420':
+          description: 'Member ID does not exist.' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'   
+              example:  
+                  message: Member ID does not exist.               
+        '433':
+          description: 'Party ID does not exist.'  
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommonResponse'   
+              example:
+                  message: Party ID does not exist.                
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                  message: Internal Server Error
+  
+components:
+  schemas:
+    getLookupWithAniResponse:
+      type: object
+      properties:
+        LookupMemberByANI_RecordsFound:
+          type: integer
+        LookupMemberByANI_MemberID:
+          type: integer
+        LookupMemberByANI_MemberDOB:
+          type: string
+    getLookupActiveInsuranceQuoteByAniResponse:
+      type: object
+      properties:
+        LookUpActiveInsuranceQuotesByANI_GlorifiProducts:
+          type: string
+        LookUpActiveInsuranceQuotesByANI_NonGlorifiProducts:
+          type: string  
+    getLookupWithMobAniResponse:
+      type: object
+      properties:
+        LookupMemberByPhone_RecordsFound:
+          type: integer
+        LookupMemberByPhone_MemberID:
+          type: integer
+        LookupMemberByPhone_MemberDOB:
+          type: string  
+        LookupMemberByPhone_Remembered:
+          type: string   
+    getLookupActiveInsuranceAniResponse:
+      type: object
+      properties:
+        LookUpActiveInsuranceQuotesByANI_GlorifiProducts:
+          type: string
+        LookUpActiveInsuranceQuotesByANI_NonGlorifiProducts:
+          type: string
+    getLookupWithMobDobResponse:
+      type: object
+      properties:
+        LookupMemberByPhoneAndDOB_RecordsFound:
+          type: integer
+        LookupMemberByPhoneAndDOB_MemberID:
+          type: integer
+    getLookupMemberInsuranceByMemberIdResponse:
+      type: object
+      properties:
+        LookupMemberInsuranceInformation_ActivePolicyCount:
+          type: integer
+        LookupMemberInsuranceInformation_GlorifiProducts:
+          type: string
+        LookupMemberInsuranceInformation_NonGlorifiProducts:
+          type: string
+        LookupMemberInsuranceInformation_OpenClaimsProducts:
+          type: string
+        LookupMemberInsuranceInformation_HasRoadSideAssist:
+          type: string
+        LookupMemberInsuranceInformation_GlorifiProductQuotes:
+          type: string
+        LookupMemberInsuranceInformation_NonGlorifiProductQuotes:
+          type: string 
+    getLookupMemberMortgagesSummaryInfoByMemberIdResponse:
+      type: object
+      properties:
+        MortgageApplicationInProgress:
+          type: string
+        MortgageApplicationID:
+          type: string
+        MortgageApplicationMLO:
+          type: string
+        ActiveMortgagesCount:
+          type: integer
+        ActiveMortgagesIDs:
+          type: string
+    getMemberBankingSummaryResponse:
+      type: object
+      properties:
+        TotalBankingAccounts:
+          type: integer
+        TotalBankingAccountTypes:
+          type: integer
+        TotalBankingCDAccounts:
+          type: integer
+        TotalBankingCheckingAccounts:
+          type: integer
+        TotalBankingSavingsAccounts:
+          type: integer
+        TotalBankingCreditCardAccounts:
+          type: integer
+        LookupBankingAccounts:
+          type: object
+          properties:
+            AccountType:
+              type: string
+            AccountNumber:
+              type: string
+    getinsurancebalancebyproduct:
+      type: object
+      properties: 
+        LookupBalanceByProduct_RecordsFound: 
+          type: integer
+        LookupBalanceByProduct_Products:
+          type: array
+          items:
+            type: object
+            properties:
+              PolicyIdentifier:
+                type: string
+              ProductCode:
+                type: string
+              PolicyState:
+                type: string
+              PolicyBalance:
+                type: integer
+              LastBillDate:
+                type: string
+              LastBillAmount:
+                type: integer
+              NextBillDate:
+                type: string
+              NextBillAmount:
+                type: integer
+    getMemberBankingCheckingInfoResponse:
+      type: object
+      properties:
+        TotalCheckingAccounts:
+          type: integer
+        CheckingInfo:
+          type: array
+          items:
+            type: object
+            properties:
+              CheckingAccountNumber: 
+                type: string
+              CheckingAccountNumberFriendly:
+                type: string
+              CheckingBalance:
+                type: string
+    getMemberBankingSavingsInfoResponse:
+      type: object
+      properties:
+        TotalSavingsAccounts:
+          type: integer
+        SavingsInfo:
+          type: array
+          items:
+            type: object
+            properties:
+              SavingsAccountNumber: 
+                type: string
+              SavingsAccountNumberFriendly:
+                type: string
+              SavingsBalance:
+                type: string
+    getMemberCCResponse:
+      type: object
+      properties:
+        TotalCCAccounts:
+          type: integer
+        CCInfo:
+          type: array
+          items: 
+            type: object
+            properties:
+              CCAccountNumber:
+                type: string
+              CCAccountNumberFriendly:
+                type: string
+              CCBalance:
+                type: string
+              CCAvailableCredit:
+                type: string
+              CCCreditLimit:
+                type: string
+              CCLastPaymentDate:
+                type: string 
+              CCLastPaymentAmount:
+                type: string 
+              CCNextPaymentDate:
+                type: string 
+              CCNextPaymentFullAmount:
+                type: string 
+              CCNextPaymentMinimumAmount:
+                type: string 
+              CCNumberOfCards:
+                type: string
+    getMemberCDResponse:
+      type: object
+      properties:
+        TotalCDAccounts: 
+          type: integer
+    CommonResponse:
+      type: object
+      properties:
+        message:
+          type: string
+    ValidationErrorResponse:
+      type: object
+      properties:
+        errors:
+          type: object
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Internal Server Error
