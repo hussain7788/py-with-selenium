@@ -71,6 +71,12 @@ git remote -v
 1. git add <foldername>/*
 2. git restore --staged <foldername>/*
 
+---------------------------------------------------------
+** if we want to move one repo branch to another repo then follow these steps
+
+1. follow the website below for complete information
+URL : https://kasunsiyambalapitiya.medium.com/move-git-branch-from-one-repository-to-another-with-preserving-history-81ed64de3a02
+
 
 
 ----------------------------------------------------------------------------------------------
