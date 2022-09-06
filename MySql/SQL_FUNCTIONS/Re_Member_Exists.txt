@@ -1,0 +1,40 @@
+-- FUNCTION: datahub.check_if_member_exists(character varying, character varying, character varying, character varying)
+
+-- DROP FUNCTION IF EXISTS datahub.check_if_member_exists(character varying, character varying, character varying, character varying);
+
+CREATE OR REPLACE FUNCTION datahub.check_if_member_exists(
+	firstname character varying,
+	lastname character varying,
+	dob character varying,
+	email character varying)
+    RETURNS integer
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+AS $BODY$
+declare
+   member_id_var integer := null;
+begin
+	IF EXISTS(SELECT * FROM datahub.party
+			 WHERE party_first_name = INITCAP(FirstName)
+			 AND party_last_name = INITCAP(LastName)
+			 AND party_dob = DOB::date
+			 AND party_email = LOWER(email))
+	THEN
+		SELECT member_id
+		INTO member_id_var
+		FROM datahub.member
+		JOIN datahub.party 
+			ON datahub.member.party_id = datahub.party.party_id
+		WHERE party_first_name = INITCAP(FirstName)
+		AND party_last_name = INITCAP(LastName)
+		AND party_dob = DOB::date
+		AND party_email = LOWER(email);
+	END IF;
+   
+   return member_id_var;
+end;
+$BODY$;
+
+ALTER FUNCTION datahub.check_if_member_exists(character varying, character varying, character varying, character varying)
+    OWNER TO la_data_admin;

@@ -1,0 +1,2 @@
+1. To make anything global 
+	sudo mv <command> /usr/local/bin

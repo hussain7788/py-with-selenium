@@ -1,0 +1,25 @@
+-- FUNCTION: datahub.add_loyalty_linked_acct_id(integer, character varying)
+
+-- DROP FUNCTION IF EXISTS datahub.add_loyalty_linked_acct_id(integer, character varying);
+
+CREATE OR REPLACE FUNCTION datahub.add_loyalty_linked_acct_id(
+	member_id_param integer,
+	account_number_param character varying)
+    RETURNS TABLE(account_ids text[]) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+	return query
+		UPDATE datahub.member_loyalty
+		SET linked_banking_acct_ids = array_prepend(account_number_param::text, linked_banking_acct_ids)
+		WHERE member_id = member_id_param
+		RETURNING datahub.member_loyalty.linked_banking_acct_ids;
+END;
+$BODY$;
+
+ALTER FUNCTION datahub.add_loyalty_linked_acct_id(integer, character varying)
+    OWNER TO la_data_admin;

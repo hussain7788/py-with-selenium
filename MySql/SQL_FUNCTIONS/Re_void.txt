@@ -1,0 +1,23 @@
+-- FUNCTION: datahub.add_delivered_credit_report(integer, bytea, date)
+
+-- DROP FUNCTION IF EXISTS datahub.add_delivered_credit_report(integer, bytea, date);
+
+CREATE OR REPLACE FUNCTION datahub.add_delivered_credit_report(
+	efx_enrollment_id_ integer,
+	report_ bytea,
+	date_created_ date)
+    RETURNS void
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+AS $BODY$
+BEGIN
+    UPDATE datahub.credit_reports
+    SET report = report_
+    WHERE efx_enrollment_id = efx_enrollment_id_
+    AND date_created = date_created_;
+END;
+$BODY$;
+
+ALTER FUNCTION datahub.add_delivered_credit_report(integer, bytea, date)
+    OWNER TO la_data_admin;

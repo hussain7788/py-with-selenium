@@ -1,0 +1,36 @@
+-- FUNCTION: datahub.address_sql_statement_creator(integer)
+
+-- DROP FUNCTION IF EXISTS datahub.address_sql_statement_creator(integer);
+
+CREATE OR REPLACE FUNCTION datahub.address_sql_statement_creator(
+	member_id_var integer)
+    RETURNS TABLE(addr_type integer, addr_value character varying, addr_desription character varying, addr_id integer, addr_address_line1 character varying, addr_address_line2 character varying, addr_city character varying, addr_county character varying, addr_state character varying, addr_postal_code character varying, addr_latitude numeric, addr_longitude numeric, valid_from_date date, valid_to_date date) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+	return query
+		SELECT datahub.addr_typ.addr_type, datahub.addr_typ.addr_value,
+			datahub.addr_typ.addr_desription, datahub.address.addr_id,
+			datahub.address.addr_address_line1, datahub.address.addr_address_line2,
+			datahub.address.addr_city, datahub.address.addr_county, datahub.address.addr_state, datahub.address.addr_postal_code,
+			datahub.address.addr_latitude, datahub.address.addr_longitude,
+			datahub.party_to_address.valid_from_date, datahub.party_to_address.valid_to_date
+			FROM datahub.member
+			JOIN datahub.party
+			ON datahub.member.party_id = datahub.party.party_id
+			JOIN datahub.party_to_address
+			ON datahub.party_to_address.party_id = datahub.party.party_id
+			JOIN datahub.address
+			ON datahub.address.addr_id = datahub.party_to_address.addr_id
+			JOIN datahub.addr_typ
+			ON datahub.addr_typ.addr_type = datahub.party_to_address.addr_type
+			WHERE datahub.member.member_id = member_id_var;
+END;
+$BODY$;
+
+ALTER FUNCTION datahub.address_sql_statement_creator(integer)
+    OWNER TO la_data_admin;
