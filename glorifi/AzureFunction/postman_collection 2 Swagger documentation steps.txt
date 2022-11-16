@@ -1,0 +1,13 @@
+Can you have a look at this link
+
+https://joolfe.github.io/postman-to-openapi/
+
+run the below command
+
+npm i postman-to-openapi -g
+
+Then use this command
+
+p2o ./path/to/PostmantoCollection.json -f ./path/to/result.yml
+
+There is a demo gif in that link

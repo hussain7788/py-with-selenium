@@ -11,7 +11,7 @@ Field          Description    Allowed Value
 (command)CMD      Command      Any command to be executed.
 
 4. For Eg- 00 23 * * * cd ~/cpa_pm_test/pm
-5. MAILTO=ashlesha14061998@gmail.com (to send mail after completion execution of task)
+5. MAILTO=valli.h7788@gmail.com (to send mail after completion execution of task)
 6. For sending mail must install ssmtp
     sudo apt-get install ssmtp
 7. To config ssmtpcr

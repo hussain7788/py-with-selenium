@@ -88,3 +88,6 @@ To Create new alias command
 Get all alias commands
 2. Get-Alias
 
+Create alias command in Linux
+1. alias <name>=<command>
+
