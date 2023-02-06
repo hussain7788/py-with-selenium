@@ -1,0 +1,32 @@
+{% extends 'common.html' %}
+
+{% block valli %}
+<h2>Admin Login </h2>
+
+<form action="http://127.0.0.1:5000/validate_admin", method="post">
+<table align="center">
+    <tr>
+        <th rowspan="5">
+            <img height="200" width="200" src="{{url_for ('static', filename='images/img2.jpg')}}">
+        </th>
+    </tr>
+    <tr>
+        <th>user</th> <th><input type="text" placeholder="username" name="user" required></th>
+    </tr>
+    <tr>
+        <th>password</th> <th><input type="password" placeholder="password" name="pass" required></th>
+    </tr>
+    <tr>
+        <th><button type="submit">Login</button></th>
+    </tr>
+            {% if message %}
+            <tr>
+                <th>{{message.error}}</th>
+            </tr>
+
+            {% endif %}
+
+</table>
+</form>
+
+{% endblock %}
