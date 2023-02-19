@@ -11,7 +11,6 @@ class person():
         return self.age, self.address
 
 
-
 class Employee(person):
     
     def __init__(self):
@@ -27,3 +26,4 @@ print(d1.name)
 print(d1.age)
 print(d1.address)
 print(d1.sample())
+print(d1.__dict__)

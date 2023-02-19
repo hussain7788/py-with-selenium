@@ -15,22 +15,22 @@ json_data = '''{
     "j_address":"kadapa"
 }'''
 
-with open("sample1.json", 'w') as s1:
-    s1.write(json_data)
+# with open("sample1.json", 'w') as s1:
+#     s1.write(json_data)
 d1 = {"name": "valli", "age": 23}
-# dump will take py dict and convert to json and save into json file
-with open("sample30.json", 'w') as f2:
-    json.dump(dictionary, f2, indent=4)
+# # dump will take py dict and convert to json and save into json file
+# with open("sample30.json", 'w') as f2:
+#     json.dump(dictionary, f2, indent=4)
 
-# reading the json file sample30.json
-with open("sample30.json", 'r') as f1:
-    r = json.load(f1)
-    print(r, type(r))
+# # reading the json file sample30.json
+# with open("sample30.json", 'r') as f1:
+#     r = json.load(f1)
+#     print(r, type(r))
 
 # storing py dict into sample30.json by dumping
 with open("sample30.json", 'a') as f3:
-    json.dump(d1, f3)
-    with open("sample30.json", 'r') as f4:
+    json.dump(dictionary, f3)
+    with open("sample30.json") as f4:
         r1 = json.load(f4)
         print("r1::", r1, type(r1))
 
@@ -66,7 +66,7 @@ with open("sample30.json", 'a') as f3:
 # print(type(json_object))
 
 ##################################################
-# convert json object into py dictinary
+# ##convert json object into py dictinary
 # with open("sample30.json") as json_file:
 # 	j1 = json.load(json_file)
 # 	print(j1, type(j1))

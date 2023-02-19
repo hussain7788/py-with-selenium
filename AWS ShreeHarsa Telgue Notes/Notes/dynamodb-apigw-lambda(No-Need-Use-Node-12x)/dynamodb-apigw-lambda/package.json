@@ -1,0 +1,6 @@
+{
+  "name": "dynamodb-doc",
+  "dependencies": {
+    "dynamodb-doc": "1.0.0"
+  }
+}

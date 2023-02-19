@@ -1,0 +1,26 @@
+1. Decide on VPC name and create a new VPC. For this class VPC name is AWS-JAN-21-VPC and IP Address space we are going to use is 10.1.0.0/16 =>65000 IPs. 
+Enable DNS Hostnames.
+
+2. Create three subnets in AWS-JAN-21.Enable automatic IP Assignment.
+
+JAN-21-Subnet1 - 10.1.1.0/24 -1a
+JAN-21-Subnet2 - 10.1.2.0/24 -1b
+JAN-21-Subnet3 - 10.1.3.0/24 -1c
+
+3. Create internet gateway and attach it to VPC. IGW name is AWS-JAN-21-IGW.
+
+4. Create new routing table for AWS-JAN-21 and assosiate subnets to it. Ignore the default routing table.
+
+5. Add routes in the routing table towards Internet Gateway.
+
+6. Create a security group Infy-VPC-SG and allow all in bound ports.
+
+7. Create a Key-Pair which create Public and Private Keys. AWS will have Public Key and you will be given private key. We need to use the private key to login to the instance.
+
+8. Deploy a Linux t2.micro instance and connect to it using private key u have created.
+
+
+
+
+
+

@@ -26,7 +26,7 @@ li2[2][0] = 7
 
 # Change is reflected in l2
 print("The new list of elements after deep copying ")
-for i in range(0, len(li1)):
+for i in range(0, len(li2)):
     print(li2[i], end=" ")
 
 print("\r")
@@ -65,7 +65,7 @@ import copy
 l1 = [1, 2, [3, 4], 5]
 l2 = copy.copy(l1)
 
-l1[2][0] = 31
+l2[2][0] = 31
 print(l1, l2)
 
 l3 = copy.deepcopy(l1)

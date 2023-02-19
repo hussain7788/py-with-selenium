@@ -28,7 +28,7 @@ print("The list printed sorting by age in descending order: ")
 print(sorted(lis, key=lambda i: i['age'], reverse=True))
 ######################################################################
 
-
+print("The list printed sorting by name in descending order: ")
 data = sorted(lis, key=lambda x: x['name'], reverse=True)
 print(data)
 
