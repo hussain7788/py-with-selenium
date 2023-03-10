@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "sname": "hussain",
+        "sage": 23,
+        "extra_field": "extra_field"
+    },
+    {
+        "id": 3,
+        "sname": "anil",
+        "sage": 25,
+        "extra_field": "extra_field"
+    },
+    {
+        "id": 4,
+        "sname": "sunil",
+        "sage": 25,
+        "extra_field": "extra_field"
+    }
+]

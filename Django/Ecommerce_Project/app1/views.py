@@ -93,6 +93,7 @@ def logout_user(request):
 
 
 def category_list(request, category_slug):
+    print("category_slug:::", category_slug)
     category = get_object_or_404(Category, slug=category_slug)
     products = Product.objects.filter(category=category)
     return render(request, "category_list.html", {"category": category, "products": products})

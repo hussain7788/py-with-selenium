@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "sname": "hussain",
+        "sage": 23
+    },
+    {
+        "id": 2,
+        "sname": "valli",
+        "sage": 24
+    },
+    {
+        "id": 3,
+        "sname": "anil",
+        "sage": 25
+    },
+    {
+        "id": 4,
+        "sname": "sunil",
+        "sage": 25
+    },
+    {
+        "id": 5,
+        "sname": "fasfd",
+        "sage": 25
+    },
+    {
+        "id": 6,
+        "sname": "fasfd",
+        "sage": 25
+    },
+    {
+        "id": 7,
+        "sname": "kaalu",
+        "sage": 25
+    },
+    {
+        "id": 8,
+        "sname": "chinna",
+        "sage": 25
+    }
+]

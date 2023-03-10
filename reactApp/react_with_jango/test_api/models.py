@@ -13,3 +13,9 @@ class PersonModel(models.Model):
     name = models.CharField(max_length=30)
     age = models.IntegerField(default=0)
     gender = models.CharField(max_length=10, choices=gender_choices)
+
+class Student(models.Model):
+    sname = models.CharField(max_length=100)
+    sage = models.IntegerField(default=0)
+    
+

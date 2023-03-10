@@ -7,6 +7,8 @@ insert into emp values(3, "ramu", 25, 70,70,90),(2, "valli", 24, 50,60,80)
 alter table emp add m4 int
 update emp set m4=68 where eno=1
 alter table emp drop m4
+'p'
+alter table emp drop column add
 truncate table emp
 delete from emp where eno=3
 drop table emp
@@ -15,6 +17,10 @@ alter table emp drop m3
 alter table emp add salary decimal
 alter table emp rename column enames to ename
 alter table emp modify column ename varchar(50)
+'postgressql'
+alter table stu alter column mar type integer
+alter table stu alter column mar type integer not null   -- alter alter is used to change column datatype, constraint name 
+'postgressql'
 desc emp
 update emp set salary = 30000 where eno=3
 update emp set salary = 40000 where eno=2
@@ -50,6 +56,9 @@ alter table emp modify column ename varchar(60) not null
 7. foreign key constraint
 -- end --
 -- checked constraint will work based on condition
+
+-- foreign key constraint--
+create table student(sno int primary key, sname varchar(50), dno int, foreign key(dno) references dept(dno))
 create table e1(eno int check(eno>100), ename varchar(10))
 insert into e1 values(101, "hussain") #success
 insert into e1 values(99, "hussain") #fail
@@ -63,8 +72,19 @@ alter table e1 add column address varchar(40) default("A")
 insert into e1 values(102, "valli", 25000, 20
 desc e1
 
+'POSTGRES SQL'
+
+CREATE TABLE assets (
+    id serial PRIMARY KEY,
+    name TEXT NOT NULL,
+    asset_no VARCHAR NOT NULL,
+    description TEXT,
+    LOCATION TEXT,
+    acquired_date DATE NOT NULL
+);
 
 
+'POSTGRES SQL'
 
 
 
