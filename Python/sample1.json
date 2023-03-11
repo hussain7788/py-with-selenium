@@ -1,5 +1,214 @@
 {
-    "j_name":"hussain",
-    "j_age":23,
-    "j_address":"kadapa"
+    "products": [
+        {
+            "id": 1,
+            "title": "iPhone 9",
+            "price": 549,
+            "brand": "Apple",
+            "category": "smartphones"
+        },
+        {
+            "id": 2,
+            "title": "iPhone X",
+            "price": 899,
+            "brand": "Apple",
+            "category": "smartphones"
+        },
+        {
+            "id": 3,
+            "title": "Samsung Universe 9",
+            "price": 1249,
+            "brand": "Samsung",
+            "category": "smartphones"
+        },
+        {
+            "id": 4,
+            "title": "OPPOF19",
+            "price": 280,
+            "brand": "OPPO",
+            "category": "smartphones"
+        },
+        {
+            "id": 5,
+            "title": "Huawei P30",
+            "price": 499,
+            "brand": "Huawei",
+            "category": "smartphones"
+        },
+        {
+            "id": 6,
+            "title": "MacBook Pro",
+            "price": 1749,
+            "brand": "Apple",
+            "category": "laptops"
+        },
+        {
+            "id": 7,
+            "title": "Samsung Galaxy Book",
+            "price": 1499,
+            "brand": "Samsung",
+            "category": "laptops"
+        },
+        {
+            "id": 8,
+            "title": "Microsoft Surface Laptop 4",
+            "price": 1499,
+            "brand": "Microsoft Surface",
+            "category": "laptops"
+        },
+        {
+            "id": 9,
+            "title": "Infinix INBOOK",
+            "price": 1099,
+            "brand": "Infinix",
+            "category": "laptops"
+        },
+        {
+            "id": 10,
+            "title": "HP Pavilion 15-DK1056WM",
+            "price": 1099,
+            "brand": "HP Pavilion",
+            "category": "laptops"
+        },
+        {
+            "id": 11,
+            "title": "perfume Oil",
+            "price": 13,
+            "brand": "Impression of Acqua Di Gio",
+            "category": "fragrances"
+        },
+        {
+            "id": 12,
+            "title": "Brown Perfume",
+            "price": 40,
+            "brand": "Royal_Mirage",
+            "category": "fragrances"
+        },
+        {
+            "id": 13,
+            "title": "Fog Scent Xpressio Perfume",
+            "price": 13,
+            "brand": "Fog Scent Xpressio",
+            "category": "fragrances"
+        },
+        {
+            "id": 14,
+            "title": "Non-Alcoholic Concentrated Perfume Oil",
+            "price": 120,
+            "brand": "Al Munakh",
+            "category": "fragrances"
+        },
+        {
+            "id": 15,
+            "title": "Eau De Perfume Spray",
+            "price": 30,
+            "brand": "Lord - Al-Rehab",
+            "category": "fragrances"
+        },
+        {
+            "id": 16,
+            "title": "Hyaluronic Acid Serum",
+            "price": 19,
+            "brand": "L'Oreal Paris",
+            "category": "skincare"
+        },
+        {
+            "id": 17,
+            "title": "Tree Oil 30ml",
+            "price": 12,
+            "brand": "Hemani Tea",
+            "category": "skincare"
+        },
+        {
+            "id": 18,
+            "title": "Oil Free Moisturizer 100ml",
+            "price": 40,
+            "brand": "Dermive",
+            "category": "skincare"
+        },
+        {
+            "id": 19,
+            "title": "Skin Beauty Serum.",
+            "price": 46,
+            "brand": "ROREC White Rice",
+            "category": "skincare"
+        },
+        {
+            "id": 20,
+            "title": "Freckle Treatment Cream- 15gm",
+            "price": 70,
+            "brand": "Fair & Clear",
+            "category": "skincare"
+        },
+        {
+            "id": 21,
+            "title": "- Daal Masoor 500 grams",
+            "price": 20,
+            "brand": "Saaf & Khaas",
+            "category": "groceries"
+        },
+        {
+            "id": 22,
+            "title": "Elbow Macaroni - 400 gm",
+            "price": 14,
+            "brand": "Bake Parlor Big",
+            "category": "groceries"
+        },
+        {
+            "id": 23,
+            "title": "Orange Essence Food Flavou",
+            "price": 14,
+            "brand": "Baking Food Items",
+            "category": "groceries"
+        },
+        {
+            "id": 24,
+            "title": "cereals muesli fruit nuts",
+            "price": 46,
+            "brand": "fauji",
+            "category": "groceries"
+        },
+        {
+            "id": 25,
+            "title": "Gulab Powder 50 Gram",
+            "price": 70,
+            "brand": "Dry Rose",
+            "category": "groceries"
+        },
+        {
+            "id": 26,
+            "title": "Plant Hanger For Home",
+            "price": 41,
+            "brand": "Boho Decor",
+            "category": "home-decoration"
+        },
+        {
+            "id": 27,
+            "title": "Flying Wooden Bird",
+            "price": 51,
+            "brand": "Flying Wooden",
+            "category": "home-decoration"
+        },
+        {
+            "id": 28,
+            "title": "3D Embellishment Art Lamp",
+            "price": 20,
+            "brand": "LED Lights",
+            "category": "home-decoration"
+        },
+        {
+            "id": 29,
+            "title": "Handcraft Chinese style",
+            "price": 60,
+            "brand": "luxury palace",
+            "category": "home-decoration"
+        },
+        {
+            "id": 30,
+            "title": "Key Holder",
+            "price": 30,
+            "brand": "Golden",
+            "category": "home-decoration"
+        }
+    ]
 }
