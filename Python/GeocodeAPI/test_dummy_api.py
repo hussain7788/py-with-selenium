@@ -29,6 +29,8 @@ def get_products():
         print(errt)
     except requests.exceptions.RequestException as err:
         print(err)
+    else:
+        print("Successfully Fetch data.....")
 
     data = response.json()
     d1 = {
@@ -44,12 +46,13 @@ def get_products():
         d1['products'].append(dt)
 
     ## sending filtered data to json file to read properly
-    with open("sample1.json", 'w') as f2:
+    with open("GeocodeAPI\sample1.json", 'w') as f2:
         json.dump(d1, f2, indent=4)
 
     ### send complete data to json file
-    with open("sample2.json", 'w') as f1:
+    with open("GeocodeAPI\sample2.json", 'w') as f1:
         json.dump(data, f1, indent=4)
+        
 
     print("Fetching data Completed..............")
     print("d1::::", d1)
