@@ -1,6 +1,7 @@
 # without using count
 
 arr = [1, 1, 2, 3, 4, 2, 7, 8, 8, 3]
+# arr = [1,1,2,2]
 
 # print("Duplicate elements in given array: ")
 # # Searches for duplicate element
@@ -20,4 +21,21 @@ for i in arr:
     else:
         l4.append(i)
 
-print(l3, l4)
+print(l3,l4)
+
+############ another method to delete duplicates ####
+l1 = []
+for index, num in enumerate(arr):
+    if arr.count(num) > 1:
+        arr.pop(index)
+        # duplicate elements in list
+        l1.append(num)
+    
+# after deleting duplicates 
+print(arr)
+# duplicates elements stored in l1
+print(l1)
+
+################ another method ###############
+l1 = [1,2,3,1,1,2,4,4]
+print(list(dict.fromkeys(l1)))

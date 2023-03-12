@@ -66,5 +66,19 @@ def fibonacci(num):
         count += 1
 
 
-for i in fibonacci(5):
-    print(i)
+func = fibonacci(5)
+print(list(func))
+
+### another type
+def func(n):
+    for i in range(0,n):
+        yield i
+    
+f1 = func(5)
+print(type(f1))
+print(next(f1))
+print(next(f1))      
+print(next(f1))      
+print(next(f1))      
+print(next(f1))      
+

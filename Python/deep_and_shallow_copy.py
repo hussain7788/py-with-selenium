@@ -39,6 +39,9 @@ for i in range(0, len(li1)):
 ##################################################################################################
 
 # shallow copy
+####################   important Rule ##############################
+## The data will reflect in original list if u change nested list data .if u change list data it will not reflect in original list
+####################################################################################################
 # if u shallow copy a list .then if u modify any data in shallow copy list then it reflect in original list
 # initializing list 1
 li1 = [1, 2, [3, 5], 4]
