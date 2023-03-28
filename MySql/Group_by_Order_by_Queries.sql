@@ -57,6 +57,32 @@ Q) Query to delete duplicate records from table using CTE
 
 -----end of CTE by partition -----------------
 
+------- inner join and group by under public schema django models---------
+
+
+SELECT * FROM public."SignalsApp_company"
+ORDER BY id ASC LIMIT 100
+
+select * from public."SignalsApp_language"
+order by id asc limit 100
+
+select * from public."SignalsApp_programmer"
+order by id asc limit 100
+
+select * from public."SignalsApp_programmer_language"
+order by id asc limit 100
+
+select c.name, count(p.name)
+from public."SignalsApp_company" as c inner join public."SignalsApp_programmer" as p
+on c.id = p.company_id group by c.name
+
+select l.name, count(p_l.programmer_id)
+from public."SignalsApp_programmer_language" as p_l inner join public."SignalsApp_language" as l
+on p_l.programmer_id = l.id
+group by l.name
+
+-----------end ------------------------------
+
 ----- triggers ----
 
 use group_order

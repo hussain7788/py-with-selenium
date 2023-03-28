@@ -1,0 +1,16 @@
+
+{% extends 'Common.html' %}
+
+{% block valli %}
+<form  method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+
+    {% for msg in messages %}
+    {% if msg %}
+        <span style="color:blue">{{msg}}</span>
+    {% endif %}
+    {% endfor %}
+</form>
+{% endblock %}

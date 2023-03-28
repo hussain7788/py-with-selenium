@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<h2> Welcome to Index Page </h2>
+<table class="table">
+    <head>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+    </head>
+    <body>
+        
+            {% for dt in data %}
+            <tr>
+                {% if dt.name != "hussain" %}
+                <td>{{dt.name}}</td>
+                <td>{{dt.age}}</td>
+                <td>{{dt.address}}</td>
+                <form action="http://localhost:5000/delete_data" method="post">
+                    <input type="hidden" value="{{dt.name}}" name="t1">
+                    <td><button type="submit">Delete</button></td>
+                </form>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        <tr>
+            <td colspan="3">
+                {% with messages = get_flashed_messages() %}
+        
+                    {% if messages %}
+                    {% for msg in messages %}
+                    <span> {{msg}}</span>
+                    {% endfor %}
+                    {% endif %}
+
+                {% endwith %}
+            </td>
+            
+        </tr>
+    </body>
+</table>
