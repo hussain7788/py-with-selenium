@@ -1,4 +1,22 @@
 {% extends 'base.html' %} {%block content%}
+<script>
+    function show_password(){
+        console.log("invoked ")
+        var ps1 = document.getElementById("password1");
+        var ps2 = document.getElementById("password2");
+
+        if(ps1.type == "password" && ps2.type == "password"){
+            ps1.type = "text"
+            ps2.type = "text"
+        }
+        else{
+            ps1.type = "password"
+            ps2.type = "password"
+
+        }
+
+    }
+</script>
 <form method="post" style=" width: 50vw; margin-left : 25vw;">
     {% csrf_token %}
     <div class="container-fluid text-center">
@@ -10,7 +28,7 @@
                 {{fm}}
                 <small> {{fm.errors | striptags}} </small>
                 {% endfor %}
-
+                <span>Show Password</span><input type="checkbox" onclick="show_password()">
                 <div class="d-grid gap-2 col-6 mx-auto pt-4">
                     <button id="submitBtn" class="btn btn-primary" type="submit">Submit</button>
                 </div>

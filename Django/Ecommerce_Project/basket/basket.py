@@ -18,7 +18,7 @@ class Basket():
         else:
             self.basket[product_id] = {
                 'price': str(product.p_price), 'qty': qty}
-
+        print("self.basket data:::", self.basket)
         self.save()
 
     def __len__(self):

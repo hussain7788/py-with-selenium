@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-
+from .decorators import unauthenticated_user
 # Create your views here.
 
 
@@ -21,7 +21,7 @@ def index(request):
     context = {"products": Product.objects.all()}
     return render(request, "index.html", context)
 
-
+@unauthenticated_user
 def register_user(request):
     fm = UserRegForm()
     if request.method == "POST":
@@ -43,7 +43,7 @@ def register_user(request):
                 messages.success(request, "user registered successfully")
                 return render(request, "register_user.html", {"u_reg_msg": "user registered successfully", "form": form})
         else:
-            messages.error(request, "user is exist")
+            messages.error(request, "Invalid Form")
             return redirect("register_user")
     else:
         fm = UserRegForm()
@@ -68,7 +68,7 @@ def register_user(request):
 #         fm = UserRegForm()
 #         return render(request, "register_user.html", {"form": fm})
 
-
+@unauthenticated_user
 def login_user(request):
     if request.method == "POST":
         uname = request.POST.get('username')
@@ -86,7 +86,7 @@ def login_user(request):
     else:
         return render(request, "login_user.html")
 
-
+@login_required
 def logout_user(request):
     logout(request)
     return redirect('login_user')

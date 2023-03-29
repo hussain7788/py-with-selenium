@@ -2,22 +2,34 @@
 
 {% block valli %}
 
-<form method="post">
-    {% csrf_token %}
-    <div class="form-floating">
-        <input type="text" class="form-control" placeholder="Username" name="uname">
-        <label for="floatingInput">Username</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="upass">
-        <label for="floatingPassword">Password</label>
-      </div>
-      <button type="submit">Sign in</button>
-      {% for msg in messages %}
-      {% if msg %}
-          <span style="color:blue">{{msg}}</span>
-      {% endif %}
-      {% endfor %}
-</form>
+    <div class="container">
+      <h2>Login Form</h2>
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="text">Username</label>
+          <input type="text" name="uname" class="form-control" id="text" placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="upass" class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+    </div>
+    {% for msg in messages %}
+    {% if msg %}
+        <span style="color:blue">{{msg}}</span>
+    {% endif %}
+    {% endfor %}
+      
+  
+  
+    
 
+      
 {% endblock %}
+
+
+

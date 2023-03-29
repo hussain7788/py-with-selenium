@@ -7,10 +7,10 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 class UserRegForm(UserCreationForm):
-    password1 = forms.CharField(label="enter password", widget=forms.PasswordInput(
-        attrs={'class': 'form-control'}))
+    password1 = forms.CharField(label="password", widget=forms.PasswordInput(
+        attrs={'class': 'form-control', 'id': 'password1'}))
     password2 = forms.CharField(label="confirm password", widget=forms.PasswordInput(
-        attrs={'class': 'form-control'}))
+        attrs={'class': 'form-control', 'id': 'password2'}))
 
     class Meta:
         model = User
