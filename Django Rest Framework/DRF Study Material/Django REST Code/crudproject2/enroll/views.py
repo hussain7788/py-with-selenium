@@ -3,6 +3,7 @@ from .forms import StudentRegistration
 from .models import User
 from django.views.generic.base import TemplateView, RedirectView
 from django.views import View
+from django.contrib import messages
 # Create your views here.
 
 # This Class Will Add new Item and Show All Items
@@ -21,8 +22,8 @@ class UserAddShowView(TemplateView):
       nm = fm.cleaned_data['name']
       em = fm.cleaned_data['email']
       pw = fm.cleaned_data['password']
-      reg = User(name=nm, email=em, password=pw)
-      reg.save()
+      fm.save()
+      messages.success(request, "Student Added.")
     return HttpResponseRedirect('/')
 
 # This Class will Update/Edit
@@ -37,6 +38,7 @@ class UserUpdateView(View):
     fm = StudentRegistration(request.POST, instance=pi)
     if fm.is_valid():
       fm.save()
+      messages.success(request, "Student Data Updated.")
     return render(request, 'enroll/updatestudent.html', {'form':fm})
 
 # This Class will Delete

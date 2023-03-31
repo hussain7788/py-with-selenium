@@ -10,6 +10,13 @@
 <body>
  <div class="container mt-5">
   <h2 class="text-center alert alert-danger">Base Class-Based View ModelForm CRUD Project</h2>
+  <div>
+    {% if messages %}
+        {% for msg in messages %}
+        <p style="color:blue">{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+    </div>
   {% block content %} {% endblock content %}
  </div>
  <script src="{% static 'enroll/js/jquery.js' %}"></script>
