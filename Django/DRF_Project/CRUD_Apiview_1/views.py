@@ -8,6 +8,7 @@ from rest_framework.viewsets import generics
 from django_filters import rest_framework as filters
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.decorators import action
+from .PG_ADMIN_FUNC_CALLS.database_calls import get_pg_func
 
 # Create your views here.
 data = [generics.CreateAPIView, generics.ListAPIView, generics.RetrieveAPIView, generics.UpdateAPIView, generics.DestroyAPIView]
@@ -16,6 +17,7 @@ data = [generics.CreateAPIView, generics.ListAPIView, generics.RetrieveAPIView, 
 class EmployeeAPIView(APIView):
 
     def get(self, request, pk=None):
+        get_pg_func()
         if pk is not None:
             try:
                 obj = Employee.objects.get(id=pk)

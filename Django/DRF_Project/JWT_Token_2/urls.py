@@ -32,6 +32,6 @@ urlpatterns = [
     path('emp/<int:pk>/', EmployeeAPIView.as_view()),
    
     ## these are the default View classes from rest_framework documentation
-    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]

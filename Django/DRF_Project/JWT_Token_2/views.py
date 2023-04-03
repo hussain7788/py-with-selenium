@@ -8,7 +8,21 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
 
+#######################################3
+## This Class is used to generate Access Token with Username Attribute
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token= super().get_token(user)
+        token['username'] = user.username
+        return token
+    
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
+############################################################
 
 class EmpViewSet(viewsets.ModelViewSet):
  queryset = Employee.objects.all()
@@ -16,9 +30,11 @@ class EmpViewSet(viewsets.ModelViewSet):
  authentication_classes = [JWTAuthentication]
  permission_classes = [permissions.IsAuthenticated]
 
-# Create your views here.
-
+############################################
 class EmployeeAPIView(APIView):
+
+    authentication_classes= [JWTAuthentication]
+    permission_classes = [permissions.IsAdminUser]
 
     def get(self, request, pk=None):
         if pk is not None:
@@ -40,18 +56,20 @@ class EmployeeAPIView(APIView):
             ser = EmployeeSerializer(filter_objs, many= True).data
 
         return Response(ser)
-#################################################################
-    ## Generating Jwt tokens when any user send post request to add 
-    ## This is manual Jwt token creation
-#########################################################   
+        #################################################################
+            ## Generating Jwt tokens when any user send post request to add 
+            ## This is manual Jwt token creation
+        #########################################################   
     def post(self, request, format=None):
         obj = EmployeeSerializer(data=request.data)
         if obj.is_valid():
             obj.save()
-            user = Employee.objects.get(name= obj.data['name'])
-            refresh = RefreshToken.for_user(user)
-            return Response(
-                {"message":"Employee Added", "refresh":str(refresh), "access":str(refresh.access_token)})
+        ## THis code us used for generating jWt token when send post request for every user
+            # user = Employee.objects.get(name= obj.data['name'])
+            # refresh = RefreshToken.for_user(user)
+            # return Response(
+            #     {"message":"Employee Added", "refresh":str(refresh), "access":str(refresh.access_token)})
+            return Response({"Message":"Employee added "})
         else:
             return Response({"message":"Invalid Data"})
 
@@ -65,6 +83,7 @@ class EmployeeAPIView(APIView):
             return Response({"message":"Invalid Data"})
         
     def delete(self, request, pk):
+        print("pk::::::", pk)
         try:
             obj = Employee.objects.get(id=pk)
         except:

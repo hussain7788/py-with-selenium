@@ -1,0 +1,11 @@
+create or replace function public.get_crud_table()
+	returns table(id bigint, name character varying, age integer)
+	LANGUAGE 'plpgsql'
+	
+as $body$
+begin
+		return query
+				select * from public."CRUD_Apiview_1_employee";
+
+end;
+$body$;
