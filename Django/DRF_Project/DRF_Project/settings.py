@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'CRUD_Apiview_1',
     'JWT_Token_2',
-
+    'All_Auth_Perm_3',
+    'Nested_Serializer_4',
 
     'rest_framework',
     'django_filters',
@@ -149,11 +150,19 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    # "DEFAULT_PERMISSION_CLASSES": ['rest_framework.permissions.IsAuthenticatedOrReadOnly'],
-    # 'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend'),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    "DEFAULT_PERMISSION_CLASSES": ['rest_framework.permissions.IsAuthenticatedOrReadOnly'],
+
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    # )
+
+    # "DEFAULT_THROTTLE_RATES":{
+    #         "anon": "3/day",
+    #         "user": "10/hour",
+    #         "hussain":'5/min'
+    # }
 }
 
 

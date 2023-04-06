@@ -13,14 +13,24 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path,include
+from rest_framework.routers import DefaultRouter
+from .views import *
+
+## these are the default imports from rest_framework documentation
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+router = DefaultRouter()
+router.register('emp_viewset', EmpViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api_view/', include('CRUD_Apiview_1.urls')),
-    path('jwt/', include('JWT_Token_2.urls')),
-    path('auth/', include('All_Auth_Perm_3.urls')),
-    path('ser/', include('Nested_Serializer_4.urls'))
-    
+    path('', include(router.urls)),
+
+    path('emp/', EmployeeAPIView.as_view()),
+    path('emp/<int:pk>/', EmployeeAPIView.as_view()),
+
+    ## if we want to login from API itself then include rest_framework urls
+    path('login/', include('rest_framework.urls'))
 ]
