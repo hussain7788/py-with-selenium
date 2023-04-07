@@ -1,0 +1,102 @@
+
+<h1 style="color: blue; background-color: black;"> <center> Django Todo Task </center> </h3>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <center>
+        <h3 style="color: green"> Add Todo Task</h3>
+        {{form.as_p}}
+        <input type="submit" value="Add">
+    </center>
+</form>
+
+
+<table align="center" border="2">
+    <center>
+        <form action="" method="post">
+            {% csrf_token %}
+        <select name="search">
+            <option value="all_tasks">All Tasks</option>
+            <option value="pending_tasks">Pending Tasks</option>
+            <option value="completed_tasks">Completed Tasks</option>
+        </select>
+        <input type="submit" value="Search">
+        </form>
+    </center>
+    <thead>
+        <tr style="background-color: yellow;">
+            <th>Task</th>
+            <th>Date Created</th>
+            <th>Completed</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if filter %}
+        {% for t in data %}
+        
+        <tr>
+            <td>
+            {% if t.comepleted == True %}
+                <strike>{{t.task}}</strike>
+            {% else %}
+            {{t.task}}
+            {% endif %}
+            </td>
+            <td>
+                {{t.created}}
+            </td>
+            <td>
+                {% if t.comepleted == True %}
+                    <p style="color: blue">Task is Completed</p>
+                {% else %}
+                <p style="color: red"> Task is Incomplete</p>
+                {% endif %}
+            </td>
+            
+            <td>
+                <a href="{% url 'update_task' t.id %}">
+                    <input type="button" value="Update">
+                </a>
+                <a href="{% url 'delete_task' t.id %}">
+                    <input type="button" value="Delete">
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        {% for t in todo %}
+        
+        <tr>
+            <td>
+            {% if t.comepleted == True %}
+                <strike>{{t.task}}</strike>
+            {% else %}
+            {{t.task}}
+            {% endif %}
+            </td>
+            <td>
+                {{t.created}}
+            </td>
+            <td>
+                {% if t.comepleted == True %}
+                    <p style="color: blue">Task is Completed</p>
+                {% else %}
+                <p style="color: red"> Task is Incomplete</p>
+                {% endif %}
+            </td>
+            
+            <td>
+                <a href="{% url 'update_task' t.id %}">
+                    <input type="button" value="Update">
+                </a>
+                <a href="{% url 'delete_task' t.id %}">
+                    <input type="button" value="Delete">
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+
+        {% endif %}
+    </tbody>
+</table>
