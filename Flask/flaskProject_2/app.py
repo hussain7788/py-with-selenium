@@ -1,19 +1,26 @@
 from flask import Flask
 from flask import redirect, url_for, render_template, request
-# from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 
-# app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URL'] = 'sqlite:///test.db'
-# with app.app_context():
-#     db = SQLAlchemy(app)
-
-# class TestDB(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(200), nullable=False)
-
-#     def __repr__(self) -> str:
-#         return self.id
 app = Flask(__name__)
+
+app.app_context().push()
+app.config['SECRET_KEY'] = 'thisissecret'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///User.sqlite3'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///MyProjects/Flask/flaskProject_2/test.db'
+
+
+# with app.app_context():
+db = SQLAlchemy(app)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False)
+    age = db.Column(db.Integer)
+
+    def __repr__(self) -> str:
+        return self.id
+    
 
 @app.route('/admin')
 def admin_page():

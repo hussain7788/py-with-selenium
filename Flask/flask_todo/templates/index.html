@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Todo </title>
+</head>
+<body>
+    <form action="http://127.0.0.1:5000/" method="post">
+        <h2>Add Todo</h2>
+        <ul>
+            <li>
+                <input type="text" placeholder="Task Name" name="t1">
+            </li>
+            <li>
+                <input type="checkbox" placeholder="completed ?" name="t2">
+            </li>
+            <li>
+                <input type="submit" value="Add Task">
+            </li>
+        </ul>
+    </form>
+
+
+
+    <table align="center" border="2">
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Completed</th>
+                <th>Created</th>
+                <th>Action</th>
+
+            </tr>
+            <tbody>
+                    {% for dt in data %}
+                        <tr>
+                            <td>{{dt.title}}</td>
+                            {% if dt.completed == True %}
+                                <td>
+                                    <strike>{{dt.completed}}</strike>
+                                </td>
+                             {% else %}
+                             <td>{{dt.completed}}</td>
+                             {% endif %}
+                            <td>{{dt.created}}</td>
+                            <td>
+                                <a href="{{ url_for('update_todo', id=dt.id) }}">
+                                    Update
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ url_for('delete_todo', id=dt.id) }}">
+                                    Delete
+                                </a>
+                            </td>
+
+                            </a>
+
+                        </tr>
+                    {% endfor %}
+            </tbody>
+        </thead>
+
+
+    </table>
+    {% with messages = get_flashed_messages() %}
+        
+                    {% if messages %}
+                    {% for msg in messages %}
+                    <span> {{msg}}</span>
+                    {% endfor %}
+                    {% endif %}
+
+                {% endwith %}
+        
+</body>
+</html>
