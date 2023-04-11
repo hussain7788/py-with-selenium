@@ -8,8 +8,26 @@
     <script type="text/javascript" src="json_parse.js">
         
     </script>
+    <script>
+        function func(){
+            alert("click")
+            console.log(document.getElementById("name").value)
+            console.log(document.getElementById("select").value)
+        }
+    </script>
 </head>
 <body>
     <h2> Json Parse Example</h2>
+    <input type="text" placeholder="ondblclick" id="name" onblur="func()">
+    <img src="images/one.jpg" alt="one.jpg">    
+
+    <select onselect="func()" id="select">
+        <option value="hussain">hussain</option>
+        <option value="valli">valli</option>
+        <option value="anil">anil</option>
+
+    </select>
+
+    <input type="button" value="submit">
 </body>
 </html>
