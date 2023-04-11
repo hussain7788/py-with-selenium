@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, url_for, request, flash, get_flashed_messages
+from flask import Flask, redirect, render_template, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -44,8 +44,22 @@ def index():
 
 @app.route('/update/<int:id>', methods= ['GET', 'POST'])
 def update_todo(id):
-    
-    return f"this is update todo{id}"
+    obj = Todo.query.get(id)
+    context = {"data":obj}
+    if request.method == "POST":
+        title = request.form.get("t1")
+        comp = request.form.get("t2")
+        print("completed :::", comp)
+        if comp == "on":
+            comp = True
+        else:
+            comp = False
+        obj.title = title
+        obj.completed = comp
+
+        db.session.commit()
+        return redirect('/')
+    return render_template("update.html", **context)
 
 @app.route('/delete/<int:id>', methods= ['GET', 'POST'])
 def delete_todo(id):

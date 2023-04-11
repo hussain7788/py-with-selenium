@@ -15,3 +15,4 @@ const dt= l1.map(a => a*2)
             .sort((a,b) => b-a)
             .reduce((a,b) => a+b)
 console.log(dt)
+

@@ -6,6 +6,11 @@ with open('mycsv.csv', 'w', newline='') as f:
     wr.writerow(['one', 'two', 'three'])
     print("data added")
 
+with open("mycsv1.csv", 'w') as cv:
+    writer = csv.writer(cv)
+    writer.writerow(['firstname', 'lastname'])
+    writer.writerow(['hussain', 'valli'])
+    print('data added')
 
 # read all records from csv file
 with open("mycsv.csv", 'r') as f:

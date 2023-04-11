@@ -24,15 +24,7 @@ class TodoApiVIew(APIView):
         return Response(ser.data)
 
     def post(self, request, format=None):
-        # if request.query_params['section'] == "create":
-        # ser_obj = TodoSerializer(data=request.data)
-        # if ser_obj.is_valid():
-        #     task_name = ser_obj.validated_data['t_name']
-        #     print("task_name:", task_name)
-        #     ser_obj.save()
-        #     return Response({"message":"added"}, status=200)
-        # else:
-        #     return Response({"message":"error"}, status=400)
+       
         if request.query_params['section'] == "create":
             task_name = request.POST.get("task_name")
             print("task_name::", task_name)
