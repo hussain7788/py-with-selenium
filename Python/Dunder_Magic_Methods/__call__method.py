@@ -8,7 +8,7 @@ class AuthMethod:
 @AuthMethod
 def process_document():
     print("called process document")
-# process_document()
+process_document()
 
 # ###########################
 # class sample():

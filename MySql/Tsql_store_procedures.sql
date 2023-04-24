@@ -22,3 +22,20 @@ begin
 select * from (select * from emp order by sal desc limit 3)E order by sal asc limit 1;
 end //
 call max_sal_third;
+
+
+------- POSTGRESQL stored procedures --------------
+
+create procedure s(numeric, character varying, integer, boolean, character varying)
+language 'plpgsql'
+as $$
+
+begin
+insert into public.stu values($1, $2, $3, $4, $5);
+commit;
+end;
+$$;
+
+drop procedure s(numeric, character varying, integer, boolean, character varying)
+
+call s(108, 'anna', 37, 'false', 'MPC');

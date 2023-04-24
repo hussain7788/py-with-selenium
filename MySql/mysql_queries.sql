@@ -16,11 +16,21 @@ select *, m1+m2+m3 as "Total" from emp
 alter table emp drop m3
 alter table emp add salary decimal
 alter table emp rename column enames to ename
-alter table emp modify column ename varchar(50)
 'postgressql'
+
+-- changing data type of column field
+alter table emp alter column ename type varchar(30)
 alter table stu alter column mar type integer
 alter table stu alter column mar type integer not null   -- alter alter is used to change column datatype, constraint name 
 'postgressql'
+
+----- creating indexes on tables----
+create index test_index on practice_s.emp(sal)
+drop index practice_s.test_index
+
+-------------
+
+
 desc emp
 update emp set salary = 30000 where eno=3
 update emp set salary = 40000 where eno=2

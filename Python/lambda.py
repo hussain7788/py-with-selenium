@@ -37,14 +37,28 @@ lis = [{"name": "ajay", "age": 20},
        {"name": "sunil", "age": 30},
        {"name": "Nikhil", "age": 19}]
 
-g1 = sorted(lis, key=lambda x: x['name'], reverse=True)
-print(g1)
+# g1 = sorted(lis, key=lambda x: x['name'], reverse=True)
+# print(g1)
 
-t1 = [
-    ("name", 'n'),
-    ("age", 'a'),
-    ("address", 'd'),
-]
+# t1 = [
+#     ("name", 'n'),
+#     ("age", 'a'),
+#     ("address", 'd'),
+# ]
 
-s1 = sorted(t1, key=lambda x: x[1])
-print(s1)
+# s1 = sorted(t1, key=lambda x: x[1])
+# print(s1)
+nums = [1,2,3,4,5]
+def func(num):
+    return num*2
+data = list(map(func, nums))
+print(data)
+
+fl =  list(filter(lambda x:x%2==0, nums))
+print(fl)
+
+from functools import reduce
+r1 = reduce(lambda x,y:x+y, nums)
+print(r1)
+
+print(sum(nums))
