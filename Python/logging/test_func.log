@@ -1,3 +1,4 @@
 INFO:root:This is before :wrapper_func
 INFO:root:This is before :test_func
 INFO:root:This is before :test_func
+INFO:root:This is before :test_func

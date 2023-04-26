@@ -106,6 +106,19 @@ CREATE TABLE assets (
 SET SQL_SAFE_UPDATES = 0;
 
 
+------------------------------
+CASE use case 
+------------------------------
+-- gettig if marks >37 pass or marks <37 fail as marks_status column from s2 table
+
+select marks,
+case
+	when marks > 37 then 'pass'
+	when marks < 37 then 'fail'
+	else 'Equal'
+end as "marks_status"
+from s2
+
 
 
 

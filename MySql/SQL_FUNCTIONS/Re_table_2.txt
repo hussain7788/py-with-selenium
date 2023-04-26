@@ -9,3 +9,30 @@ begin
 
 end;
 $body$;
+
+
+
+-----------------------
+returning country with number of cities
+--------------------------------
+
+create or replace function country_city(country_name character varying)
+	returns table(name character varying, city_length bigint)
+	language 'plpgsql'
+	
+as $body$
+begin
+		return query
+			
+			select c1.code as "country name", count(c2.countrycode_id) as "Total Cities"
+			from app1_country c1 inner join app1_city c2
+			on c1.code = c2.countrycode_id
+			group by c1.code 
+			having c1.name = country_name;
+
+end;
+$body$;
+
+drop function country_city(character varying)
+
+select country_city('India')

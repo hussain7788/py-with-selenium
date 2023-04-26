@@ -18,18 +18,22 @@ import logging
 # display_info()
 
 
-def decorator(func):
-    logging.basicConfig(filename=f"logging/{func.__name__}.log", level=logging.INFO)
-    def wrapper_func(*args, **kwargs):
-        logging.info(f"This is before :{func.__name__}")
-        print(args, kwargs)
-        return func()
+# def decorator(func):
+#     logging.basicConfig(filename=f"logging/{func.__name__}.log", level=logging.INFO)
+#     def wrapper_func(*args, **kwargs):
+#         logging.info(f"This is before :{func.__name__}")
+#         print(args, kwargs)
+#         return func()
     
-    return wrapper_func
+#     return wrapper_func
 
-@decorator
-def test_func():
-    print(f"This is main : {test_func.__name__}")
+# @decorator
+# def test_func():
+#     print(f"This is main : {test_func.__name__}")
 
 
-test_func()
+# test_func()
+
+def sample():
+    print(sample.__name__)
+sample()

@@ -94,17 +94,28 @@ PASSWORD=270164835,
 HOST="localhost",
 PORT=5432 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': "DRF_Test_DB",
+#         'USER': 'postgres',
+#         'PASSWORD':270164835,
+#         'HOST':"localhost",
+#         'PORT':5432
+#     }
+# }
+
+## mahammed databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "DRF_Test_DB",
+        'ENGINE': 'django.db.backends.mssql',
+        'NAME': "school",
         'USER': 'postgres',
         'PASSWORD':270164835,
         'HOST':"localhost",
         'PORT':5432
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
