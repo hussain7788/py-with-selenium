@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        // $(document).on('click', '#increment', function(e){
+        //     e.preventDefault();
+        //     var id = $(this).data('index')
+        //     console.log(id, typeof(id))
+        //     num = $('#number').val();
+        //     name = $('#name').val();
+        //     $("#name").on("input", function(){
+        //         var n1 = $(this).val();
+        //         console.log("new name", n1)
+        //     })
+        //     // console.log(num, name)
+            
+        // })
+        
+        $(document).ready(function(e){
+            $("#increment").on("click", function(e){
+                e.preventDefault();
+                var inc = $(this).data("index")
+                console.log(inc)
+            })
+            $("#name").on("input", function(e){
+                var name = $(this).val();
+                console.log(name)
+            })
+            
+        })
+        var number = 1;
+        function increment(){
+            var num = document.getElementById('number').value = ++ number
+
+        }
+        function decrement(){
+            if(number !=0){
+                var num = document.getElementById('number').value = -- number;
+                console.log(num)
+            }
+        }
+
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <input type="text" id="name" placeholder="name">
+    <input type="number" id="number" placeholder="number">
+    <button type="button" id="increment" data-index="1" onclick="increment()">increment</button>
+    <button type="button" id="decrement" data-index="2" onclick="decrement()">decrement</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

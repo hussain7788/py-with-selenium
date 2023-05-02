@@ -1,0 +1,35 @@
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/My_Projects/Ecommerce_Project
+ExecStart=/home/ubuntu/My_Projects/env/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          Ecommerce_Project.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+
+------------------
+
+server {
+    listen 80;
+    server_name 54.226.46.73;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/ubuntu/My_Projects/Ecommerce_Project;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
