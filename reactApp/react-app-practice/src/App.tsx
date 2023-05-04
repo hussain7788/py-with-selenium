@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Messages from './components/messages'
+import Messages from './components/Messages'
 import ListGroup from './components/ListGroup'
 import Props from './components/Props'
 import Alert from './components/Alert'
@@ -24,7 +24,8 @@ function App() {
         <br />
         <span>this is span tag</span>
       </Alert> */}
-      <Button></Button>
+      <Alert children='hello world'></Alert>
+      {/* <Button></Button> */}
 
     </div>
       
