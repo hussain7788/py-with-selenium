@@ -1,2 +1,40 @@
+
+Structure of linux machine:
+
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+-- here home dir is for users like 
+	. /home/user1/
+	. /home/user2/
+-- to navigate to home just type 
+	. cd ~
+-- here the above path is roor directory.its belongs to main root user(admin)
+-- we will have all default commands in bin dir like (pwd, touch, mv, cp)
+
 1. To make anything global 
 	sudo mv <command> /usr/local/bin
+
+2. to create file and add data into file
+	. cat is used to concat from multi files and read data from multiple files
+   	. cat >> file.txt
+3. to move file 
+	. mv file1 file2
+4. to rename file 
+	. mv file1_oldname file1_newname
+5. to create and add data into file
+	. nano file1.txt
+6. to read large file in line by line
+	. more file1.txt
+7. to read large file in backward and forward direction
+	. less fil1.txt
+8. to open file with only 5 lines of code from starting
+	. less -n 5 file1.txt
+9. to open file with only 5 lines of code from ending
+	. tail -n 5 file1.txt
+
+10. To read content from one file and send output to another file
+	. cat file1.txt > file2.txt
+	. cat file1.txt file2.txt > combined.txt
+
+11. Redirectional command to send data from one file to another
+	. >
+
