@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block 'cart' %}
+
+<table class="table">
+
+    <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Delete</th>
+
+    </thead>
+
+    <tbody>
+        {% for p in items %}
+        <tr data-item="{{p.id}}" class="product-item">
+            <td>{{p.p_name}}</td>
+            <td>{{p.p_price}}</td>
+            <td>
+                <button type="button" class="btn btn-danger delete-button" id="delete-button" data-item="{{p.id}}">Delete</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <div style="color:blue; font-size: large;">
+        Total :<b id="total_price">{{total_price}}</b>
+    </div>
+
+</table>
+
+
+<script>
+    $(document).ready(function(){
+        // delete items
+        $(".delete-button").on('click', function(e){
+            e.preventDefault();
+            var id = $(this).data('item');
+            console.log("delete_id", id)
+            $.ajax({
+                url: "{% url 'delete_item' %}",
+                data: {id:id, csrfmiddlewaretoken: "{{csrf_token}}"},
+                method: "POST",
+                success: function(item){
+                    console.log(item)
+                    $('.product-item[data-item="' + id + '"]').remove();
+                    document.getElementById("basket_qty").innerHTML = item.item_qty;
+                    document.getElementById("total_price").innerHTML = item.total_price
+
+                }
+            })
+        });
+
+    });
+
+</script>
+
+
+{% endblock %}

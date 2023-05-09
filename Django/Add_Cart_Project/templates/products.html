@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block 'cart' %}
+
+<script> 
+    function unauthorized_alert(){
+        alert("Please login to add products to cart")
+    }
+</script>
+
+<h3> Product Details</h3>
+
+<ul>
+    {% for p in products %}
+    <li>
+        <li>{{p.name}}</li>
+        <li>{{p.price}}</li>
+    </li>
+    {% if request.user.is_authenticated %}
+    <li>
+        <a href="{% url 'add_cart' p.id %}">
+        <button type="button">Add to Cart</button>
+        </a>
+    </li>
+    {% else %}
+    <li>
+        <button type="submit" onclick="unauthorized_alert()">Add to Cart</button>
+    </li>
+
+    {% endif %}
+    {% endfor %}
+</ul>
+
+{% endblock %}
