@@ -71,6 +71,23 @@ git remote -v
 1. git add <foldername>/*
 2. git restore --staged <foldername>/*
 
+
+--------------_-----
+- Diff between git merge and git rebase
+- git merge 
+  - git merge --squash feature (from master)
+  - git commit -m feature merged to master
+  - done
+  
+  - this command merge latest commits of feature branch master branch 
+
+- git rebase
+   git rebase master (from feature)
+   - this command first checks for both branches latest     commits that are common 
+   - now its saves feature branch data locally and now       it brings latest commits of master into               feature branch and its again apply the locally        changed data onto feature on top of latest master       commit .
+   - so finally it align both branches same
+  
+
 ---------------------------------------------------------
 ** if we want to move one repo branch to another repo then follow these steps
 
