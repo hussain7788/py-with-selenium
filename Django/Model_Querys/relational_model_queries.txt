@@ -255,3 +255,18 @@ class Programmer(models.Model):
     programme = programme.filter(Q(age__gte=20) | Q(age__lte=24))
   # AND operator to query model
     programme = programme.filter(Q(age__gte=20) & Q(age__lte=24))
+    
+    
+ #########
+ # To use annotate and aggregate functions 
+ from django.db.models import Count, Min, Max, Avg, Sum
+ 
+ Country.objects.annotate(max('city__population'))
+ 
+ Country.objects.annotate(count('city__name'))
+ 
+ Country.objects.filter(name='India').annotate(max('city__population'))
+ 
+ City.objects.annotate(count('name'))
+ 
+ 
