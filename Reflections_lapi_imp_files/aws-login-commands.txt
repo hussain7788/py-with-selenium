@@ -1,0 +1,52 @@
+ssh -i AWSB24.pem ec2-user@
+ssh -i GHV.pem ec2-user@
+
+http://54.226.46.73/search/sports/
+chmod 400 GHV.pem 
+
+#!/bin/bash
+yum update -y
+sudo amazon-linux-extras install nginx1
+sudo yum install nginx
+sudo systemctl start nginx
+service nginx start
+sudo systemctl enable nginx (in ubuntu)
+
+nano /usr/share/nginx/html/index.html
+<h3> THis is server 1</h1>
+<h3> THis is server 2</h1>
+<h3> THis is server 3</h1>
+
+linux shell script for 10 times
+------------------
+#!/bin/bash
+I=0
+while [ $I -lt 11 ]
+do
+echo "Welcome to SSM For $I time..."
+sleep 1
+I=$( $I + 1)
+done
+---------------------------
+
+docker installation
+--------------------
+#!/bin/bash
+echo "Installing Docker"
+sudo yum update -y
+sudo yum install docker
+sudo service docker start
+sudo docker run --rm -dit --name=container1 -p 8000:80 hussain/rollingupdate:v3
+sudo docker run --rm -dit --name=container2 -p 9000:80 hussain/rollingupdate:v3
+-----------------------------------------
+
+UBUNTU commands:
+------------------------
+1. apt update && apt install -y nginx stress git
+2. systemctl enable nginx (to start nginx automatically from new AMI after reboot)
+
+----------------------------------
+windows run commands 
+----------------------------------
+1. sysdm.cpl = Information about computer active directory 
+2. mstsc = login to windows server (Remote desktop connection)

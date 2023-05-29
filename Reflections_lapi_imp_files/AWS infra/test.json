@@ -1,0 +1,77 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "3a2f8f7b-40dd-439e-bf29-9377f4c5a723": {
+                "size": {
+                    "width": 370,
+                    "height": 190
+                },
+                "position": {
+                    "x": 220,
+                    "y": 120
+                },
+                "z": 0,
+                "embeds": [
+                    "0702d86b-457b-4b93-b795-78bc76db592d"
+                ]
+            },
+            "0702d86b-457b-4b93-b795-78bc76db592d": {
+                "size": {
+                    "width": 320,
+                    "height": 140
+                },
+                "position": {
+                    "x": 250,
+                    "y": 170
+                },
+                "z": 1,
+                "parent": "3a2f8f7b-40dd-439e-bf29-9377f4c5a723",
+                "embeds": [
+                    "12654ac5-5b10-443e-a97e-7ecc064e0bdf"
+                ]
+            },
+            "12654ac5-5b10-443e-a97e-7ecc064e0bdf": {
+                "size": {
+                    "width": 140,
+                    "height": 107.04661506705375
+                },
+                "position": {
+                    "x": 355.0540894894721,
+                    "y": 192.95338493294625
+                },
+                "z": 2,
+                "parent": "0702d86b-457b-4b93-b795-78bc76db592d"
+            }
+        }
+    },
+    "Resources": {
+        "EC2VPC1OH5W": {
+            "Type": "AWS::EC2::VPC",
+            "Properties": {},
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "3a2f8f7b-40dd-439e-bf29-9377f4c5a723"
+                }
+            }
+        },
+        "EC2SNHL": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {},
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "0702d86b-457b-4b93-b795-78bc76db592d"
+                }
+            }
+        },
+        "EC2RT1SEAH": {
+            "Type": "AWS::EC2::RouteTable",
+            "Properties": {},
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "12654ac5-5b10-443e-a97e-7ecc064e0bdf"
+                }
+            }
+        }
+    }
+}
