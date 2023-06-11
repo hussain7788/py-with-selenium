@@ -3,6 +3,7 @@ from models import Employee
 from database import engine, Base, SessionLocal
 from schemas import Employee_Schema
 from sqlalchemy.orm import Session
+from sqlalchemy import select, and_, or_
 import logging
 from starlette.responses import RedirectResponse
 import os
@@ -47,7 +48,8 @@ def get_employee(id: int, db: Session = Depends(get_session)):
         Fetch Employee data based on Id
     """
 
-    emp_obj = db.query(Employee).get(id)
+    # emp_obj = db.query(Employee).get(id)
+    emp_obj = db.get(Employee, id)
     if emp_obj is None:
         raise HTTPException(
             status_code=404,
@@ -83,7 +85,7 @@ def update_employee(id: int, emp: Employee_Schema, db: Session = Depends(get_ses
         Updating Employee by ID with validation schema
     """
 
-    emp_obj = db.query(Employee).get(id)
+    emp_obj = db.get(Employee, id)
 
     if emp_obj is None:
         raise HTTPException(
@@ -107,7 +109,7 @@ def delete_employee(id: int, db: Session = Depends(get_session)):
         Deleting Employee data based on Id
     """
     
-    emp_obj = db.query(Employee).get(id)
+    emp_obj = db.get(Employee, id)
 
     if emp_obj is None:
         raise HTTPException(

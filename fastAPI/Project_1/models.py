@@ -26,7 +26,7 @@ class Employee(Base):
 
     company_id = Column(Integer, ForeignKey('company.id'))
 
-    company = relationship('Company', back_populates='employees')
+    company = relationship('Company', back_populates='employees', cascade='all')
 
     def __repr__(self):
         return "<Employee(name='%s')>" % (self.name)

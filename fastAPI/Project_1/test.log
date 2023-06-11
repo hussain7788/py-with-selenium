@@ -15,3 +15,7 @@ INFO:root:Successfully fetched all Employees..
 INFO:root:Successfully fetched Employee of Id: 2
 INFO:root:Successfully fetched all Employees..
 INFO:root:Successfully fetched all Employees..
+INFO:root:Successfully fetched all Employees..
+INFO:root:Successfully fetched Employee of Id: 2
+INFO:root:Successfully fetched Employee by ID: 2
+INFO:root:Successfully updated Employee data of ID: 2
