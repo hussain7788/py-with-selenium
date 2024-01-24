@@ -34,6 +34,8 @@ select * from (select * from emp order by sal desc limit 2)E order by sal asc li
 
 Q) query to find 3rd maximum salary from emp
 select max(sal) from emp where sal<(select max(sal) from emp where sal<(select max(sal) from emp));
+select * from (
+select distinct marks from stu order by marks limit 3)E order by marks desc limit 1
 
 select sal from(
 select sal from emp order by sal desc limit 3)E order by sal asc limit 1;
@@ -56,6 +58,22 @@ Q) Query to delete duplicate records from table using CTE
         delete from cte_rental where rid>1
 
 -----end of CTE by partition -----------------
+
+----- using ranking functions ---------------
+
+select *, row_number() over(order by marks) as 'rid',
+		rank() over(order by marks) as 'rank id',
+        dense_rank() over(order by marks) as 'den id',
+        row_number() over(partition by marks order by marks) as 'par id'
+        from stu
+        id, name, marks, doj,       rid, rank, den, parti
+        1	valli	40	2024-01-22	1	    1	1	1
+        2	hussain	40	2024-01-21	2	    1	1	2
+        5	kanna	50	2024-01-20	3	    3	2	1
+        6	chinna	50	2024-01-17	4	    3	2	2
+        4	sunil	60	2024-01-19	5	    5	3	1
+        3	anil	90	2024-01-18	6	    6	4	1
+------ end -------------------------
 
 ------- inner join and group by under public schema django models---------
 

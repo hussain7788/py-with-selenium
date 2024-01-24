@@ -21,6 +21,8 @@ urlpatterns = [
     path('api_view/', include('CRUD_Apiview_1.urls')),
     path('jwt/', include('JWT_Token_2.urls')),
     path('auth/', include('All_Auth_Perm_3.urls')),
-    path('ser/', include('Nested_Serializer_4.urls'))
+    path('ser/', include('Nested_Serializer_4.urls')),
+    path('', include('drf_pro_2024.urls')),
+    path('auth/', include('rest_framework.urls'))
     
 ]

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'JWT_Token_2',
     'All_Auth_Perm_3',
     'Nested_Serializer_4',
+    'drf_pro_2024',
 
     'rest_framework',
     'django_filters',
@@ -81,12 +82,12 @@ WSGI_APPLICATION = 'DRF_Project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 NAME= "DRF_Test_DB",
 USER= 'postgres',
@@ -106,16 +107,16 @@ PORT=5432
 # }
 
 ## mahammed databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mssql',
-        'NAME': "school",
-        'USER': 'postgres',
-        'PASSWORD':270164835,
-        'HOST':"localhost",
-        'PORT':5432
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mssql',
+#         'NAME': "school",
+#         'USER': 'postgres',
+#         'PASSWORD':270164835,
+#         'HOST':"localhost",
+#         'PORT':5432
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

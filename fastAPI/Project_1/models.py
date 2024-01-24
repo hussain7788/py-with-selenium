@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, Float, DateTime, Date,ForeignKey
 from sqlalchemy.orm import relationship
 from database import Base
 from database2 import base
+from datetime import datetime
 
 class Company(Base):
     __tablename__ = 'company'
@@ -39,6 +40,7 @@ class Student(base):
     name = Column(String(50))
     age = Column(Integer)
     course = Column(String(50))
+    doj = Column(Date, default=datetime.utcnow)
     
     def __repr__(self):
         return "<Student(name='%s')>" % (self.name)

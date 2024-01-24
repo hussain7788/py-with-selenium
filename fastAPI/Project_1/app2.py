@@ -44,6 +44,7 @@ def add():
 def get_students():
 
     objs = []
+    import pdb;pdb.set_trace()
     with SessionLocal() as se:
         stm = select(Student)
         objs = se.scalars(stm).all()

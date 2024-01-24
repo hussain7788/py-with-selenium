@@ -15,6 +15,7 @@ alter table stu drop constraint stu_marks_check
 
 -- TO remove unique key constraint
 ALTER TABLE stu DROP CONSTRAINT stu_tname_key
+alter table stu drop index test -- in sql 
 
 -- TO remove primary key constraint
 ALTER TABLE stu DROP CONSTRAINT stu_pkey
