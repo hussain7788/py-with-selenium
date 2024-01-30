@@ -35,3 +35,17 @@ def sum_num(val1, val2):
     print("This is Sum of Nums:", val1+val2)
 
 display_func()  #it is same like above 
+
+def deco_func(func):
+
+    def wrapper_func():
+        res = func()
+        add = res+ 5
+        return add
+    return wrapper_func
+
+@deco_func
+def sample():
+    return 10
+
+print(sample())

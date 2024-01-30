@@ -25,9 +25,9 @@
 # print(next(s1))
 # print(next(s1))
 
-# #### tuple comprehensions for generators
-# t1 = (x*x for x in range(1000))
-# print(next(t1))
-# print(next(t1))
-# print(next(t1))
-# print(list(t1))
+#### tuple comprehensions for generators
+t1 = (x*x for x in range(1000))
+print(next(t1))
+print(next(t1))
+print(next(t1))
+print(list(t1))

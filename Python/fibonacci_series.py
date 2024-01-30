@@ -82,3 +82,15 @@ print(next(f1))
 print(next(f1))      
 print(next(f1))      
 
+
+def find_fibonanci(num):
+    if num <= 1:
+        return 1
+    series = [0,1]
+    for i in range(num -2):
+        val = series[i] + series[i + 1]
+        series.append(val)
+
+    return series
+
+print(find_fibonanci(10))
