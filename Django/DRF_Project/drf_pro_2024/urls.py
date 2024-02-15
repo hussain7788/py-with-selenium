@@ -12,5 +12,7 @@ urlpatterns = [
     path("course/<int:pk>/", CourseAPIView.as_view()),
     path('gettoken/', TokenObtainPairView.as_view()),
     path('refresh_token/', TokenRefreshView.as_view()),
-    path('verify_token/', TokenVerifyView.as_view())
+    path('verify_token/', TokenVerifyView.as_view()),
+    path('sample/', sample, name='sample'),
+    path("upload/", uploadFile.as_view())
 ]

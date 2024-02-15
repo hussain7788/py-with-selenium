@@ -1,0 +1,72 @@
+,Date,Transaction Type,Vch No.,Ref No,Ref Type,Ref Date,Debtor,Ref Amount,Amount,Particulars,Vch Type,Amount Verified
+0,01-07-2020,Parent,396,,,,Himalayan Daily Need,,50000.0,Himalayan Daily Need,Receipt,Yes
+1,01-07-2020,Child,396,SSI20210348,Agst Ref,,Himalayan Daily Need,50000.0,,Himalayan Daily Need,Receipt,
+2,01-07-2020,Other,396,,,,Standard Chartered Bank,,-50000.0,Standard Chartered Bank,Receipt,
+3,01-07-2020,Parent,397,,,,Ajit Cycle Stores,,221979.0,Ajit Cycle Stores,Receipt,Yes
+4,01-07-2020,Child,397,SSI19202245,Agst Ref,,Ajit Cycle Stores,55.0,,Ajit Cycle Stores,Receipt,
+5,01-07-2020,Child,397,SSI19202246,Agst Ref,,Ajit Cycle Stores,2572.0,,Ajit Cycle Stores,Receipt,
+6,01-07-2020,Child,397,SSI19202600,Agst Ref,,Ajit Cycle Stores,941.0,,Ajit Cycle Stores,Receipt,
+7,01-07-2020,Child,397,SSICN/19-20/470,Agst Ref,,Ajit Cycle Stores,-3068.0,,Ajit Cycle Stores,Receipt,
+8,01-07-2020,Child,397,SSICN/19-20/471,Agst Ref,,Ajit Cycle Stores,-500.0,,Ajit Cycle Stores,Receipt,
+9,01-07-2020,Child,397,SSI19202955,Agst Ref,,Ajit Cycle Stores,699.0,,Ajit Cycle Stores,Receipt,
+10,01-07-2020,Child,397,SSI20210333,Agst Ref,,Ajit Cycle Stores,28476.0,,Ajit Cycle Stores,Receipt,
+11,01-07-2020,Child,397,SSI20210334,Agst Ref,,Ajit Cycle Stores,75684.0,,Ajit Cycle Stores,Receipt,
+12,01-07-2020,Child,397,SSI20210335,Agst Ref,,Ajit Cycle Stores,90811.0,,Ajit Cycle Stores,Receipt,
+13,01-07-2020,Child,397,SSI20210336,Agst Ref,,Ajit Cycle Stores,26309.0,,Ajit Cycle Stores,Receipt,
+14,01-07-2020,Other,397,,,,Standard Chartered Bank,,-221979.0,Standard Chartered Bank,Receipt,
+15,01-07-2020,Parent,398,,,,The Bike Shop,,1000000.0,The Bike Shop,Receipt,Yes
+16,01-07-2020,Child,398,SSI20210201,Agst Ref,,The Bike Shop,400103.53,,The Bike Shop,Receipt,
+17,01-07-2020,Child,398,SSI20210202,Agst Ref,,The Bike Shop,41440.0,,The Bike Shop,Receipt,
+18,01-07-2020,Child,398,SSI20210203,Agst Ref,,The Bike Shop,65384.0,,The Bike Shop,Receipt,
+19,01-07-2020,Child,398,SSI20210204,Agst Ref,,The Bike Shop,64512.0,,The Bike Shop,Receipt,
+20,01-07-2020,Child,398,SSI20210205,Agst Ref,,The Bike Shop,85523.0,,The Bike Shop,Receipt,
+21,01-07-2020,Child,398,SSI20210297,Agst Ref,,The Bike Shop,143360.0,,The Bike Shop,Receipt,
+22,01-07-2020,Child,398,SSI20210298,Agst Ref,,The Bike Shop,117412.0,,The Bike Shop,Receipt,
+23,01-07-2020,Child,398,SSI20210393,Agst Ref,,The Bike Shop,82265.47,,The Bike Shop,Receipt,
+24,01-07-2020,Other,398,,,,Standard Chartered Bank,,-1000000.0,Standard Chartered Bank,Receipt,
+25,01-07-2020,Parent,399,,,,Cycle Zone- North,,200000.0,Cycle Zone- North,Receipt,Yes
+26,01-07-2020,Child,399,SSI19203052,Agst Ref,,Cycle Zone- North,43531.22,,Cycle Zone- North,Receipt,
+27,01-07-2020,Child,399,SSI19203053,Agst Ref,,Cycle Zone- North,30240.0,,Cycle Zone- North,Receipt,
+28,01-07-2020,Child,399,SSI19203054,Agst Ref,,Cycle Zone- North,18564.0,,Cycle Zone- North,Receipt,
+29,01-07-2020,Child,399,SSI19203055,Agst Ref,,Cycle Zone- North,39330.0,,Cycle Zone- North,Receipt,
+30,01-07-2020,Child,399,SSI19203056,Agst Ref,,Cycle Zone- North,1070.0,,Cycle Zone- North,Receipt,
+31,01-07-2020,Child,399,SSI20210261,Agst Ref,,Cycle Zone- North,67264.78,,Cycle Zone- North,Receipt,
+32,01-07-2020,Other,399,,,,Standard Chartered Bank,,-200000.0,Standard Chartered Bank,Receipt,
+33,01-07-2020,Parent,400,,,,Nareshchandra & Co.,,56223.0,Nareshchandra & Co.,Receipt,Yes
+34,01-07-2020,Child,400,SSI19201521,Agst Ref,,Nareshchandra & Co.,8480.38,,Nareshchandra & Co.,Receipt,
+35,01-07-2020,Child,400,SSI19201522,Agst Ref,,Nareshchandra & Co.,1388.0,,Nareshchandra & Co.,Receipt,
+36,01-07-2020,Child,400,SSI19201635,Agst Ref,,Nareshchandra & Co.,46354.62,,Nareshchandra & Co.,Receipt,
+37,01-07-2020,Other,400,,,,Standard Chartered Bank,,-56223.0,Standard Chartered Bank,Receipt,
+38,01-07-2020,Parent,401,,,,Shivdeep Cycle Track,,48504.0,Shivdeep Cycle Track,Receipt,Yes
+39,01-07-2020,Child,401,SSI19202489,Agst Ref,,Shivdeep Cycle Track,38052.0,,Shivdeep Cycle Track,Receipt,
+40,01-07-2020,Child,401,SSI19202490,Agst Ref,,Shivdeep Cycle Track,10452.0,,Shivdeep Cycle Track,Receipt,
+41,01-07-2020,Other,401,,,,Standard Chartered Bank,,-48504.0,Standard Chartered Bank,Receipt,
+42,01-07-2020,Parent,402,,,,Krishna Cycle Stores,,200000.0,Krishna Cycle Stores,Receipt,Yes
+43,01-07-2020,Child,402,SSI20210415,Agst Ref,,Krishna Cycle Stores,185352.81,,Krishna Cycle Stores,Receipt,
+44,01-07-2020,Child,402,SSI20210416,Agst Ref,,Krishna Cycle Stores,14647.19,,Krishna Cycle Stores,Receipt,
+45,01-07-2020,Other,402,,,,Standard Chartered Bank,,-200000.0,Standard Chartered Bank,Receipt,
+46,01-07-2020,Parent,403,,,,Pedallers Point - Gachibowli,,138880.0,Pedallers Point - Gachibowli,Receipt,Yes
+47,01-07-2020,Child,403,SSI19202483,Agst Ref,,Pedallers Point - Gachibowli,104612.56,,Pedallers Point - Gachibowli,Receipt,
+48,01-07-2020,Child,403,SSI19202500,Agst Ref,,Pedallers Point - Gachibowli,34267.44,,Pedallers Point - Gachibowli,Receipt,
+49,01-07-2020,Other,403,,,,Standard Chartered Bank,,-138880.0,Standard Chartered Bank,Receipt,
+50,01-07-2020,Parent,404,,,,Vaibhav Cycle Stores,,39000.0,Vaibhav Cycle Stores,Receipt,Yes
+51,01-07-2020,Child,404,SSI19203207,Agst Ref,,Vaibhav Cycle Stores,0.01,,Vaibhav Cycle Stores,Receipt,
+52,01-07-2020,Child,404,SSI20210352,Agst Ref,,Vaibhav Cycle Stores,38999.99,,Vaibhav Cycle Stores,Receipt,
+53,01-07-2020,Other,404,,,,Standard Chartered Bank,,-39000.0,Standard Chartered Bank,Receipt,
+54,01-07-2020,Parent,405,,,,Durga Cycles,,96880.0,Durga Cycles,Receipt,Yes
+55,01-07-2020,Child,405,SSI20210181,Agst Ref,,Durga Cycles,96880.0,,Durga Cycles,Receipt,
+56,01-07-2020,Other,405,,,,Standard Chartered Bank,,-96880.0,Standard Chartered Bank,Receipt,
+57,01-07-2020,Parent,406,,,,Verdant Outdoor Sports World Pvt Ltd,,25000.0,Verdant Outdoor Sports World Pvt Ltd,Receipt,Yes
+58,01-07-2020,Child,406,SSI19200832,Agst Ref,,Verdant Outdoor Sports World Pvt Ltd,25000.0,,Verdant Outdoor Sports World Pvt Ltd,Receipt,
+59,01-07-2020,Other,406,,,,Standard Chartered Bank,,-25000.0,Standard Chartered Bank,Receipt,
+60,01-07-2020,Parent,407,,,,Freewheelers Bike Zone,,70000.0,Freewheelers Bike Zone,Receipt,Yes
+61,01-07-2020,Child,407,SSI20210172,Agst Ref,,Freewheelers Bike Zone,50469.0,,Freewheelers Bike Zone,Receipt,
+62,01-07-2020,Child,407,SSI20210173,Agst Ref,,Freewheelers Bike Zone,19531.0,,Freewheelers Bike Zone,Receipt,
+63,01-07-2020,Other,407,,,,Standard Chartered Bank,,-70000.0,Standard Chartered Bank,Receipt,
+64,01-07-2020,Parent,408,,,,Bikeshark -The Urban Cycle Store,,100000.0,Bikeshark -The Urban Cycle Store,Receipt,Yes
+65,01-07-2020,Child,408,SSI19201311,Agst Ref,,Bikeshark -The Urban Cycle Store,3216.72,,Bikeshark -The Urban Cycle Store,Receipt,
+66,01-07-2020,Child,408,SSI19201312,Agst Ref,,Bikeshark -The Urban Cycle Store,4077.0,,Bikeshark -The Urban Cycle Store,Receipt,
+67,01-07-2020,Child,408,SSI19201409,Agst Ref,,Bikeshark -The Urban Cycle Store,13722.0,,Bikeshark -The Urban Cycle Store,Receipt,
+68,01-07-2020,Child,408,SSI19201467,Agst Ref,,Bikeshark -The Urban Cycle Store,37336.0,,Bikeshark -The Urban Cycle Store,Receipt,
+69,01-07-2020,Child,408,SSI19201496,Agst Ref,,Bikeshark -The Urban Cycle Store,41648.28,,Bikeshark -The Urban Cycle Store,Receipt,
+70,01-07-2020,Other,408,,,,Standard Chartered Bank,,-100000.0,Standard Chartered Bank,Receipt,
