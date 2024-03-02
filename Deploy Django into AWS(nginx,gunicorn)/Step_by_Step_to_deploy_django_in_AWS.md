@@ -49,7 +49,7 @@ Step 6 - Gunicorn Socket and Service setup
         - ExecStart = Environment directory where we installed all packages
         - Ecommerce_Project.wsgi:application = project_name.wsgi
         - Now after above chages paste the code in gunicron.service file and save
-
+        
         - [Unit]
             Description=gunicorn daemon
             Requires=gunicorn.socket

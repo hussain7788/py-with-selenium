@@ -44,6 +44,7 @@ def user_signup(request):
 
     return render(request, 'signup.html')
 
+
 @csrf_exempt
 def user_login(request):
 
