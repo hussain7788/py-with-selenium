@@ -52,3 +52,15 @@ print("Current day:", today.day)
 # root = Tk()
 # root.title("first")
 # root.mainloop()
+
+import os
+base = os.path.dirname(__file__)
+file_name = os.path.join(base, "decorators.py")
+print(os.path.join(base, "decorators.py"))
+
+last = file_name.split("\\")[-1]
+print(last)
+st = f"python {last}"
+print(st)
+os.chdir(base)
+os.system(st)
