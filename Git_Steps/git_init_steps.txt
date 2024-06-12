@@ -71,6 +71,10 @@ git remote -v
 1. git add <foldername>/*
 2. git restore --staged <foldername>/*
 
+-------Delete local and remote branch -----------------
+1. git branch -D branch_name (local)
+2. git push origin --delete feature-branch (remote)
+
 
 --------------_-----
 - Diff between git merge and git rebase
