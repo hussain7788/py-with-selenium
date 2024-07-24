@@ -18,8 +18,16 @@ git remote -v
 3. now git push 
 4. this is remove last committed and pushed changes
 
+---- revert back all committed and pushed changes in single go
+1) git revert HEAD~3..HEAD (HEAD3 means it will revert 3 commits)
+2) it will open editor for three commits just shift:wq and enter
+3) git push now 
+
 ------reglog to check all activities---------
 1.git reflog
+
+-------- to check all config details----
+1. git config --list
 
 
 ----- if .gitignore does not work then do this-----
