@@ -1,0 +1,28 @@
+
+creating ssh key in system and adding ssh key in github to clone repo
+--------------------------------------------------------------------------
+
+type this in terminal "ssh-keygen -b 4096 -t rsa"
+press enter 3 times
+Your identification has been saved in /Users/kaushakr/.ssh/id_rsa (Note this place)
+Your public key has been saved in /Users/kaushakr/.ssh/id_rsa.pub
+
+
+go to the folder location equivalent (/Users/kaushakr/.ssh/)
+do cat id_rsa.pub
+
+
+copy the key starting from ssh-rsa till the end.
+
+
+got to github -> profile -> settings -> ssh and gpg keys -> add new ssh key
+
+insert the value
+
+The click on configure sso and authorize your team (it-lifecycle).
+
+Then everything is good.
+
+Then when you clone for the first time it will ask for adding to hosts and the options (yes/no/[fingerprint]) type yes.
+
+The cloning will start .
