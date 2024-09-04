@@ -9,3 +9,5 @@ Git/
 db.sqlite3
 $RECYCLE.BIN/
 reactApp/.venv/
+Python/RASA/.rasa/cache/
+Python/RASA/models/
