@@ -1,0 +1,43 @@
+1. docker run steps
+
+ - <image>:<tag> = buff-nlp-skillbuilder:latest
+
+ - docker build . -f Dockerfile -t <image>:<tag> 
+    - '-f' refers the file name
+    - '-t' refers the image tag name which we want to give 
+
+ - docker run -it <image>:<tag> will create the container for this image 
+ - docker run -it <image>:<tag> /bin/bash will run in terminal
+ - docker exec -it <container_id> /bin/bash will execute in terminal 
+
+---------------------------------------------------
+Push the Image to a Docker Hub and share it with anyone 
+---------------------------------------------------
+
+1. docker tag <your-image-name>:<tag> <username>/<repository-name>:<tag>
+ - For example, if your Docker Hub username is hussain7788 and your image is named myapp, you would do:
+  - docker tag myapp:latest hussain7788/myapp:latest
+
+2. Login to Docker Hub (or another registry): Use your credentials to log into Docker Hub
+ - docker login (enter username and password)
+
+3. Push the Image: Push the tagged image to the registry:
+ - docker push hussain7788/myapp:latest
+
+4. Share the Image: After pushing it, anyone with access (public or private) can pull the image by running:
+ - docker pull hussain7788/myapp:latest
+
+---------------------------------------------------
+Export and Share the Image as a Tar Archive
+---------------------------------------------------
+
+1. docker save -o myapp_image.tar myapp:latest
+ - myapp_image = image_name which we want to give in our local 
+ - myapp:latest = docker image
+
+2. Share the Image: Send the myapp_image.tar file to your recipient through a file-sharing service
+
+3. Load the Image on the Other Machine: The recipient can load the image into their Docker environment using:
+ - docker load -i myapp_image.tar
+
+ 

@@ -1,5 +1,15 @@
 --------------docker--------------------
 
+--------Main----------
+--------------------
+- If we want to check our code in docker container then run below 
+     - docker exec -it <container-name> /bin/bash/ (this will open our application code in terminal)
+- if we want to attach our container to check terminal flow then run below
+     - docker attach <container name>
+- if we want to check logs run below 
+     - docker-compose logs -f <service name>
+
+
 1. install docker 
  	-sudo apt install docker.io
 
